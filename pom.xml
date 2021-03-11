@@ -8,7 +8,7 @@
   <artifactId>spotitube.nielsbosman</artifactId>
   <version>1.0</version>
 
-  <name>spotitube.nielsbosman</name>
+  <name>HAN-dea-Spotitube</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -20,9 +20,9 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.7.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
