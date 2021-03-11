@@ -1,2 +1,2 @@
-# HAN-dea-Spotitube
-Java Spotitube application with maven. This project is for the schoolcourse DEA for HAN University of Applied Sciences.
+# Spotitube [![Build Status](https://travis-ci.org/HANICA-DEA/spotitube.svg?branch=master)](https://travis-ci.org/HANICA-DEA/spotitube) [![Coverage Status](https://coveralls.io/repos/github/niels-bosman/HAN-dea-Spotitube/badge.svg?branch=master)](https://coveralls.io/github/niels-bosman/HAN-dea-Spotitube/?branch=master)
+Een Java API voor de course DEA in het OOSE semester van de Hogeschool van Arnhem en Nijmegen.
