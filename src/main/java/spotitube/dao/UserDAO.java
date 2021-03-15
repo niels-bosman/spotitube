@@ -17,13 +17,13 @@ public class UserDAO
     @Resource(name = "jdbc/spotitube")
     DataSource dataSource;
 
-    private static final String LOGIN_USER_QUERY = "SELECT * from user WHERE username = ? AND password = ?";
-    private static final String ADD_TOKEN_TO_USER_QUERY = "UPDATE user SET token = ? WHERE id = ?";
+    private static final String LOGIN_QUERY = "SELECT * from user WHERE username = ? AND password = ?";
+    private static final String ADD_TOKEN_QUERY = "UPDATE user SET token = ? WHERE id = ?";
 
     public User authenticate(String username, String password)
     {
         try (Connection connection = dataSource.getConnection()) {
-            PreparedStatement statement = connection.prepareStatement(LOGIN_USER_QUERY);
+            PreparedStatement statement = connection.prepareStatement(LOGIN_QUERY);
             statement.setString(1, username);
             statement.setString(2, password);
             ResultSet resultSet = statement.executeQuery();
@@ -52,7 +52,7 @@ public class UserDAO
     public void addToken(int id, String token)
     {
         try (Connection connection = dataSource.getConnection()) {
-            PreparedStatement statement = connection.prepareStatement(ADD_TOKEN_TO_USER_QUERY);
+            PreparedStatement statement = connection.prepareStatement(ADD_TOKEN_QUERY);
             statement.setString(1, token);
             statement.setInt(2, id);
             statement.execute();
