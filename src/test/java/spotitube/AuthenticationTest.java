@@ -45,7 +45,7 @@ public class AuthenticationTest
         AuthenticationResponseDTO authenticationResponseDTO = (AuthenticationResponseDTO) response.getEntity();
 
         // Assert
-        assertEquals(200, response.getStatus());
+        assertEquals(Response.Status.OK, response.getStatusInfo());
         assertEquals(this.authenticationDTO.user, authenticationResponseDTO.user);
     }
 
@@ -61,6 +61,6 @@ public class AuthenticationTest
         Response response = this.authenticationService.login(this.authenticationDTO);
 
         // Assert
-        assertEquals(401, response.getStatus());
+        assertEquals(Response.Status.UNAUTHORIZED, response.getStatusInfo());
     }
 }
