@@ -28,20 +28,22 @@ public class UserDAO
             statement.setString(2, password);
             ResultSet resultSet = statement.executeQuery();
 
-            if (resultSet.next()) {
-                int userId = resultSet.getInt("id");
-                String token = UUID.randomUUID().toString();
-
-                User user = new User(userId);
-                user.setToken(token);
-                user.setUsername(resultSet.getString("username"));
-                user.setPassword(resultSet.getString("password"));
-                user.setName(resultSet.getString("name"));
-
-                this.addToken(userId, token);
-
-                return user;
+            if (!resultSet.next()) {
+                return null;
             }
+
+            String token = UUID.randomUUID().toString();
+            User user = new User(resultSet.getInt("id"));
+
+            user.setToken(token);
+            user.setUsername(resultSet.getString("username"));
+            user.setPassword(resultSet.getString("password"));
+            user.setName(resultSet.getString("name"));
+
+            this.addToken(user, token);
+
+            return user;
+
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
@@ -49,12 +51,12 @@ public class UserDAO
         return null;
     }
 
-    public void addToken(int id, String token)
+    public void addToken(User user, String token)
     {
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(ADD_TOKEN_QUERY);
             statement.setString(1, token);
-            statement.setInt(2, id);
+            statement.setInt(2, user.getId());
             statement.execute();
         } catch (SQLException exception) {
             exception.printStackTrace();
