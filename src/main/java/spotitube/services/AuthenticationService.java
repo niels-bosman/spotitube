@@ -19,11 +19,11 @@ public class AuthenticationService
     @Path("login")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response login(AuthenticationDTO possibleUser)
+    public Response login(AuthenticationDTO entity)
     {
-        User user = userDAO.authenticate(possibleUser.user, possibleUser.password);
+        User authenticated = userDAO.authenticate(entity.user, entity.password);
 
-        if (user == null) {
+        if (authenticated == null) {
             return Response
                     .status(Response.Status.UNAUTHORIZED)
                     .build();
@@ -31,7 +31,7 @@ public class AuthenticationService
 
         return Response
                 .status(Response.Status.OK)
-                .entity(new AuthenticationResponseDTO(user.getToken(), user.getName()))
+                .entity(new AuthenticationResponseDTO(authenticated.getToken(), authenticated.getName()))
                 .build();
     }
 
