@@ -25,12 +25,12 @@ public class AuthenticationService
 
         if (user == null) {
             return Response
-                    .status(401)
+                    .status(Response.Status.UNAUTHORIZED)
                     .build();
         }
 
         return Response
-                .status(200)
+                .status(Response.Status.OK)
                 .entity(new LoginDTO(user.getToken(), user.getName()))
                 .build();
     }
