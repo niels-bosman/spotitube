@@ -24,14 +24,15 @@ public class AuthenticationService
         User user = userDAO.authenticate(possibleUser.user, possibleUser.password);
 
         if (user == null) {
-            return Response.status(401).build();
+            return Response
+                    .status(401)
+                    .build();
         }
 
-        LoginDTO loginDTO = new LoginDTO();
-        loginDTO.token = user.getToken();
-        loginDTO.user = user.getUsername();
-
-        return Response.status(200).entity(loginDTO).build();
+        return Response
+                .status(200)
+                .entity(new LoginDTO(user.getToken(), user.getUsername()))
+                .build();
     }
 
     @Inject
