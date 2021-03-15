@@ -4,7 +4,6 @@ import java.util.UUID;
 
 public class UserDTO
 {
-    public String username;
+    public String user;
     public String password;
-    public UUID token;
 }

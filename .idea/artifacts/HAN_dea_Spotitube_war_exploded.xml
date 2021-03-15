@@ -14,7 +14,7 @@
           <element id="module-output" name="HAN-dea-Spotitube" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: com.airhacks:jaxrs-cors:0.0.1" />
+          <element id="library" level="project" name="Maven: com.airhacks:jaxrs-cors:0.0.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

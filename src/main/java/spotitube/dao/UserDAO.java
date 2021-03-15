@@ -20,15 +20,20 @@ public class UserDAO
 
     public User getUser(String username, String password)
     {
-        try {
-            Connection connection = dataSource.getConnection();
+        try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(LOGIN_USER_QUERY);
             statement.setString(1, username);
             statement.setString(2, password);
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
-                return new User();
+                User user = new User(resultSet.getInt("id"));
+                user.setUsername(resultSet.getString("username"));
+                user.setPassword(resultSet.getString("password"));
+
+                // TODO: Set users UUID code in DB
+
+                return user;
             }
         } catch (SQLException exception) {
             exception.printStackTrace();

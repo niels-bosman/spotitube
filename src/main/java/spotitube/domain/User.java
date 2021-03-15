@@ -7,11 +7,12 @@ public class User
     private int id;
     private String username;
     private String password;
-    private UUID token;
+    private String token;
 
-    public User()
+    public User(int id)
     {
-        this.token = UUID.randomUUID();
+        this.id = id;
+        this.token = UUID.randomUUID().toString();
     }
 
     public int getId()
@@ -44,12 +45,12 @@ public class User
         this.password = password;
     }
 
-    public UUID getToken()
+    public String getToken()
     {
         return token;
     }
 
-    public void setToken(UUID token)
+    public void setToken(String token)
     {
         this.token = token;
     }
