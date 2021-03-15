@@ -26,19 +26,19 @@ public class UserDAO
             PreparedStatement statement = connection.prepareStatement(LOGIN_QUERY);
             statement.setString(1, username);
             statement.setString(2, password);
-            ResultSet resultSet = statement.executeQuery();
+            ResultSet result = statement.executeQuery();
 
-            if (!resultSet.next()) {
+            if (!result.next()) {
                 return null;
             }
 
             String token = UUID.randomUUID().toString();
-            User user = new User(resultSet.getInt("id"));
+            User user = new User(result.getInt("id"));
 
             user.setToken(token);
-            user.setUsername(resultSet.getString("username"));
-            user.setPassword(resultSet.getString("password"));
-            user.setName(resultSet.getString("name"));
+            user.setUsername(result.getString("username"));
+            user.setPassword(result.getString("password"));
+            user.setName(result.getString("name"));
 
             this.addToken(user, token);
 
