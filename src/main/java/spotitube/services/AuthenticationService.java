@@ -21,7 +21,7 @@ public class AuthenticationService
     @Consumes(MediaType.APPLICATION_JSON)
     public Response login(UserDTO possibleUser)
     {
-        User user = userDAO.getUser(possibleUser.user, possibleUser.password);
+        User user = userDAO.authenticate(possibleUser.user, possibleUser.password);
 
         if (user == null) {
             return Response.status(401).build();

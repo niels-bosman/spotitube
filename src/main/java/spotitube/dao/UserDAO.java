@@ -20,7 +20,7 @@ public class UserDAO
     private static final String LOGIN_USER_QUERY = "SELECT * from user WHERE username = ? AND password = ?";
     private static final String ADD_TOKEN_TO_USER_QUERY = "UPDATE user SET token = ? WHERE id = ?";
 
-    public User getUser(String username, String password)
+    public User authenticate(String username, String password)
     {
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(LOGIN_USER_QUERY);
@@ -38,7 +38,7 @@ public class UserDAO
                 user.setPassword(resultSet.getString("password"));
                 user.setName(resultSet.getString("name"));
 
-                this.addTokenToUser(userId, token);
+                this.addToken(userId, token);
 
                 return user;
             }
@@ -49,7 +49,7 @@ public class UserDAO
         return null;
     }
 
-    public void addTokenToUser(int id, String token)
+    public void addToken(int id, String token)
     {
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(ADD_TOKEN_TO_USER_QUERY);

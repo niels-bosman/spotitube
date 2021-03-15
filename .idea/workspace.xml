@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Base login functionality">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Add token to user when logging in">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/insertUser.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/insertUser.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/services/AuthenticationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +227,7 @@
       <updated>1615458595360</updated>
       <workItem from="1615458599126" duration="2993000" />
       <workItem from="1615481926121" duration="3027000" />
-      <workItem from="1615804822712" duration="12978000" />
+      <workItem from="1615804822712" duration="13157000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -272,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615818712606</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add token to user when logging in">
+      <created>1615820018811</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615820018811</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +302,7 @@
     <MESSAGE value="Basic login functionality" />
     <MESSAGE value="Basic userDAO" />
     <MESSAGE value="Base login functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base login functionality" />
+    <MESSAGE value="Add token to user when logging in" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add token to user when logging in" />
   </component>
 </project>
