@@ -31,7 +31,7 @@ public class AuthenticationService
 
         return Response
                 .status(200)
-                .entity(new LoginDTO(user.getToken(), user.getUsername()))
+                .entity(new LoginDTO(user.getToken(), user.getName()))
                 .build();
     }
 
