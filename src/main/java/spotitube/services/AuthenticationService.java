@@ -7,8 +7,8 @@ import javax.ws.rs.core.Response;
 
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
-import spotitube.services.dto.LoginDTO;
-import spotitube.services.dto.UserDTO;
+import spotitube.services.dto.AuthenticationResponseDTO;
+import spotitube.services.dto.AuthenticationDTO;
 
 @Path("auth")
 public class AuthenticationService
@@ -19,7 +19,7 @@ public class AuthenticationService
     @Path("login")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response login(UserDTO possibleUser)
+    public Response login(AuthenticationDTO possibleUser)
     {
         User user = userDAO.authenticate(possibleUser.user, possibleUser.password);
 
@@ -31,7 +31,7 @@ public class AuthenticationService
 
         return Response
                 .status(Response.Status.OK)
-                .entity(new LoginDTO(user.getToken(), user.getName()))
+                .entity(new AuthenticationResponseDTO(user.getToken(), user.getName()))
                 .build();
     }
 

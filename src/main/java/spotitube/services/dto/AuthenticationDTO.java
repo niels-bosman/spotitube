@@ -1,6 +1,6 @@
 package spotitube.services.dto;
 
-public class UserDTO
+public class AuthenticationDTO
 {
     public String user;
     public String password;

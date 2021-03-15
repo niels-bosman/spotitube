@@ -1,10 +1,11 @@
 package spotitube.services.dto;
 
-public class LoginDTO {
+public class AuthenticationResponseDTO
+{
     public String token;
     public String user;
 
-    public LoginDTO(String token, String user)
+    public AuthenticationResponseDTO(String token, String user)
     {
         this.token = token;
         this.user = user;
