@@ -7,8 +7,8 @@ import javax.ws.rs.core.Response;
 
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
-import spotitube.services.dto.AuthenticationResponseDTO;
-import spotitube.services.dto.AuthenticationDTO;
+import spotitube.dto.AuthenticationResponseDTO;
+import spotitube.dto.AuthenticationDTO;
 
 @Path("auth")
 public class AuthenticationService

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.services.AuthenticationService;
-import spotitube.services.dto.AuthenticationDTO;
+import spotitube.dto.AuthenticationDTO;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -13,7 +13,7 @@ import static org.mockito.Mockito.when;
 import javax.ws.rs.core.Response;
 
 import org.junit.jupiter.api.BeforeEach;
-import spotitube.services.dto.AuthenticationResponseDTO;
+import spotitube.dto.AuthenticationResponseDTO;
 
 public class AuthenticationTest
 {

@@ -1,4 +1,4 @@
-package spotitube.services.dto;
+package spotitube.dto;
 
 public class AuthenticationDTO
 {
