@@ -17,7 +17,7 @@ public class UserDAO
     @Resource(name = "jdbc/spotitube")
     DataSource dataSource;
 
-    private static final String LOGIN_QUERY = "SELECT * from user WHERE username = ? AND password = ?";
+    private static final String LOGIN_QUERY = "SELECT * FROM user WHERE username = ? AND password = ?";
     private static final String ADD_TOKEN_QUERY = "UPDATE user SET token = ? WHERE id = ?";
 
     public User authenticate(String username, String password)
