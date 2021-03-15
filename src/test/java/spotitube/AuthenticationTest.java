@@ -31,7 +31,7 @@ public class AuthenticationTest
     }
 
     @Test
-    public void succesfulLogin()
+    public void successfulLogin()
     {
         // Arrange
         User user = new User(0);

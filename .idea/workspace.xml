@@ -9,8 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Basic auth tests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="rename tests to have no word &quot;test&quot; in it (should be obvious)">
       <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/AuthenticationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/AuthenticationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -280,7 +279,7 @@
       <updated>1615458595360</updated>
       <workItem from="1615458599126" duration="2993000" />
       <workItem from="1615481926121" duration="3027000" />
-      <workItem from="1615804822712" duration="17519000" />
+      <workItem from="1615804822712" duration="17546000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -394,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615824480394</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="rename tests to have no word &quot;test&quot; in it (should be obvious)">
+      <created>1615824553657</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1615824553657</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,6 +432,7 @@
     <MESSAGE value="Renaming of DTO's" />
     <MESSAGE value="Use setter and remove useless import in User Domain" />
     <MESSAGE value="Basic auth tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic auth tests" />
+    <MESSAGE value="rename tests to have no word &quot;test&quot; in it (should be obvious)" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename tests to have no word &quot;test&quot; in it (should be obvious)" />
   </component>
 </project>
