@@ -1,5 +1,6 @@
 package spotitube.services;
 
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -8,17 +9,18 @@ import spotitube.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.services.dto.UserDTO;
 
-public class AuthenticationService {
+@Path("auth")
+public class AuthenticationService
+{
+    private UserDAO userDAO;
 
-    private final UserDAO userDAO = new UserDAO();
-
-    @GET
+    @POST
     @Path("login")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response login(@FormParam("user") String username, @FormParam("password") String password)
+    public Response login(UserDTO possibleUser)
     {
-        User user = userDAO.getUser(username, password);
+        User user = userDAO.getUser(possibleUser.username, possibleUser.password);
 
         if (user == null) {
             return Response.status(401).build();
@@ -29,5 +31,11 @@ public class AuthenticationService {
         userDTO.token = user.getToken();
 
         return Response.status(200).entity(userDTO).build();
+    }
+
+    @Inject
+    public void setUserDAO(UserDAO userDAO)
+    {
+        this.userDAO = userDAO;
     }
 }
