@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.UUID;
 
 @Default
 public class UserDAO
@@ -17,6 +18,7 @@ public class UserDAO
     DataSource dataSource;
 
     private static final String LOGIN_USER_QUERY = "SELECT * from user WHERE username = ? AND password = ?";
+    private static final String ADD_TOKEN_TO_USER_QUERY = "UPDATE user SET token = ? WHERE id = ?";
 
     public User getUser(String username, String password)
     {
@@ -27,11 +29,16 @@ public class UserDAO
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
-                User user = new User(resultSet.getInt("id"));
+                int userId = resultSet.getInt("id");
+                String token = UUID.randomUUID().toString();
+
+                User user = new User(userId);
+                user.setToken(token);
                 user.setUsername(resultSet.getString("username"));
                 user.setPassword(resultSet.getString("password"));
+                user.setName(resultSet.getString("name"));
 
-                // TODO: Set users UUID code in DB
+                this.addTokenToUser(userId, token);
 
                 return user;
             }
@@ -40,5 +47,17 @@ public class UserDAO
         }
 
         return null;
+    }
+
+    public void addTokenToUser(int id, String token)
+    {
+        try (Connection connection = dataSource.getConnection()) {
+            PreparedStatement statement = connection.prepareStatement(ADD_TOKEN_TO_USER_QUERY);
+            statement.setString(1, token);
+            statement.setInt(2, id);
+            statement.execute();
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
     }
 }

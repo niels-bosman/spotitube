@@ -6,13 +6,13 @@ public class User
 {
     private int id;
     private String username;
+    private String name;
     private String password;
     private String token;
 
     public User(int id)
     {
         this.id = id;
-        this.token = UUID.randomUUID().toString();
     }
 
     public int getId()
@@ -33,6 +33,16 @@ public class User
     public void setUsername(String username)
     {
         this.username = username;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
     }
 
     public String getPassword()
