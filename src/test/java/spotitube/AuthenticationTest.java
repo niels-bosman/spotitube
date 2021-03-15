@@ -31,7 +31,7 @@ public class AuthenticationTest
     }
 
     @Test
-    public void loginTestRegular()
+    public void succesfulLogin()
     {
         // Arrange
         User user = new User(0);
@@ -50,7 +50,7 @@ public class AuthenticationTest
     }
 
     @Test
-    public void loginNotFoundTest()
+    public void failedLogin()
     {
         // Arrange
         UserDAO userDAOMock = mock(UserDAO.class);
