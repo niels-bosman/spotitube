@@ -8,10 +8,6 @@ public class User
     private String password;
     private String token;
 
-    public User(int id)
-    {
-        setId(id);
-    }
 
     public int getId()
     {

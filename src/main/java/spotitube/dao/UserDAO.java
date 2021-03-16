@@ -1,6 +1,7 @@
 package spotitube.dao;
 
 import spotitube.domain.User;
+import spotitube.services.UserService;
 
 import javax.annotation.Resource;
 import javax.enterprise.inject.Default;
@@ -22,6 +23,8 @@ public class UserDAO
 
     public User authenticate(String username, String password)
     {
+        User user = new User();
+
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(LOGIN_QUERY);
             statement.setString(1, username);
@@ -32,23 +35,15 @@ public class UserDAO
                 return null;
             }
 
-            String token = UUID.randomUUID().toString();
-            User user = new User(result.getInt("id"));
-
-            user.setToken(token);
+            user.setId(result.getInt("id"));
             user.setUsername(result.getString("username"));
             user.setPassword(result.getString("password"));
             user.setName(result.getString("name"));
-
-            this.addToken(user, token);
-
-            return user;
-
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
 
-        return null;
+        return user;
     }
 
     public void addToken(User user, String token)
@@ -58,6 +53,7 @@ public class UserDAO
             statement.setString(1, token);
             statement.setInt(2, user.getId());
             statement.execute();
+            user.setToken(token);
         } catch (SQLException exception) {
             exception.printStackTrace();
         }

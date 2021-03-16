@@ -7,31 +7,32 @@ import javax.ws.rs.core.Response;
 
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
-import spotitube.dto.AuthenticationResponseDTO;
-import spotitube.dto.AuthenticationDTO;
+import spotitube.dto.LoginResponseDTO;
+import spotitube.dto.LoginRequestDTO;
 
-@Path("auth")
-public class AuthenticationService
+@Path("login")
+public class LoginService
 {
     private UserDAO userDAO;
 
     @POST
-    @Path("login")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response login(AuthenticationDTO entity)
+    public Response login(LoginRequestDTO entity)
     {
-        User authenticated = userDAO.authenticate(entity.user, entity.password);
+        User user = userDAO.authenticate(entity.user, entity.password);
 
-        if (authenticated == null) {
+        if (user == null) {
             return Response
                     .status(Response.Status.UNAUTHORIZED)
                     .build();
         }
 
+        userDAO.addToken(user, UserService.generateUUID());
+
         return Response
                 .status(Response.Status.OK)
-                .entity(new AuthenticationResponseDTO(authenticated.getToken(), authenticated.getName()))
+                .entity(new LoginResponseDTO(user.getToken(), user.getName()))
                 .build();
     }
 
