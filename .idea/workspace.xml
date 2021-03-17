@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Refactor code and added ternary operator">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Cleanup get parameters in userDAO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dto/LoginRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dto/LoginRequestDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -276,7 +275,7 @@
       <workItem from="1615824973822" duration="2853000" />
       <workItem from="1615889487529" duration="920000" />
       <workItem from="1615890534559" duration="861000" />
-      <workItem from="1615969229559" duration="4239000" />
+      <workItem from="1615969229559" duration="4451000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -460,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615973124177</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Cleanup get parameters in userDAO">
+      <created>1615973480909</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1615973480909</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,6 +508,7 @@
     <MESSAGE value="Code cleanup" />
     <MESSAGE value="Added UserMapper" />
     <MESSAGE value="Refactor code and added ternary operator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor code and added ternary operator" />
+    <MESSAGE value="Cleanup get parameters in userDAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup get parameters in userDAO" />
   </component>
 </project>

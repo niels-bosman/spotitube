@@ -25,8 +25,8 @@ public class LoginTest
     {
         this.loginResource = new LoginResource();
         this.loginRequestDTO = new LoginRequestDTO();
-        this.loginRequestDTO.user = "niels";
-        this.loginRequestDTO.password = "niels";
+        this.loginRequestDTO.setUser("niels");
+        this.loginRequestDTO.setPassword("niels");
     }
 
     @Test
@@ -34,7 +34,7 @@ public class LoginTest
     {
         // Arrange
         User user = new User();
-        user.setName(this.loginRequestDTO.user);
+        user.setName(this.loginRequestDTO.getUser());
         UserDAO userDAOMock = mock(UserDAO.class);
         when(userDAOMock.get(loginRequestDTO)).thenReturn(user);
         this.loginResource.setUserDAO(userDAOMock);

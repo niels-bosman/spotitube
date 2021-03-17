@@ -2,8 +2,8 @@ package spotitube.dto;
 
 public class LoginRequestDTO
 {
-    public String user;
-    public String password;
+    private String user;
+    private String password;
 
     public String getUser()
     {
