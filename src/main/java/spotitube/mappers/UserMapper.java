@@ -23,7 +23,11 @@ public class UserMapper implements IMapper<User, LoginResponseDTO>
     @Override
     public LoginResponseDTO convertToDTO(User entity, Object... args)
     {
-        return new LoginResponseDTO(entity.getToken(), entity.getName());
+        LoginResponseDTO dto = new LoginResponseDTO();
+        dto.setToken(entity.getToken());
+        dto.setUser(entity.getName());
+
+        return dto;
     }
 
     @Override
@@ -52,6 +56,10 @@ public class UserMapper implements IMapper<User, LoginResponseDTO>
 
     public static UserMapper getInstance()
     {
-        return mapper == null ? new UserMapper() : mapper;
+        if (mapper == null) {
+            mapper = new UserMapper();
+        }
+
+        return mapper;
     }
 }

@@ -9,10 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Cleanup get parameters in userDAO">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="cleanup DTO's">
+      <change afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dto/LoginRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dto/LoginRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dto/LoginResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dto/LoginResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/mappers/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/mappers/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +279,7 @@
       <workItem from="1615824973822" duration="2853000" />
       <workItem from="1615889487529" duration="920000" />
       <workItem from="1615890534559" duration="861000" />
-      <workItem from="1615969229559" duration="4451000" />
+      <workItem from="1615969229559" duration="5875000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -466,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615973480909</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="cleanup DTO's">
+      <created>1615973893596</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1615973893596</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,6 +520,7 @@
     <MESSAGE value="Added UserMapper" />
     <MESSAGE value="Refactor code and added ternary operator" />
     <MESSAGE value="Cleanup get parameters in userDAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup get parameters in userDAO" />
+    <MESSAGE value="cleanup DTO's" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup DTO's" />
   </component>
 </project>

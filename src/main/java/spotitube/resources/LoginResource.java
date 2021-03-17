@@ -10,9 +10,6 @@ import spotitube.domain.User;
 import spotitube.dto.LoginRequestDTO;
 import spotitube.mappers.UserMapper;
 
-/**
- * The type Login resource.
- */
 @Path("login")
 public class LoginResource
 {
