@@ -1,6 +1,7 @@
 package spotitube.dao;
 
 import spotitube.domain.User;
+import spotitube.dto.LoginRequestDTO;
 
 import javax.annotation.Resource;
 import javax.enterprise.inject.Default;
@@ -19,14 +20,14 @@ public class UserDAO
     private static final String LOGIN_QUERY = "SELECT * FROM user WHERE username = ? AND password = ?";
     private static final String ADD_TOKEN_QUERY = "UPDATE user SET token = ? WHERE id = ?";
 
-    public User get(String username, String password)
+    public User get(LoginRequestDTO requestDTO)
     {
         User user = new User();
 
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(LOGIN_QUERY);
-            statement.setString(1, username);
-            statement.setString(2, password);
+            statement.setString(1, requestDTO.getUser());
+            statement.setString(2, requestDTO.getPassword());
             ResultSet result = statement.executeQuery();
 
             if (!result.next()) {

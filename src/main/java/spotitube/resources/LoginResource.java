@@ -32,7 +32,7 @@ public class LoginResource
     @Consumes(MediaType.APPLICATION_JSON)
     public Response login(LoginRequestDTO entity)
     {
-        User user = userDAO.get(entity.user, entity.password);
+        User user = userDAO.get(entity);
 
         if (user == null) {
             return Response

@@ -36,7 +36,7 @@ public class LoginTest
         User user = new User();
         user.setName(this.loginRequestDTO.user);
         UserDAO userDAOMock = mock(UserDAO.class);
-        when(userDAOMock.get(this.loginRequestDTO.user, this.loginRequestDTO.password)).thenReturn(user);
+        when(userDAOMock.get(loginRequestDTO)).thenReturn(user);
         this.loginResource.setUserDAO(userDAOMock);
 
         // Act
@@ -53,7 +53,7 @@ public class LoginTest
     {
         // Arrange
         UserDAO userDAOMock = mock(UserDAO.class);
-        when(userDAOMock.get(this.loginRequestDTO.user, this.loginRequestDTO.password)).thenReturn(null);
+        when(userDAOMock.get(loginRequestDTO)).thenReturn(null);
         this.loginResource.setUserDAO(userDAOMock);
 
         // Act
