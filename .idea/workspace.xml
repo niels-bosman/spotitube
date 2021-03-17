@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Added required DTO's">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Add placeholders for all the resource routes (Playlist)">
+      <change afterPath="$PROJECT_DIR$/sql/playlist.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/playlist_track.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/playlist_user.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +77,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -263,7 +278,7 @@
       <workItem from="1615890534559" duration="861000" />
       <workItem from="1615969229559" duration="5875000" />
       <workItem from="1615976063442" duration="1530000" />
-      <workItem from="1615977610625" duration="895000" />
+      <workItem from="1615977610625" duration="2924000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -482,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615977421050</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Add placeholders for all the resource routes (Playlist)">
+      <created>1615978519622</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1615978519622</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +523,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Basic userDAO" />
     <MESSAGE value="Base login functionality" />
     <MESSAGE value="Add token to user when logging in" />
     <MESSAGE value="renaming of functions" />
@@ -526,6 +547,7 @@
     <MESSAGE value="Added necessary files for playlists" />
     <MESSAGE value="Added domain models for Tracks and Playlists" />
     <MESSAGE value="Added required DTO's" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added required DTO's" />
+    <MESSAGE value="Add placeholders for all the resource routes (Playlist)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add placeholders for all the resource routes (Playlist)" />
   </component>
 </project>
