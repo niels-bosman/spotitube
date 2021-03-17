@@ -1,7 +1,7 @@
 package spotitube.mappers;
 
 import spotitube.domain.User;
-import spotitube.dto.LoginResponseDTO;
+import spotitube.dto.login.LoginResponseDTO;
 
 import java.util.ArrayList;
 import java.util.List;

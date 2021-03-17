@@ -7,7 +7,7 @@ import javax.ws.rs.core.Response;
 
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
-import spotitube.dto.LoginRequestDTO;
+import spotitube.dto.login.LoginRequestDTO;
 import spotitube.mappers.UserMapper;
 
 @Path("login")
@@ -21,15 +21,15 @@ public class LoginResource
      * Here we authenticate a user based on username and
      * password. After that we add a token to it's column.
      *
-     * @param entity the request entity.
+     * @param request the request entity.
      * @return the request response.
      */
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response login(LoginRequestDTO entity)
+    public Response login(LoginRequestDTO request)
     {
-        User user = userDAO.get(entity);
+        User user = userDAO.get(request);
 
         if (user == null) {
             return Response

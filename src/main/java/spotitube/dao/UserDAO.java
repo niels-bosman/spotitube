@@ -1,7 +1,7 @@
 package spotitube.dao;
 
 import spotitube.domain.User;
-import spotitube.dto.LoginRequestDTO;
+import spotitube.dto.login.LoginRequestDTO;
 
 import javax.annotation.Resource;
 import javax.enterprise.inject.Default;

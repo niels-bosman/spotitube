@@ -1,4 +1,4 @@
-package spotitube.dto;
+package spotitube.dto.login;
 
 public class LoginResponseDTO
 {
