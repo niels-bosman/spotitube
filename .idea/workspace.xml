@@ -9,10 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Added necessary files for playlists">
-      <change afterPath="$PROJECT_DIR$/src/main/java/spotitube/domain/Playlist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spotitube/domain/Track.java" afterDir="false" />
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Added domain models for Tracks and Playlists">
+      <change afterPath="$PROJECT_DIR$/src/main/java/spotitube/dto/track/TrackDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/spotitube/dto/track/TracksResponseDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dto/playlist/PlaylistRequestDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dto/playlist/PlaylistDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dto/playlist/PlaylistResponseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dto/playlist/PlaylistResponseDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +276,7 @@
       <workItem from="1615889487529" duration="920000" />
       <workItem from="1615890534559" duration="861000" />
       <workItem from="1615969229559" duration="5875000" />
-      <workItem from="1615976063442" duration="830000" />
+      <workItem from="1615976063442" duration="1348000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -479,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615976456559</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added domain models for Tracks and Playlists">
+      <created>1615976906472</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1615976906472</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +507,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Spelling" />
     <MESSAGE value="Basic login functionality" />
     <MESSAGE value="Basic userDAO" />
     <MESSAGE value="Base login functionality" />
@@ -523,6 +531,7 @@
     <MESSAGE value="Cleanup get parameters in userDAO" />
     <MESSAGE value="cleanup DTO's" />
     <MESSAGE value="Added necessary files for playlists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added necessary files for playlists" />
+    <MESSAGE value="Added domain models for Tracks and Playlists" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added domain models for Tracks and Playlists" />
   </component>
 </project>
