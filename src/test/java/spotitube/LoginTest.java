@@ -17,7 +17,6 @@ import spotitube.dto.LoginResponseDTO;
 
 public class LoginTest
 {
-
     private LoginRequestDTO loginRequestDTO;
     private LoginResource loginResource;
 

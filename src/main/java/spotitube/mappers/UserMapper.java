@@ -52,10 +52,6 @@ public class UserMapper implements IMapper<User, LoginResponseDTO>
 
     public static UserMapper getInstance()
     {
-        if (mapper == null) {
-            mapper = new UserMapper();
-        }
-
-        return mapper;
+        return mapper == null ? new UserMapper() : mapper;
     }
 }
