@@ -1,7 +1,6 @@
 package spotitube.dao;
 
 import spotitube.domain.User;
-import spotitube.services.UserService;
 
 import javax.annotation.Resource;
 import javax.enterprise.inject.Default;
@@ -10,7 +9,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.UUID;
 
 @Default
 public class UserDAO
@@ -21,7 +19,7 @@ public class UserDAO
     private static final String LOGIN_QUERY = "SELECT * FROM user WHERE username = ? AND password = ?";
     private static final String ADD_TOKEN_QUERY = "UPDATE user SET token = ? WHERE id = ?";
 
-    public User authenticate(String username, String password)
+    public User get(String username, String password)
     {
         User user = new User();
 
@@ -39,6 +37,7 @@ public class UserDAO
             user.setUsername(result.getString("username"));
             user.setPassword(result.getString("password"));
             user.setName(result.getString("name"));
+            user.setToken();
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
@@ -46,14 +45,13 @@ public class UserDAO
         return user;
     }
 
-    public void addToken(User user, String token)
+    public void addToken(User user)
     {
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(ADD_TOKEN_QUERY);
-            statement.setString(1, token);
+            statement.setString(1, user.getToken());
             statement.setInt(2, user.getId());
             statement.execute();
-            user.setToken(token);
         } catch (SQLException exception) {
             exception.printStackTrace();
         }

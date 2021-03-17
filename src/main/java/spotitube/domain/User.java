@@ -1,5 +1,7 @@
 package spotitube.domain;
 
+import java.util.UUID;
+
 public class User
 {
     private int id;
@@ -57,5 +59,10 @@ public class User
     public void setToken(String token)
     {
         this.token = token;
+    }
+
+    public void setToken()
+    {
+        this.token = UUID.randomUUID().toString();
     }
 }

@@ -3,7 +3,7 @@ package spotitube;
 import org.junit.jupiter.api.Test;
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
-import spotitube.services.LoginService;
+import spotitube.resources.LoginResource;
 import spotitube.dto.LoginRequestDTO;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,12 +19,12 @@ public class LoginTest
 {
 
     private LoginRequestDTO loginRequestDTO;
-    private LoginService loginService;
+    private LoginResource loginResource;
 
     @BeforeEach
     public void setup()
     {
-        this.loginService = new LoginService();
+        this.loginResource = new LoginResource();
         this.loginRequestDTO = new LoginRequestDTO();
         this.loginRequestDTO.user = "niels";
         this.loginRequestDTO.password = "niels";
@@ -37,16 +37,16 @@ public class LoginTest
         User user = new User();
         user.setName(this.loginRequestDTO.user);
         UserDAO userDAOMock = mock(UserDAO.class);
-        when(userDAOMock.authenticate(this.loginRequestDTO.user, this.loginRequestDTO.password)).thenReturn(user);
-        this.loginService.setUserDAO(userDAOMock);
+        when(userDAOMock.get(this.loginRequestDTO.user, this.loginRequestDTO.password)).thenReturn(user);
+        this.loginResource.setUserDAO(userDAOMock);
 
         // Act
-        Response response = this.loginService.login(this.loginRequestDTO);
+        Response response = this.loginResource.login(this.loginRequestDTO);
         LoginResponseDTO loginResponseDTO = (LoginResponseDTO) response.getEntity();
 
         // Assert
         assertEquals(Response.Status.OK, response.getStatusInfo());
-        assertEquals(this.loginRequestDTO.user, loginResponseDTO.user);
+        assertEquals(this.loginRequestDTO.getUser(), loginResponseDTO.getUser());
     }
 
     @Test
@@ -54,11 +54,11 @@ public class LoginTest
     {
         // Arrange
         UserDAO userDAOMock = mock(UserDAO.class);
-        when(userDAOMock.authenticate(this.loginRequestDTO.user, this.loginRequestDTO.password)).thenReturn(null);
-        this.loginService.setUserDAO(userDAOMock);
+        when(userDAOMock.get(this.loginRequestDTO.user, this.loginRequestDTO.password)).thenReturn(null);
+        this.loginResource.setUserDAO(userDAOMock);
 
         // Act
-        Response response = this.loginService.login(this.loginRequestDTO);
+        Response response = this.loginResource.login(this.loginRequestDTO);
 
         // Assert
         assertEquals(Response.Status.UNAUTHORIZED, response.getStatusInfo());

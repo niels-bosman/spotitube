@@ -1,4 +1,4 @@
-package spotitube.services;
+package spotitube.resources;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -7,20 +7,32 @@ import javax.ws.rs.core.Response;
 
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
-import spotitube.dto.LoginResponseDTO;
 import spotitube.dto.LoginRequestDTO;
+import spotitube.mappers.UserMapper;
 
+/**
+ * The type Login resource.
+ */
 @Path("login")
-public class LoginService
+public class LoginResource
 {
     private UserDAO userDAO;
 
+    /**
+     * Handles the "/login" route.
+     *
+     * Here we authenticate a user based on username and
+     * password. After that we add a token to it's column.
+     *
+     * @param entity the request entity.
+     * @return the request response.
+     */
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response login(LoginRequestDTO entity)
     {
-        User user = userDAO.authenticate(entity.user, entity.password);
+        User user = userDAO.get(entity.user, entity.password);
 
         if (user == null) {
             return Response
@@ -28,14 +40,19 @@ public class LoginService
                     .build();
         }
 
-        userDAO.addToken(user, UserService.generateUUID());
+        userDAO.addToken(user);
 
         return Response
                 .status(Response.Status.OK)
-                .entity(new LoginResponseDTO(user.getToken(), user.getName()))
+                .entity(UserMapper.getInstance().convertToDTO(user))
                 .build();
     }
 
+    /**
+     * Injects the userDAO.
+     *
+     * @param userDAO the UserDAO.
+     */
     @Inject
     public void setUserDAO(UserDAO userDAO)
     {
