@@ -41,7 +41,8 @@ public class UserDAO
             user.setPassword(result.getString("password"));
             user.setName(result.getString("name"));
             user.setToken();
-        } catch (SQLException exception) {
+        }
+        catch (SQLException exception) {
             exception.printStackTrace();
         }
 
@@ -55,12 +56,13 @@ public class UserDAO
             statement.setString(1, user.getToken());
             statement.setInt(2, user.getId());
             statement.execute();
-        } catch (SQLException exception) {
+        }
+        catch (SQLException exception) {
             exception.printStackTrace();
         }
     }
 
-    public User verifyToken(String token) throws UnauthorizedException
+    public User verifyToken(String token)
     {
         User user = new User();
 
@@ -69,10 +71,13 @@ public class UserDAO
             statement.setString(1, token);
             ResultSet resultSet = statement.executeQuery();
 
-            user.setId(resultSet.getInt("id"));
-            user.setName(resultSet.getString("name"));
-            user.setToken(token);
-        } catch (SQLException exception) {
+            if (resultSet.next()) {
+                user.setId(resultSet.getInt("id"));
+                user.setName(resultSet.getString("name"));
+                user.setToken(token);
+            }
+        }
+        catch (SQLException exception) {
             exception.printStackTrace();
         }
 
