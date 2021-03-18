@@ -22,6 +22,13 @@ public class UserDAO
     private static final String ADD_TOKEN_QUERY = "UPDATE user SET token = ? WHERE id = ?";
     private static final String FETCH_USER_BY_TOKEN_QUERY = "SELECT id, name from user WHERE token = ?";
 
+    /**
+     * Get a specific user
+     *
+     * @param requestDTO The searchable user.
+     * @return The user.
+     * @throws UnauthorizedException the unauthorized exception
+     */
     public User get(LoginRequestDTO requestDTO) throws UnauthorizedException
     {
         User user = new User();
@@ -49,6 +56,11 @@ public class UserDAO
         return user;
     }
 
+    /**
+     * Add token to the user.
+     *
+     * @param user The user to add it to.
+     */
     public void addToken(User user)
     {
         try (Connection connection = dataSource.getConnection()) {
@@ -62,6 +74,12 @@ public class UserDAO
         }
     }
 
+    /**
+     * Verify token user.
+     *
+     * @param token The given token.
+     * @return The verified user.
+     */
     public User verifyToken(String token)
     {
         User user = new User();

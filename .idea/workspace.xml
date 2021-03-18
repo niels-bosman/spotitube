@@ -9,13 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Reformatting and javadoc">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Reformat SQL">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/playlist.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/playlist_track.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist_track.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/playlist_user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist_user.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/track.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/track.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/user.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dto/track/TrackDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dto/track/TrackDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +283,7 @@
       <workItem from="1615977610625" duration="5722000" />
       <workItem from="1615988546534" duration="634000" />
       <workItem from="1616060197175" duration="10229000" />
-      <workItem from="1616071806849" duration="4618000" />
+      <workItem from="1616071806849" duration="5336000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -594,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616075784679</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Reformat SQL">
+      <created>1616076430820</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1616076430820</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +619,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Make status code assertions with Response.Status class." />
     <MESSAGE value="Rename SQL file" />
     <MESSAGE value="Move files (DTO) out of services folder." />
     <MESSAGE value="Rename result" />
@@ -638,7 +643,8 @@
     <MESSAGE value="cleanup code" />
     <MESSAGE value="Playlist CRUD done" />
     <MESSAGE value="Reformatting and javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformatting and javadoc" />
+    <MESSAGE value="Reformat SQL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformat SQL" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Spotitube_BE.ic" NAME="Spotitube BE Coverage Results" MODIFIED="1616070218560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

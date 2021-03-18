@@ -55,7 +55,7 @@ public class TrackDTO {
         return playCount;
     }
 
-    public void setPlaycount(int playCount) {
+    public void setPlayCount(int playCount) {
         this.playCount = playCount;
     }
 

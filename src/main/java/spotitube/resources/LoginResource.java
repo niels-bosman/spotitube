@@ -6,7 +6,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import exceptions.UnauthorizedException;
-import spotitube.dao.UserDAO;
+import services.UserService;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
 import spotitube.mappers.UserMapper;
@@ -14,11 +14,10 @@ import spotitube.mappers.UserMapper;
 @Path("login")
 public class LoginResource
 {
-    private UserDAO userDAO;
+    private UserService userService;
 
     /**
      * Handles the "/login" route.
-     *
      * Here we authenticate a user based on username and
      * password. After that we add a token to it's column.
      *
@@ -31,13 +30,12 @@ public class LoginResource
     public Response login(LoginRequestDTO request)
     {
         try {
-            User user = userDAO.get(request);
+            User user = userService.get(request);
 
-            userDAO.addToken(user);
+            userService.addToken(user);
 
             return Response
-                    .status(Response.Status.OK)
-                    .entity(UserMapper.getInstance().convertToDTO(user))
+                    .ok(UserMapper.getInstance().convertToDTO(user))
                     .build();
         }
         catch (UnauthorizedException e) {
@@ -48,13 +46,13 @@ public class LoginResource
     }
 
     /**
-     * Injects the userDAO.
+     * Injects the UserService.
      *
-     * @param userDAO the UserDAO.
+     * @param userService the UserService.
      */
     @Inject
-    public void setUserDAO(UserDAO userDAO)
+    public void setUserService(UserService userService)
     {
-        this.userDAO = userDAO;
+        this.userService = userService;
     }
 }

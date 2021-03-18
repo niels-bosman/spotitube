@@ -3,6 +3,7 @@ package services;
 import exceptions.UnauthorizedException;
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
+import spotitube.dto.login.LoginRequestDTO;
 
 import javax.inject.Inject;
 
@@ -10,6 +11,13 @@ public class UserService
 {
     private UserDAO userDAO;
 
+    /**
+     * Authenticate token user.
+     *
+     * @param token the token
+     * @return the user
+     * @throws UnauthorizedException the unauthorized exception
+     */
     public User authenticateToken(String token) throws UnauthorizedException
     {
         User user = userDAO.verifyToken(token);
@@ -19,6 +27,28 @@ public class UserService
         }
 
         throw new UnauthorizedException();
+    }
+
+    /**
+     * Get user.
+     *
+     * @param requestDTO the request dto
+     * @return the user
+     * @throws UnauthorizedException the unauthorized exception
+     */
+    public User get(LoginRequestDTO requestDTO) throws UnauthorizedException
+    {
+        return userDAO.get(requestDTO);
+    }
+
+    /**
+     * Add token.
+     *
+     * @param user the user
+     */
+    public void addToken(User user)
+    {
+        userDAO.addToken(user);
     }
 
     /**
