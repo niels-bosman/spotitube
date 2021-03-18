@@ -4,9 +4,11 @@ import exceptions.UnauthorizedException;
 import services.PlaylistService;
 import services.UserService;
 import spotitube.dao.PlaylistDAO;
+import spotitube.domain.Playlist;
 import spotitube.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
 import spotitube.dto.playlist.PlaylistResponseDTO;
+import spotitube.mappers.PlaylistMapper;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -58,13 +60,30 @@ public class PlaylistResource
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response deletePlaylist(@PathParam("id") int playlistId, String token)
+    public Response deletePlaylist(@PathParam("id") int playlistId, @QueryParam("token") String token)
     {
-        // TODO: Implement method.
+        try {
+            User user = userService.authenticateToken(token);
+            Playlist playlist = new Playlist();
+            playlist.setId(playlistId);
+
+            if (playlistId > 0 && playlistService.delete(playlist, user)) {
+                PlaylistResponseDTO dto = createResponse(playlistService.getAll(user), playlistService.getTotalDuration());
+
+                return Response
+                        .status(Response.Status.OK)
+                        .entity(dto)
+                        .build();
+            }
+        }
+        catch (UnauthorizedException e) {
+            return Response
+                    .status(Response.Status.UNAUTHORIZED)
+                    .build();
+        }
 
         return Response
-                .ok()
+                .status(Response.Status.BAD_REQUEST)
                 .build();
     }
 

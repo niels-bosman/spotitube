@@ -23,6 +23,11 @@ public class PlaylistService
         return playlistDAO.getTotalDuration();
     }
 
+    public boolean delete(Playlist playlist, User user)
+    {
+        return playlistDAO.delete(playlist, user);
+    }
+
     /**
      * Injects an instance of PlaylistDAO.
      *

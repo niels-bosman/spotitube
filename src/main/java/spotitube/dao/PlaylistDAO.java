@@ -1,6 +1,7 @@
 package spotitube.dao;
 
 import spotitube.domain.Playlist;
+import spotitube.domain.User;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
@@ -10,7 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class PlaylistDAO
 {
@@ -19,6 +19,7 @@ public class PlaylistDAO
 
     private static final String GET_ALL_PLAYLISTS_QUERY = "SELECT id, name, owner_id FROM playlist";
     private static final String GET_TOTAL_DURATION_QUERY = "SELECT SUM(duration) AS `duration` FROM track";
+    private static final String DELETE_PLAYLIST_QUERY = "DELETE FROM playlist WHERE id = ? AND owner_id = ?";
 
     public List<Playlist> getAll()
     {
@@ -46,20 +47,31 @@ public class PlaylistDAO
 
     public int getTotalDuration()
     {
-        AtomicInteger duration = new AtomicInteger();
-
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(GET_TOTAL_DURATION_QUERY);
             ResultSet result = statement.executeQuery();
 
             if (result.next()) {
-                duration.set(result.getInt("duration"));
+                return result.getInt("duration");
             }
         }
         catch (SQLException exception) {
             exception.printStackTrace();
         }
 
-        return duration.get();
+        return 0;
+    }
+
+    public boolean delete(Playlist playlist, User user)
+    {
+        try (Connection connection = dataSource.getConnection()) {
+            PreparedStatement statement = connection.prepareStatement(DELETE_PLAYLIST_QUERY);
+            statement.setInt(1, playlist.getId());
+            statement.setInt(2, user.getId());
+            return statement.executeUpdate() > 0;
+        }
+        catch (SQLException exception) {
+            return false;
+        }
     }
 }
