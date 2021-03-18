@@ -68,7 +68,10 @@ public class PlaylistResource
             playlist.setId(playlistId);
 
             if (playlistId > 0 && playlistService.delete(playlist, user)) {
-                PlaylistResponseDTO dto = createResponse(playlistService.getAll(user), playlistService.getTotalDuration());
+                PlaylistResponseDTO dto = createResponse(
+                    playlistService.getAll(user),
+                    playlistService.getTotalDuration()
+                );
 
                 return Response
                         .status(Response.Status.OK)
@@ -90,18 +93,35 @@ public class PlaylistResource
     /**
      * Adds a playlist
      *
-     * @param request The sent request
+     * @param token The query param token
+     * @param request The given playlist
      * @return The response of the request
      */
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addPlaylist(PlaylistDTO request)
+    public Response addPlaylist(@QueryParam("token") String token, PlaylistDTO request)
     {
-        // TODO: Implement method.
+        try {
+            User user = userService.authenticateToken(token);
+
+            if (playlistService.add(request, user)) {
+                PlaylistResponseDTO dto = createResponse(
+                    playlistService.getAll(user),
+                    playlistService.getTotalDuration()
+                );
+
+                return Response.ok(dto).build();
+            }
+        }
+        catch (UnauthorizedException e) {
+            return Response
+                    .status(Response.Status.UNAUTHORIZED)
+                    .build();
+        }
 
         return Response
-                .ok()
+                .status(Response.Status.BAD_REQUEST)
                 .build();
     }
 

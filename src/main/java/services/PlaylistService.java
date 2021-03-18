@@ -28,6 +28,14 @@ public class PlaylistService
         return playlistDAO.delete(playlist, user);
     }
 
+    public boolean add(PlaylistDTO playlistDTO, User user)
+    {
+        Playlist playlist = PlaylistMapper.getInstance().convertToEntity(playlistDTO);
+        playlist.setOwnerId(user.getId());
+
+        return playlistDAO.add(playlist);
+    }
+
     /**
      * Injects an instance of PlaylistDAO.
      *

@@ -20,6 +20,7 @@ public class PlaylistDAO
     private static final String GET_ALL_PLAYLISTS_QUERY = "SELECT id, name, owner_id FROM playlist";
     private static final String GET_TOTAL_DURATION_QUERY = "SELECT SUM(duration) AS `duration` FROM track";
     private static final String DELETE_PLAYLIST_QUERY = "DELETE FROM playlist WHERE id = ? AND owner_id = ?";
+    private static final String CREATE_NEW_PLAYLIST_QUERY = "INSERT INTO playlist (name, owner_id) VALUES(?, ?)";
 
     public List<Playlist> getAll()
     {
@@ -68,6 +69,21 @@ public class PlaylistDAO
             PreparedStatement statement = connection.prepareStatement(DELETE_PLAYLIST_QUERY);
             statement.setInt(1, playlist.getId());
             statement.setInt(2, user.getId());
+
+            return statement.executeUpdate() > 0;
+        }
+        catch (SQLException exception) {
+            return false;
+        }
+    }
+
+    public boolean add(Playlist playlist)
+    {
+        try (Connection connection = dataSource.getConnection()) {
+            PreparedStatement statement = connection.prepareStatement(CREATE_NEW_PLAYLIST_QUERY);
+            statement.setString(1, playlist.getName());
+            statement.setInt(2, playlist.getOwnerId());
+
             return statement.executeUpdate() > 0;
         }
         catch (SQLException exception) {
