@@ -1,5 +1,6 @@
 package spotitube;
 
+import exceptions.UnauthorizedException;
 import org.junit.jupiter.api.Test;
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
@@ -30,7 +31,7 @@ public class LoginTest
     }
 
     @Test
-    public void successfulLogin()
+    public void successfulLogin() throws UnauthorizedException
     {
         // Arrange
         User user = new User();
@@ -49,11 +50,11 @@ public class LoginTest
     }
 
     @Test
-    public void failedLogin()
+    public void failedLogin() throws UnauthorizedException
     {
         // Arrange
         UserDAO userDAOMock = mock(UserDAO.class);
-        when(userDAOMock.get(loginRequestDTO)).thenReturn(null);
+        when(userDAOMock.get(loginRequestDTO)).thenThrow(new UnauthorizedException());
         this.loginResource.setUserDAO(userDAOMock);
 
         // Act

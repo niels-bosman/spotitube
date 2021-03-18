@@ -1,6 +1,9 @@
 package spotitube.resources;
 
+import exceptions.UnauthorizedException;
+import services.UserService;
 import spotitube.dao.PlaylistDAO;
+import spotitube.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
 
 import javax.inject.Inject;
@@ -12,6 +15,7 @@ import javax.ws.rs.core.Response;
 public class PlaylistResource
 {
     private PlaylistDAO playlistDAO;
+    private UserService userService;
 
     /**
      * Getter of all of the playlists.
@@ -24,11 +28,18 @@ public class PlaylistResource
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getAll(String token)
     {
-        // TODO: Implement method.
+        try {
+            User user = userService.authenticateToken(token);
 
-        return Response
-                .ok()
-                .build();
+            return Response
+                    .ok()
+                    .build();
+        }
+        catch (UnauthorizedException e) {
+            return Response
+                    .status(Response.Status.UNAUTHORIZED)
+                    .build();
+        }
     }
 
     /**

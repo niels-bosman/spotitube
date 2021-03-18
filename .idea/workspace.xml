@@ -9,11 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Base SQL files">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Dummy data in SQL files.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/UnauthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/playlist.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/playlist_user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist_user.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/user.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -67,7 +71,7 @@
       <recent name="spotitube" />
     </key>
   </component>
-  <component name="RunManager" selected="TomEE Server.Spotitube BE">
+  <component name="RunManager" selected="JUnit.LoginTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="spotitube.App" />
       <module name="HAN-dea-Spotitube" />
@@ -77,6 +81,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -267,7 +282,7 @@
       <workItem from="1615976063442" duration="1530000" />
       <workItem from="1615977610625" duration="5722000" />
       <workItem from="1615988546534" duration="634000" />
-      <workItem from="1616060197175" duration="252000" />
+      <workItem from="1616060197175" duration="2054000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -507,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615983694037</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Dummy data in SQL files.">
+      <created>1616060458856</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1616060458856</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +548,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add token to user when logging in" />
     <MESSAGE value="renaming of functions" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="return name of user instead of username in LoginDTO after logging in." />
@@ -551,6 +572,7 @@
     <MESSAGE value="Added required DTO's" />
     <MESSAGE value="Add placeholders for all the resource routes (Playlist)" />
     <MESSAGE value="Base SQL files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base SQL files" />
+    <MESSAGE value="Dummy data in SQL files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dummy data in SQL files." />
   </component>
 </project>

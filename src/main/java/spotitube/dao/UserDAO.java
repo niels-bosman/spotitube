@@ -1,5 +1,6 @@
 package spotitube.dao;
 
+import exceptions.UnauthorizedException;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
 
@@ -19,8 +20,9 @@ public class UserDAO
 
     private static final String LOGIN_QUERY = "SELECT * FROM user WHERE username = ? AND password = ?";
     private static final String ADD_TOKEN_QUERY = "UPDATE user SET token = ? WHERE id = ?";
+    private static final String FETCH_USER_BY_TOKEN_QUERY = "SELECT id, name from user WHERE token = ?";
 
-    public User get(LoginRequestDTO requestDTO)
+    public User get(LoginRequestDTO requestDTO) throws UnauthorizedException
     {
         User user = new User();
 
@@ -31,7 +33,7 @@ public class UserDAO
             ResultSet result = statement.executeQuery();
 
             if (!result.next()) {
-                return null;
+                throw new UnauthorizedException();
             }
 
             user.setId(result.getInt("id"));
@@ -56,5 +58,24 @@ public class UserDAO
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
+    }
+
+    public User verifyToken(String token) throws UnauthorizedException
+    {
+        User user = new User();
+
+        try (Connection connection = dataSource.getConnection()) {
+            PreparedStatement statement = connection.prepareStatement(FETCH_USER_BY_TOKEN_QUERY);
+            statement.setString(1, token);
+            ResultSet resultSet = statement.executeQuery();
+
+            user.setId(resultSet.getInt("id"));
+            user.setName(resultSet.getString("name"));
+            user.setToken(token);
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+
+        return (user.getName() != null) ? user : null;
     }
 }

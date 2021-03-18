@@ -5,6 +5,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import exceptions.UnauthorizedException;
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
@@ -29,20 +30,21 @@ public class LoginResource
     @Consumes(MediaType.APPLICATION_JSON)
     public Response login(LoginRequestDTO request)
     {
-        User user = userDAO.get(request);
+        try {
+            User user = userDAO.get(request);
 
-        if (user == null) {
+            userDAO.addToken(user);
+
+            return Response
+                    .status(Response.Status.OK)
+                    .entity(UserMapper.getInstance().convertToDTO(user))
+                    .build();
+        }
+        catch (UnauthorizedException e) {
             return Response
                     .status(Response.Status.UNAUTHORIZED)
                     .build();
         }
-
-        userDAO.addToken(user);
-
-        return Response
-                .status(Response.Status.OK)
-                .entity(UserMapper.getInstance().convertToDTO(user))
-                .build();
     }
 
     /**
