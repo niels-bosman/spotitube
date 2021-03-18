@@ -8,7 +8,7 @@ public class PlaylistDTO
 {
     private int id;
     private String name;
-    private boolean owner;
+    private boolean owner = false;
     private List<TrackDTO> tracks;
 
     public int getId()

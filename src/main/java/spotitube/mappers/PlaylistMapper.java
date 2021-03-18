@@ -28,7 +28,6 @@ public class PlaylistMapper implements IMapper<Playlist, PlaylistDTO>
         PlaylistDTO dto = new PlaylistDTO();
         dto.setId(entity.getId());
         dto.setName(entity.getName());
-        dto.setOwner(false);
 
         if (args.length > 0 && isOwner(args[0], entity)) {
             dto.setOwner(true);

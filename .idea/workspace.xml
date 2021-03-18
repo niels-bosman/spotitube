@@ -9,16 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Updated SQL tables">
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spotitube/mappers/PlaylistMapper.java" afterDir="false" />
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Basic get all playlists with Mapper, DAO, DTO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/playlist.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/domain/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/domain/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dto/playlist/PlaylistDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dto/playlist/PlaylistDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/mappers/PlaylistMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/mappers/PlaylistMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +278,7 @@
       <workItem from="1615976063442" duration="1530000" />
       <workItem from="1615977610625" duration="5722000" />
       <workItem from="1615988546534" duration="634000" />
-      <workItem from="1616060197175" duration="7490000" />
+      <workItem from="1616060197175" duration="8040000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -545,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616062934338</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Basic get all playlists with Mapper, DAO, DTO">
+      <created>1616069057481</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1616069057481</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +565,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="return name of user instead of username in LoginDTO after logging in." />
     <MESSAGE value="Use Response class for status codes." />
     <MESSAGE value="Renaming of DTO's" />
     <MESSAGE value="Use setter and remove useless import in User Domain" />
@@ -589,7 +589,8 @@
     <MESSAGE value="Dummy data in SQL files." />
     <MESSAGE value="Exceptions for being unauthorized" />
     <MESSAGE value="Updated SQL tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated SQL tables" />
+    <MESSAGE value="Basic get all playlists with Mapper, DAO, DTO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic get all playlists with Mapper, DAO, DTO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
