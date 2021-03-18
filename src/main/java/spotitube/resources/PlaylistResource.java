@@ -12,8 +12,10 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.List;
 
+/**
+ * The type Playlist resource.
+ */
 @Path("playlists")
 public class PlaylistResource
 {
@@ -33,7 +35,7 @@ public class PlaylistResource
         try {
             User user = userService.authenticateToken(token);
 
-            PlaylistResponseDTO dto = createResponse(playlistService.getAll(user), playlistService.getTotalDuration());
+            PlaylistResponseDTO dto = createResponse(user);
 
             return Response
                     .ok(dto)
@@ -64,10 +66,7 @@ public class PlaylistResource
             playlist.setId(playlistId);
 
             if (playlistId > 0 && playlistService.delete(playlist, user)) {
-                PlaylistResponseDTO dto = createResponse(
-                        playlistService.getAll(user),
-                        playlistService.getTotalDuration()
-                );
+                PlaylistResponseDTO dto = createResponse(user);
 
                 return Response
                         .ok(dto)
@@ -101,10 +100,7 @@ public class PlaylistResource
             User user = userService.authenticateToken(token);
 
             if (playlistService.add(request, user)) {
-                PlaylistResponseDTO dto = createResponse(
-                        playlistService.getAll(user),
-                        playlistService.getTotalDuration()
-                );
+                PlaylistResponseDTO dto = createResponse(user);
 
                 return Response
                         .ok(dto)
@@ -125,28 +121,49 @@ public class PlaylistResource
     /**
      * Edits a specific playlist
      *
-     * @param id The playlist ID
+     * @param playlistId The playlist ID
      * @param token      The user token
+     * @param request    The given request body
      * @return The edited playlist
      */
     @PUT
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response editPlaylist(@PathParam("id") int id, @QueryParam("token") String token, PlaylistDTO playlistDTO)
+    public Response editPlaylist(@PathParam("id") int playlistId, @QueryParam("token") String token, PlaylistDTO request)
     {
-        // TODO: Implement method.
+        try {
+            User user = userService.authenticateToken(token);
+            Playlist playlist = new Playlist();
+            playlist.setId(playlistId);
 
-        return Response
-                .ok()
-                .build();
+            if (playlistId > 0 && playlistService.editTitle(playlist, request, user)) {
+                PlaylistResponseDTO dto = createResponse(user);
+
+                return Response
+                        .ok(dto)
+                        .build();
+            }
+        }
+        catch (UnauthorizedException e) {
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+        }
+
+        return Response.status(Response.Status.BAD_REQUEST).build();
     }
 
-    private PlaylistResponseDTO createResponse(List<PlaylistDTO> playlists, int length)
+    /**
+     * Formats all the playlists and verifies it with the user.
+     *
+     * @param user the authenticated User.
+     * @return A full playlist with it's duration
+     */
+    private PlaylistResponseDTO createResponse(User user)
     {
         PlaylistResponseDTO playlistResponseDTO = new PlaylistResponseDTO();
-        playlistResponseDTO.setPlaylists(playlists);
-        playlistResponseDTO.setLength(length);
+
+        playlistResponseDTO.setPlaylists(playlistService.getAll(user));
+        playlistResponseDTO.setLength(playlistService.getTotalDuration());
 
         return playlistResponseDTO;
     }

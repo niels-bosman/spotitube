@@ -36,6 +36,11 @@ public class PlaylistService
         return playlistDAO.add(playlist);
     }
 
+    public boolean editTitle(Playlist editablePlaylist, PlaylistDTO newPlaylist, User user)
+    {
+        return playlistDAO.editTitle(editablePlaylist, newPlaylist, user);
+    }
+
     /**
      * Injects an instance of PlaylistDAO.
      *
