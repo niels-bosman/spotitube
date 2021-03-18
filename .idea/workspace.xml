@@ -9,14 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Dummy data in SQL files.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/UnauthorizedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Exceptions for being unauthorized">
+      <change afterPath="$PROJECT_DIR$/sql/track.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/playlist.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/playlist_track.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist_track.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +279,7 @@
       <workItem from="1615976063442" duration="1530000" />
       <workItem from="1615977610625" duration="5722000" />
       <workItem from="1615988546534" duration="634000" />
-      <workItem from="1616060197175" duration="2054000" />
+      <workItem from="1616060197175" duration="2730000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -529,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616060458856</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Exceptions for being unauthorized">
+      <created>1616062265776</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1616062265776</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +552,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="renaming of functions" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="return name of user instead of username in LoginDTO after logging in." />
     <MESSAGE value="Use Response class for status codes." />
@@ -573,6 +576,7 @@
     <MESSAGE value="Add placeholders for all the resource routes (Playlist)" />
     <MESSAGE value="Base SQL files" />
     <MESSAGE value="Dummy data in SQL files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dummy data in SQL files." />
+    <MESSAGE value="Exceptions for being unauthorized" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exceptions for being unauthorized" />
   </component>
 </project>

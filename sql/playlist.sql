@@ -8,7 +8,9 @@ CREATE TABLE playlist
     name VARCHAR(50) NOT NULL
 );
 
-INSERT INTO playlist (name, user_id) VALUES ('afspeellijst1', 0);
-INSERT INTO playlist (name, user_id) VALUES ('afspeellijst2', 0);
-INSERT INTO playlist (name, user_id) VALUES ('afspeellijst3', 0);
-INSERT INTO playlist (name, user_id) VALUES ('afspeellijst4', 0);
+INSERT INTO playlist (name, user_id) VALUES ('Heavy metal', 0);
+INSERT INTO playlist (name, user_id) VALUES ('Pop', 0);
+INSERT INTO playlist (name, user_id) VALUES ('Hip hop', 0);
+INSERT INTO playlist (name, user_id) VALUES ('Techno', 0);
+INSERT INTO playlist (name, user_id) VALUES ('Techno', 0);
+INSERT INTO playlist (name, user_id) VALUES ('Progressive Rock', 0);
