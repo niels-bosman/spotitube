@@ -3,12 +3,10 @@ package spotitube.resources;
 import exceptions.UnauthorizedException;
 import services.PlaylistService;
 import services.UserService;
-import spotitube.dao.PlaylistDAO;
 import spotitube.domain.Playlist;
 import spotitube.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
 import spotitube.dto.playlist.PlaylistResponseDTO;
-import spotitube.mappers.PlaylistMapper;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -19,7 +17,6 @@ import java.util.List;
 @Path("playlists")
 public class PlaylistResource
 {
-    private PlaylistDAO playlistDAO;
     private UserService userService;
     private PlaylistService playlistService;
 
@@ -27,7 +24,7 @@ public class PlaylistResource
      * Getter of all of the playlists.
      *
      * @param token the token
-     * @return the all
+     * @return All of the playlists with its total time.
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -39,8 +36,7 @@ public class PlaylistResource
             PlaylistResponseDTO dto = createResponse(playlistService.getAll(user), playlistService.getTotalDuration());
 
             return Response
-                    .status(Response.Status.OK)
-                    .entity(dto)
+                    .ok(dto)
                     .build();
         }
         catch (UnauthorizedException e) {
@@ -53,9 +49,9 @@ public class PlaylistResource
     /**
      * Deletes a specific playlist
      *
-     * @param playlistId The playlist id
+     * @param playlistId The playlist ID
      * @param token      The token
-     * @return request response
+     * @return request The new full playlist list with it's total time.
      */
     @DELETE
     @Path("/{id}")
@@ -69,13 +65,12 @@ public class PlaylistResource
 
             if (playlistId > 0 && playlistService.delete(playlist, user)) {
                 PlaylistResponseDTO dto = createResponse(
-                    playlistService.getAll(user),
-                    playlistService.getTotalDuration()
+                        playlistService.getAll(user),
+                        playlistService.getTotalDuration()
                 );
 
                 return Response
-                        .status(Response.Status.OK)
-                        .entity(dto)
+                        .ok(dto)
                         .build();
             }
         }
@@ -93,9 +88,9 @@ public class PlaylistResource
     /**
      * Adds a playlist
      *
-     * @param token The query param token
+     * @param token   The query param token
      * @param request The given playlist
-     * @return The response of the request
+     * @return The newly added playlist
      */
     @POST
     @Produces(MediaType.APPLICATION_JSON)
@@ -107,11 +102,13 @@ public class PlaylistResource
 
             if (playlistService.add(request, user)) {
                 PlaylistResponseDTO dto = createResponse(
-                    playlistService.getAll(user),
-                    playlistService.getTotalDuration()
+                        playlistService.getAll(user),
+                        playlistService.getTotalDuration()
                 );
 
-                return Response.ok(dto).build();
+                return Response
+                        .ok(dto)
+                        .build();
             }
         }
         catch (UnauthorizedException e) {
@@ -128,15 +125,15 @@ public class PlaylistResource
     /**
      * Edits a specific playlist
      *
-     * @param playlistId The playlist ID
-     * @param token      The token
-     * @return The request response
+     * @param id The playlist ID
+     * @param token      The user token
+     * @return The edited playlist
      */
     @PUT
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response editPlaylist(@PathParam("id") int playlistId, String token)
+    public Response editPlaylist(@PathParam("id") int id, @QueryParam("token") String token, PlaylistDTO playlistDTO)
     {
         // TODO: Implement method.
 
@@ -152,17 +149,6 @@ public class PlaylistResource
         playlistResponseDTO.setLength(length);
 
         return playlistResponseDTO;
-    }
-
-    /**
-     * Injects the playlistDAO.
-     *
-     * @param playlistDAO the PlaylistDAO.
-     */
-    @Inject
-    public void setPlaylistDAO(PlaylistDAO playlistDAO)
-    {
-        this.playlistDAO = playlistDAO;
     }
 
     /**
