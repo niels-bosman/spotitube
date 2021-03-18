@@ -11,3 +11,4 @@ CREATE TABLE user
 );
 
 INSERT INTO user (username, password, name) VALUES ('niels', 'niels', 'Niels Bosman');
+INSERT INTO user (username, password, name) VALUES ('niels2', 'niels2', 'Niels Bosman2');
