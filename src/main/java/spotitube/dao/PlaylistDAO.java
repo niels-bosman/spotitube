@@ -93,8 +93,10 @@ public class PlaylistDAO
             return statement.executeUpdate() > 0;
         }
         catch (SQLException exception) {
-            return false;
+            exception.printStackTrace();
         }
+
+        return false;
     }
 
     /**
@@ -113,8 +115,10 @@ public class PlaylistDAO
             return statement.executeUpdate() > 0;
         }
         catch (SQLException exception) {
-            return false;
+            exception.printStackTrace();
         }
+
+        return false;
     }
 
     /**
@@ -136,14 +140,21 @@ public class PlaylistDAO
             return statement.executeUpdate() > 0;
         }
         catch (SQLException exception) {
-            return false;
+            exception.printStackTrace();
         }
+
+        return false;
     }
 
+    /**
+     * Checks if a specific playlist is actually owned by a user.
+     *
+     * @param playlistId The ID of the playlist to check.
+     * @param userId     The user to check.
+     * @return If the playlist is owner by the user.
+     */
     public boolean isOwnedByUser(int playlistId, int userId)
     {
-        boolean isOwner = false;
-
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(IS_OWNED_BY_USER_QUERY);
             statement.setInt(1, playlistId);
@@ -151,13 +162,13 @@ public class PlaylistDAO
             ResultSet result = statement.executeQuery();
 
             if (result.next()) {
-                isOwner = true;
+                return true;
             }
         }
         catch (SQLException exception) {
-            return false;
+            exception.printStackTrace();
         }
 
-        return isOwner;
+        return false;
     }
 }

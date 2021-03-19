@@ -9,14 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Formatting SQL">
-      <change afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistTrackResource.java" afterDir="false" />
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Basic API done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/playlist.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/TrackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/TrackService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/TrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/TrackDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,14 +282,7 @@
       <workItem from="1615988546534" duration="634000" />
       <workItem from="1616060197175" duration="10229000" />
       <workItem from="1616071806849" duration="6757000" />
-      <workItem from="1616153789761" duration="8019000" />
-    </task>
-    <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
-      <created>1615460392316</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1615460392316</updated>
+      <workItem from="1616153789761" duration="8760000" />
     </task>
     <task id="LOCAL-00002" summary="Updated pom.xml and README.md">
       <created>1615460424961</created>
@@ -629,7 +620,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616158275851</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Basic API done">
+      <created>1616161818244</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1616161818245</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +646,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Code cleanup" />
     <MESSAGE value="Added UserMapper" />
     <MESSAGE value="Refactor code and added ternary operator" />
     <MESSAGE value="Cleanup get parameters in userDAO" />
@@ -673,7 +670,8 @@
     <MESSAGE value="Basic track resource with its nesessary files." />
     <MESSAGE value="TrackResource done" />
     <MESSAGE value="Formatting SQL" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formatting SQL" />
+    <MESSAGE value="Basic API done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic API done" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Spotitube_BE.ic" NAME="Spotitube BE Coverage Results" MODIFIED="1616070218560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

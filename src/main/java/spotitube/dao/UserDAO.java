@@ -75,7 +75,7 @@ public class UserDAO
     }
 
     /**
-     * Verify token user.
+     * Verify user token.
      *
      * @param token The given token.
      * @return The verified user.
