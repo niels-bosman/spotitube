@@ -21,7 +21,4 @@ INSERT INTO playlist (name, owner_id)
 VALUES ('Techno', 1);
 
 INSERT INTO playlist (name, owner_id)
-VALUES ('Techno', 1);
-
-INSERT INTO playlist (name, owner_id)
 VALUES ('Progressive Rock', 1);

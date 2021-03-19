@@ -19,6 +19,25 @@ public class TrackService
         return TrackMapper.getInstance().convertToDTO(tracks);
     }
 
+    public List<TrackDTO> getAllByPlaylist(int playlistId)
+    {
+        List<Track> tracks = trackDAO.getAllInPlaylist(playlistId);
+
+        return TrackMapper.getInstance().convertToDTO(tracks);
+    }
+
+    public boolean deleteFromPlaylist(int playlistId, int trackId, int userId)
+    {
+        return trackDAO.deleteFromPlaylist(playlistId, trackId, userId);
+    }
+
+    public boolean addTrackToPlaylist(TrackDTO trackDTO, int playlistId)
+    {
+        Track track = TrackMapper.getInstance().convertToEntity(trackDTO);
+
+        return trackDAO.addToPlaylist(track, playlistId);
+    }
+
     /**
      * Injects an instance of TrackDAO.
      *

@@ -74,6 +74,11 @@ public class PlaylistService
         return playlistDAO.editTitle(editablePlaylist, newPlaylist, user);
     }
 
+    public boolean isOwnedBy(int playlistId, int userId)
+    {
+        return playlistDAO.isOwnedByUser(playlistId, userId);
+    }
+
     /**
      * Injects an instance of PlaylistDAO.
      *

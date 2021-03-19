@@ -23,6 +23,7 @@ public class PlaylistDAO
     private static final String DELETE_QUERY = "DELETE FROM playlist WHERE id = ? AND owner_id = ?";
     private static final String CREATE_NEW_QUERY = "INSERT INTO playlist (name, owner_id) VALUES(?, ?)";
     private static final String UPDATE_NAME_QUERY = "UPDATE playlist SET name = ? WHERE id = ? AND owner_id = ?";
+    private static final String IS_OWNED_BY_USER_QUERY = "SELECT 1 FROM playlist WHERE id = ? AND owner_id = ?";
 
     /**
      * Gets all of the playlists.
@@ -137,5 +138,26 @@ public class PlaylistDAO
         catch (SQLException exception) {
             return false;
         }
+    }
+
+    public boolean isOwnedByUser(int playlistId, int userId)
+    {
+        boolean isOwner = false;
+
+        try (Connection connection = dataSource.getConnection()) {
+            PreparedStatement statement = connection.prepareStatement(IS_OWNED_BY_USER_QUERY);
+            statement.setInt(1, playlistId);
+            statement.setInt(2, userId);
+            ResultSet result = statement.executeQuery();
+
+            if (result.next()) {
+                isOwner = true;
+            }
+        }
+        catch (SQLException exception) {
+            return false;
+        }
+
+        return isOwner;
     }
 }
