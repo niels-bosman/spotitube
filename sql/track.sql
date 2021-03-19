@@ -3,14 +3,14 @@ USE spotitube;
 DROP TABLE IF EXISTS track;
 CREATE TABLE track
 (
-    id               INT          NOT NULL auto_increment PRIMARY KEY,
-    title            VARCHAR(50)  NOT NULL,
-    performer        VARCHAR(50)  NOT NULL,
-    duration         INT          NOT NULL,
-    album            VARCHAR(50)  NULL,
-    playCount        INT          NULL,
-    publicationDate  VARCHAR(50)  NULL,
-    description      VARCHAR(100) NULL
+    id              INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title           VARCHAR(50)  NOT NULL,
+    performer       VARCHAR(50)  NOT NULL,
+    duration        INT          NOT NULL,
+    album           VARCHAR(50)  NULL,
+    playCount       INT          NULL,
+    publicationDate VARCHAR(50)  NULL,
+    description     VARCHAR(100) NULL
 );
 
 INSERT INTO track

@@ -3,7 +3,7 @@ USE spotitube;
 DROP TABLE IF EXISTS playlist;
 CREATE TABLE playlist
 (
-    id       INT         NOT NULL auto_increment PRIMARY KEY,
+    id       INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
     owner_id INT         NOT NULL,
     name     VARCHAR(50) NOT NULL
 );

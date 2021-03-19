@@ -3,7 +3,7 @@ USE spotitube;
 DROP TABLE IF EXISTS user;
 CREATE TABLE user
 (
-    id       INT         NOT NULL auto_increment PRIMARY KEY,
+    id       INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(50) NOT NULL,
     token    VARCHAR(50) NULL,

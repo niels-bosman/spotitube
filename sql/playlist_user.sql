@@ -4,7 +4,7 @@ spotitube;
 DROP TABLE IF EXISTS playlist_user;
 CREATE TABLE playlist_user
 (
-    id          INT NOT NULL auto_increment PRIMARY KEY,
+    id          INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user_id     INT NOT NULL,
     playlist_id INT NOT NULL
 );

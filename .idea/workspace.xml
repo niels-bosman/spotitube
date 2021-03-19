@@ -9,13 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Basic track resource with its nesessary files.">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="TrackResource done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/playlist.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/playlist_track.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist_track.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/TrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/TrackDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/playlist_user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist_user.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/track.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/track.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/user.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +283,7 @@
       <workItem from="1615988546534" duration="634000" />
       <workItem from="1616060197175" duration="10229000" />
       <workItem from="1616071806849" duration="6757000" />
-      <workItem from="1616153789761" duration="4374000" />
+      <workItem from="1616153789761" duration="4479000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -614,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616157277013</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="TrackResource done">
+      <created>1616158174001</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1616158174001</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -633,7 +640,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rename result" />
     <MESSAGE value="Renaming in AuthService" />
     <MESSAGE value="Code cleanup" />
     <MESSAGE value="Added UserMapper" />
@@ -658,7 +664,8 @@
     <MESSAGE value="Reformat SQL" />
     <MESSAGE value="Reformat user service, dao and resources." />
     <MESSAGE value="Basic track resource with its nesessary files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic track resource with its nesessary files." />
+    <MESSAGE value="TrackResource done" />
+    <option name="LAST_COMMIT_MESSAGE" value="TrackResource done" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Spotitube_BE.ic" NAME="Spotitube BE Coverage Results" MODIFIED="1616070218560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
