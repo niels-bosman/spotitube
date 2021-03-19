@@ -10,13 +10,13 @@ CREATE TABLE playlist_track
 );
 
 INSERT INTO playlist_track (track_id, playlist_id, offlineAvailable)
-VALUES (0, 1, true);
+VALUES (1, 2, true);
 
 INSERT INTO playlist_track (track_id, playlist_id, offlineAvailable)
-VALUES (1, 1, true);
+VALUES (2, 2, true);
 
 INSERT INTO playlist_track (track_id, playlist_id, offlineAvailable)
-VALUES (2, 1, false);
+VALUES (3, 3, false);
 
 INSERT INTO playlist_track (track_id, playlist_id, offlineAvailable)
-VALUES (3, 1, false);
+VALUES (3, 2, false);

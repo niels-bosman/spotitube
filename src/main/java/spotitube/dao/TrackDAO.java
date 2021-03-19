@@ -19,6 +19,7 @@ public class TrackDAO
 
     private static final String GET_TRACKS_IN_PLAYLIST_QUERY =
             "SELECT t.*, pt.offlineAvailable FROM track t INNER JOIN playlist_track pt ON pt.track_id = t.id WHERE pt.playlist_id = ?";
+
     private static final String GET_TRACKS_NOT_IN_PLAYLIST_QUERY =
             "SELECT *, 0 AS `offlineAvailable` FROM track WHERE id NOT IN (SELECT track_id FROM playlist_track WHERE playlist_id = ?);";
 
@@ -34,6 +35,7 @@ public class TrackDAO
 
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, playlistId);
             ResultSet result = statement.executeQuery();
 
             while (result.next()) {

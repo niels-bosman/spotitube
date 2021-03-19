@@ -9,15 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Reformat user service, dao and resources.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/TrackService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/TrackDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spotitube/mappers/TrackMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" afterDir="false" />
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Basic track resource with its nesessary files.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/playlist.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/playlist_track.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/playlist_track.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/track.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/track.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/TrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/TrackDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +283,7 @@
       <workItem from="1615988546534" duration="634000" />
       <workItem from="1616060197175" duration="10229000" />
       <workItem from="1616071806849" duration="6757000" />
-      <workItem from="1616153789761" duration="3463000" />
+      <workItem from="1616153789761" duration="4374000" />
     </task>
     <task id="LOCAL-00001" summary="Updated pom.xml and README.md">
       <created>1615460392316</created>
@@ -609,7 +607,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616077160147</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Basic track resource with its nesessary files.">
+      <created>1616157277013</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1616157277013</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,7 +633,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Move files (DTO) out of services folder." />
     <MESSAGE value="Rename result" />
     <MESSAGE value="Renaming in AuthService" />
     <MESSAGE value="Code cleanup" />
@@ -653,7 +657,8 @@
     <MESSAGE value="Reformatting and javadoc" />
     <MESSAGE value="Reformat SQL" />
     <MESSAGE value="Reformat user service, dao and resources." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformat user service, dao and resources." />
+    <MESSAGE value="Basic track resource with its nesessary files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic track resource with its nesessary files." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Spotitube_BE.ic" NAME="Spotitube BE Coverage Results" MODIFIED="1616070218560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

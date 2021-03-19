@@ -15,13 +15,13 @@ INSERT INTO playlist (name, owner_id)
 VALUES ('Pop', 1);
 
 INSERT INTO playlist (name, owner_id)
-VALUES ('Hip hop', 0);
+VALUES ('Hip hop', 1);
 
 INSERT INTO playlist (name, owner_id)
 VALUES ('Techno', 1);
 
 INSERT INTO playlist (name, owner_id)
-VALUES ('Techno', 0);
+VALUES ('Techno', 1);
 
 INSERT INTO playlist (name, owner_id)
-VALUES ('Progressive Rock', 0);
+VALUES ('Progressive Rock', 1);

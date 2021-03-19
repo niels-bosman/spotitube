@@ -19,6 +19,13 @@ public class TrackResource
     private UserService userService;
     private TrackService trackService;
 
+    /**
+     * Get's all the available tracks to add to a specific playlist.
+     *
+     * @param token      The authenticated user token.
+     * @param playlistId The playlist ID
+     * @return the response
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response tracks(@QueryParam("token") String token, @QueryParam("forPlaylist") int playlistId)
@@ -46,12 +53,22 @@ public class TrackResource
                 .build();
     }
 
+    /**
+     * Sets user service.
+     *
+     * @param userService the user service
+     */
     @Inject
     public void setUserService(UserService userService)
     {
         this.userService = userService;
     }
 
+    /**
+     * Sets track service.
+     *
+     * @param trackService the track service
+     */
     @Inject
     public void setTrackService(TrackService trackService)
     {
