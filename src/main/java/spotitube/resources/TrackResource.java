@@ -44,7 +44,7 @@ public class TrackResource
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.UNAUTHORIZED)
+                    .status(Response.Status.FORBIDDEN)
                     .build();
         }
 

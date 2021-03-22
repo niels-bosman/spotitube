@@ -7,11 +7,13 @@ import spotitube.domain.Playlist;
 import spotitube.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
 import spotitube.dto.playlist.PlaylistResponseDTO;
+import spotitube.mappers.PlaylistMapper;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.List;
 
 @Path("playlists")
 public class PlaylistResource
@@ -40,7 +42,7 @@ public class PlaylistResource
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.UNAUTHORIZED)
+                    .status(Response.Status.FORBIDDEN)
                     .build();
         }
     }
@@ -72,7 +74,7 @@ public class PlaylistResource
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.UNAUTHORIZED)
+                    .status(Response.Status.FORBIDDEN)
                     .build();
         }
 
@@ -106,7 +108,7 @@ public class PlaylistResource
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.UNAUTHORIZED)
+                    .status(Response.Status.FORBIDDEN)
                     .build();
         }
 
@@ -144,7 +146,7 @@ public class PlaylistResource
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.UNAUTHORIZED)
+                    .status(Response.Status.FORBIDDEN)
                     .build();
         }
 
@@ -162,9 +164,11 @@ public class PlaylistResource
     private PlaylistResponseDTO createResponse(User user)
     {
         PlaylistResponseDTO playlistResponseDTO = new PlaylistResponseDTO();
+        List<PlaylistDTO> playlistDTOs = playlistService.getAll(user);
+        int duration = playlistService.getTotalDuration(PlaylistMapper.getInstance().convertToEntity(playlistDTOs));
 
-        playlistResponseDTO.setPlaylists(playlistService.getAll(user));
-        playlistResponseDTO.setLength(playlistService.getTotalDuration());
+        playlistResponseDTO.setPlaylists(playlistDTOs);
+        playlistResponseDTO.setLength(duration);
 
         return playlistResponseDTO;
     }

@@ -45,7 +45,7 @@ public class PlaylistTrackResource
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.UNAUTHORIZED)
+                    .status(Response.Status.FORBIDDEN)
                     .build();
         }
 
@@ -81,7 +81,7 @@ public class PlaylistTrackResource
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.UNAUTHORIZED)
+                    .status(Response.Status.FORBIDDEN)
                     .build();
         }
 
@@ -117,7 +117,7 @@ public class PlaylistTrackResource
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.UNAUTHORIZED)
+                    .status(Response.Status.FORBIDDEN)
                     .build();
         }
 

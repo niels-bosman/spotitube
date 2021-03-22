@@ -29,9 +29,9 @@ public class PlaylistService
      *
      * @return The total duration.
      */
-    public int getTotalDuration()
+    public int getTotalDuration(List<Playlist> playlists)
     {
-        return playlistDAO.getTotalDuration();
+        return playlistDAO.getTotalDuration(playlists);
     }
 
     /**
