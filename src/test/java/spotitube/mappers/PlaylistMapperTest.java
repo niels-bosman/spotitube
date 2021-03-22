@@ -66,7 +66,7 @@ public class PlaylistMapperTest
     public void mapMultipleToDTO()
     {
         // Arrange
-        List<PlaylistDTO> playlistDTOS = PlaylistMapper.getInstance().convertToDTO(playlists);
+        List<PlaylistDTO> playlistDTOS = PlaylistMapper.getInstance().convertToDTO(playlists, 1);
 
         // Assert
         for (int i = 0; i < playlistDTOS.size(); i++) {

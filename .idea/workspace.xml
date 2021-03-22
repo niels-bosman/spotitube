@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="PlaylistMapperTest done">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Mapper tests done.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/mappers/TrackMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/mappers/TrackMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/mappers/PlaylistMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/mappers/PlaylistMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/mappers/PlaylistMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/mappers/PlaylistMapperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,16 +68,14 @@
       <recent name="spotitube" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TrackMapperTest">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PlaylistMapperTest">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,7 +141,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserMapperTest.mapMultipleResponseDTOsToUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HAN-dea-Spotitube" />
       <extension name="coverage">
         <pattern>
@@ -152,8 +151,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="spotitube.mappers" />
       <option name="MAIN_CLASS_NAME" value="spotitube.mappers.UserMapperTest" />
-      <option name="METHOD_NAME" value="mapMultipleResponseDTOsToUsers" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -246,20 +244,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.UserMapperTest.mapMultipleResponseDTOsToUsers" />
       <item itemvalue="JUnit.PlaylistMapperTest.mapSinglePlaylistDomainToPlaylistDTO" />
       <item itemvalue="JUnit.LoginResourceTest" />
       <item itemvalue="JUnit.PlaylistMapperTest" />
-      <item itemvalue="TomEE Server.TomEE 9.0.37" />
       <item itemvalue="JUnit.TrackMapperTest" />
+      <item itemvalue="TomEE Server.TomEE 9.0.37" />
+      <item itemvalue="JUnit.UserMapperTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TrackMapperTest" />
         <item itemvalue="JUnit.PlaylistMapperTest" />
+        <item itemvalue="JUnit.TrackMapperTest" />
+        <item itemvalue="JUnit.UserMapperTest" />
         <item itemvalue="JUnit.LoginResourceTest" />
         <item itemvalue="JUnit.PlaylistMapperTest.mapSinglePlaylistDomainToPlaylistDTO" />
-        <item itemvalue="JUnit.UserMapperTest.mapMultipleResponseDTOsToUsers" />
       </list>
     </recent_temporary>
   </component>
@@ -288,14 +286,8 @@
       <workItem from="1616407252788" duration="2704000" />
       <workItem from="1616413240591" duration="6098000" />
       <workItem from="1616440484744" duration="1637000" />
-      <workItem from="1616452707641" duration="1216000" />
-    </task>
-    <task id="LOCAL-00009" summary="renaming of functions">
-      <created>1615820312079</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1615820312079</updated>
+      <workItem from="1616452707641" duration="1349000" />
+      <workItem from="1616454759505" duration="482000" />
     </task>
     <task id="LOCAL-00010" summary="Refactoring">
       <created>1615820632276</created>
@@ -633,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616441742469</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Mapper tests done.">
+      <created>1616453941156</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1616453941156</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,7 +651,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add placeholders for all the resource routes (Playlist)" />
     <MESSAGE value="Base SQL files" />
     <MESSAGE value="Dummy data in SQL files." />
     <MESSAGE value="Exceptions for being unauthorized" />
@@ -677,9 +675,23 @@
     <MESSAGE value="Workspace" />
     <MESSAGE value="Reformat code" />
     <MESSAGE value="PlaylistMapperTest done" />
-    <option name="LAST_COMMIT_MESSAGE" value="PlaylistMapperTest done" />
+    <MESSAGE value="Mapper tests done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mapper tests done." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$LoginResourceTest.ic" NAME="LoginResourceTest Coverage Results" MODIFIED="1616455009677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>spotitube.resources.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Spotitube_BE.ic" NAME="Spotitube BE Coverage Results" MODIFIED="1616164842603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$UserMapperTest.ic" NAME="UserMapperTest Coverage Results" MODIFIED="1616455027672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>spotitube.mappers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$PlaylistMapperTest.ic" NAME="PlaylistMapperTest Coverage Results" MODIFIED="1616455227463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>spotitube.mappers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$TrackMapperTest.ic" NAME="TrackMapperTest Coverage Results" MODIFIED="1616455049205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>spotitube.mappers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$TomEE_9_0_37.ic" NAME="TomEE 9.0.37 Coverage Results" MODIFIED="1616454983480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
