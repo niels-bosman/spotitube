@@ -10,18 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Fix playlist duration query and status codes (FORBIDDEN)">
-      <change afterPath="$PROJECT_DIR$/sql/create.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/IdService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/playlist.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/playlist_track.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/playlist_user.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/track.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/user.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistTrackResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistTrackResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +58,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -77,18 +66,7 @@
       <recent name="spotitube" />
     </key>
   </component>
-  <component name="RunManager" selected="TomEE Server.Spotitube BE">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TomEE Server.TomEE 9.0.37">
     <configuration name="LoginResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HAN-dea-Spotitube" />
       <extension name="coverage">
@@ -168,17 +146,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Spotitube BE" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 9.0.37" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="TomEE 9.0.37" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 9.0.37" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="HAN-dea-Spotitube:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="18e4416e-fd49-460c-87a4-fe79139bbae2" />
+        <option name="BASE_DIRECTORY_NAME" value="122a5839-c7d8-4113-9ab1-4b2cdfe3681c" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -186,7 +164,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="40701" />
+        <option name="DEBUG_PORT" value="46059" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -260,8 +238,8 @@
       <item itemvalue="JUnit.UserMapperTest.mapMultipleUserDomainsToResponseDTOs" />
       <item itemvalue="JUnit.UserMapperTest.mapMultipleResponseDTOsToUsers" />
       <item itemvalue="JUnit.PlaylistMapperTest.mapSinglePlaylistDomainToPlaylistDTO" />
-      <item itemvalue="TomEE Server.Spotitube BE" />
       <item itemvalue="JUnit.LoginResourceTest" />
+      <item itemvalue="TomEE Server.TomEE 9.0.37" />
     </list>
     <recent_temporary>
       <list>
@@ -297,6 +275,7 @@
       <workItem from="1616261777718" duration="300000" />
       <workItem from="1616407252788" duration="2704000" />
       <workItem from="1616413240591" duration="6098000" />
+      <workItem from="1616440484744" duration="380000" />
     </task>
     <task id="LOCAL-00006" summary="Base login functionality">
       <created>1615818712606</created>
