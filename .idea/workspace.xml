@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Reformat code">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="PlaylistMapperTest done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/mappers/PlaylistMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/mappers/PlaylistMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/mappers/TrackMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/mappers/TrackMapperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,14 +67,16 @@
       <recent name="spotitube" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistMapperTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TrackMapperTest">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,6 +127,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TrackMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HAN-dea-Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotitube.mappers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotitube.mappers" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.mappers.TrackMapperTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserMapperTest.mapMultipleResponseDTOsToUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HAN-dea-Spotitube" />
       <extension name="coverage">
@@ -136,22 +153,6 @@
       <option name="PACKAGE_NAME" value="spotitube.mappers" />
       <option name="MAIN_CLASS_NAME" value="spotitube.mappers.UserMapperTest" />
       <option name="METHOD_NAME" value="mapMultipleResponseDTOsToUsers" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserMapperTest.mapMultipleUserDomainsToResponseDTOs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HAN-dea-Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.mappers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube.mappers" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.mappers.UserMapperTest" />
-      <option name="METHOD_NAME" value="mapMultipleUserDomainsToResponseDTOs" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -245,20 +246,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.UserMapperTest.mapMultipleUserDomainsToResponseDTOs" />
       <item itemvalue="JUnit.UserMapperTest.mapMultipleResponseDTOsToUsers" />
       <item itemvalue="JUnit.PlaylistMapperTest.mapSinglePlaylistDomainToPlaylistDTO" />
       <item itemvalue="JUnit.LoginResourceTest" />
-      <item itemvalue="TomEE Server.TomEE 9.0.37" />
       <item itemvalue="JUnit.PlaylistMapperTest" />
+      <item itemvalue="TomEE Server.TomEE 9.0.37" />
+      <item itemvalue="JUnit.TrackMapperTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TrackMapperTest" />
         <item itemvalue="JUnit.PlaylistMapperTest" />
         <item itemvalue="JUnit.LoginResourceTest" />
         <item itemvalue="JUnit.PlaylistMapperTest.mapSinglePlaylistDomainToPlaylistDTO" />
         <item itemvalue="JUnit.UserMapperTest.mapMultipleResponseDTOsToUsers" />
-        <item itemvalue="JUnit.UserMapperTest.mapMultipleUserDomainsToResponseDTOs" />
       </list>
     </recent_temporary>
   </component>
@@ -286,14 +287,8 @@
       <workItem from="1616261777718" duration="300000" />
       <workItem from="1616407252788" duration="2704000" />
       <workItem from="1616413240591" duration="6098000" />
-      <workItem from="1616440484744" duration="1246000" />
-    </task>
-    <task id="LOCAL-00008" summary="renaming of functions">
-      <created>1615820177662</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1615820177662</updated>
+      <workItem from="1616440484744" duration="1637000" />
+      <workItem from="1616452707641" duration="1216000" />
     </task>
     <task id="LOCAL-00009" summary="renaming of functions">
       <created>1615820312079</created>
@@ -631,7 +626,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616441244344</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="PlaylistMapperTest done">
+      <created>1616441742468</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1616441742469</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,7 +652,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added required DTO's" />
     <MESSAGE value="Add placeholders for all the resource routes (Playlist)" />
     <MESSAGE value="Base SQL files" />
     <MESSAGE value="Dummy data in SQL files." />
@@ -675,7 +676,8 @@
     <MESSAGE value="Fix playlist duration query and status codes (FORBIDDEN)" />
     <MESSAGE value="Workspace" />
     <MESSAGE value="Reformat code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformat code" />
+    <MESSAGE value="PlaylistMapperTest done" />
+    <option name="LAST_COMMIT_MESSAGE" value="PlaylistMapperTest done" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Spotitube_BE.ic" NAME="Spotitube BE Coverage Results" MODIFIED="1616164842603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
