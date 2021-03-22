@@ -38,13 +38,13 @@ public class LoginResource
             userService.addToken(user);
 
             return Response
-                    .ok(UserMapper.getInstance().convertToDTO(user))
-                    .build();
+                .ok(UserMapper.getInstance().convertToDTO(user))
+                .build();
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.UNAUTHORIZED)
-                    .build();
+                .status(Response.Status.UNAUTHORIZED)
+                .build();
         }
     }
 

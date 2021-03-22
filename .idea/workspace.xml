@@ -9,8 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Fix playlist duration query and status codes (FORBIDDEN)">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Workspace">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistTrackResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistTrackResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +62,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -275,14 +279,7 @@
       <workItem from="1616261777718" duration="300000" />
       <workItem from="1616407252788" duration="2704000" />
       <workItem from="1616413240591" duration="6098000" />
-      <workItem from="1616440484744" duration="380000" />
-    </task>
-    <task id="LOCAL-00006" summary="Base login functionality">
-      <created>1615818712606</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1615818712606</updated>
+      <workItem from="1616440484744" duration="753000" />
     </task>
     <task id="LOCAL-00007" summary="Add token to user when logging in">
       <created>1615820018811</created>
@@ -620,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616408812144</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Workspace">
+      <created>1616440876273</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1616440876274</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -639,7 +643,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added necessary files for playlists" />
     <MESSAGE value="Added domain models for Tracks and Playlists" />
     <MESSAGE value="Added required DTO's" />
     <MESSAGE value="Add placeholders for all the resource routes (Playlist)" />
@@ -664,7 +667,8 @@
     <MESSAGE value="Formatting" />
     <MESSAGE value="UserMapperTest and sample for PlaylistMapperTest (not done). HET IS TIJD VOOR WEEKEND" />
     <MESSAGE value="Fix playlist duration query and status codes (FORBIDDEN)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix playlist duration query and status codes (FORBIDDEN)" />
+    <MESSAGE value="Workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workspace" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Spotitube_BE.ic" NAME="Spotitube BE Coverage Results" MODIFIED="1616164842603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

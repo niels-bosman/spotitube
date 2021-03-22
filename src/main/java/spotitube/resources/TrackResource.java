@@ -40,19 +40,19 @@ public class TrackResource
                 dto.setTracks(trackService.getAllNotInPlaylist(playlistId));
 
                 return Response
-                        .ok(dto)
-                        .build();
+                    .ok(dto)
+                    .build();
             }
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.FORBIDDEN)
-                    .build();
+                .status(Response.Status.FORBIDDEN)
+                .build();
         }
 
         return Response
-                .status(Response.Status.BAD_REQUEST)
-                .build();
+            .status(Response.Status.BAD_REQUEST)
+            .build();
     }
 
     /**

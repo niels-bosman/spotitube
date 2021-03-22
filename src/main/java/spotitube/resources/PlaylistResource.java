@@ -39,13 +39,13 @@ public class PlaylistResource
             PlaylistResponseDTO dto = createResponse(user);
 
             return Response
-                    .ok(dto)
-                    .build();
+                .ok(dto)
+                .build();
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.FORBIDDEN)
-                    .build();
+                .status(Response.Status.FORBIDDEN)
+                .build();
         }
     }
 
@@ -70,19 +70,19 @@ public class PlaylistResource
                 PlaylistResponseDTO dto = createResponse(user);
 
                 return Response
-                        .ok(dto)
-                        .build();
+                    .ok(dto)
+                    .build();
             }
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.FORBIDDEN)
-                    .build();
+                .status(Response.Status.FORBIDDEN)
+                .build();
         }
 
         return Response
-                .status(Response.Status.BAD_REQUEST)
-                .build();
+            .status(Response.Status.BAD_REQUEST)
+            .build();
     }
 
     /**
@@ -104,19 +104,19 @@ public class PlaylistResource
                 PlaylistResponseDTO dto = createResponse(user);
 
                 return Response
-                        .ok(dto)
-                        .build();
+                    .ok(dto)
+                    .build();
             }
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.FORBIDDEN)
-                    .build();
+                .status(Response.Status.FORBIDDEN)
+                .build();
         }
 
         return Response
-                .status(Response.Status.BAD_REQUEST)
-                .build();
+            .status(Response.Status.BAD_REQUEST)
+            .build();
     }
 
     /**
@@ -142,19 +142,19 @@ public class PlaylistResource
                 PlaylistResponseDTO dto = createResponse(user);
 
                 return Response
-                        .ok(dto)
-                        .build();
+                    .ok(dto)
+                    .build();
             }
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.FORBIDDEN)
-                    .build();
+                .status(Response.Status.FORBIDDEN)
+                .build();
         }
 
         return Response
-                .status(Response.Status.BAD_REQUEST)
-                .build();
+            .status(Response.Status.BAD_REQUEST)
+            .build();
     }
 
     /**

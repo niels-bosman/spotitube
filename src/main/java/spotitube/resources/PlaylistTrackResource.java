@@ -41,19 +41,19 @@ public class PlaylistTrackResource
                 tracksResponseDTO.setTracks(trackService.getAllByPlaylist(playlistId));
 
                 return Response
-                        .ok(tracksResponseDTO)
-                        .build();
+                    .ok(tracksResponseDTO)
+                    .build();
             }
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.FORBIDDEN)
-                    .build();
+                .status(Response.Status.FORBIDDEN)
+                .build();
         }
 
         return Response
-                .status(Response.Status.BAD_REQUEST)
-                .build();
+            .status(Response.Status.BAD_REQUEST)
+            .build();
     }
 
     /**
@@ -77,19 +77,19 @@ public class PlaylistTrackResource
                 dto.setTracks(trackService.getAllByPlaylist(playlistId));
 
                 return Response
-                        .ok(dto)
-                        .build();
+                    .ok(dto)
+                    .build();
             }
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.FORBIDDEN)
-                    .build();
+                .status(Response.Status.FORBIDDEN)
+                .build();
         }
 
         return Response
-                .status(Response.Status.BAD_REQUEST)
-                .build();
+            .status(Response.Status.BAD_REQUEST)
+            .build();
     }
 
     /**
@@ -113,19 +113,19 @@ public class PlaylistTrackResource
                 dto.setTracks(trackService.getAllByPlaylist(playlistId));
 
                 return Response
-                        .ok(dto)
-                        .build();
+                    .ok(dto)
+                    .build();
             }
         }
         catch (UnauthorizedException e) {
             return Response
-                    .status(Response.Status.FORBIDDEN)
-                    .build();
+                .status(Response.Status.FORBIDDEN)
+                .build();
         }
 
         return Response
-                .status(Response.Status.BAD_REQUEST)
-                .build();
+            .status(Response.Status.BAD_REQUEST)
+            .build();
     }
 
     /**
@@ -139,8 +139,8 @@ public class PlaylistTrackResource
     public boolean canRemoveTrackFromPlaylist(int playlistId, int trackId, int userId)
     {
         return idService.isValid(trackId, userId, playlistId)
-                && playlistService.isOwnedBy(playlistId, userId)
-                && trackService.deleteFromPlaylist(playlistId, trackId, userId);
+            && playlistService.isOwnedBy(playlistId, userId)
+            && trackService.deleteFromPlaylist(playlistId, trackId, userId);
     }
 
     /**
@@ -154,8 +154,8 @@ public class PlaylistTrackResource
     public boolean canAddTrackToPlaylist(int playlistId, int userId, TrackDTO trackDTO)
     {
         return idService.isValid(playlistId, userId)
-                && playlistService.isOwnedBy(playlistId, userId)
-                && trackService.addTrackToPlaylist(trackDTO, playlistId);
+            && playlistService.isOwnedBy(playlistId, userId)
+            && trackService.addTrackToPlaylist(trackDTO, playlistId);
     }
 
     /**
