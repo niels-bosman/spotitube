@@ -1,6 +1,7 @@
 package spotitube.resources;
 
 import exceptions.UnauthorizedException;
+import services.IdService;
 import services.PlaylistService;
 import services.TrackService;
 import services.UserService;
@@ -19,6 +20,7 @@ public class PlaylistTrackResource
     private UserService userService;
     private TrackService trackService;
     private PlaylistService playlistService;
+    private IdService idService;
 
     /**
      * Getter of all the tracks in a specific playlist.
@@ -34,7 +36,7 @@ public class PlaylistTrackResource
         try {
             userService.authenticateToken(token);
 
-            if (playlistId > 0) {
+            if (idService.isValid(playlistId)) {
                 TracksResponseDTO tracksResponseDTO = new TracksResponseDTO();
                 tracksResponseDTO.setTracks(trackService.getAllByPlaylist(playlistId));
 
@@ -136,8 +138,7 @@ public class PlaylistTrackResource
      */
     public boolean canRemoveTrackFromPlaylist(int playlistId, int trackId, int userId)
     {
-        return playlistId > 0
-                && trackId > 0
+        return idService.isValid(trackId, userId, playlistId)
                 && playlistService.isOwnedBy(playlistId, userId)
                 && trackService.deleteFromPlaylist(playlistId, trackId, userId);
     }
@@ -152,7 +153,7 @@ public class PlaylistTrackResource
      */
     public boolean canAddTrackToPlaylist(int playlistId, int userId, TrackDTO trackDTO)
     {
-        return playlistId > 0
+        return idService.isValid(playlistId, userId)
                 && playlistService.isOwnedBy(playlistId, userId)
                 && trackService.addTrackToPlaylist(trackDTO, playlistId);
     }
@@ -188,5 +189,16 @@ public class PlaylistTrackResource
     public void setTrackService(TrackService trackService)
     {
         this.trackService = trackService;
+    }
+
+    /**
+     * Injects the idService.
+     *
+     * @param idService the IdService.
+     */
+    @Inject
+    public void setIdService(IdService idService)
+    {
+        this.idService = idService;
     }
 }

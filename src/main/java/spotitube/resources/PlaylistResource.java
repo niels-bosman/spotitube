@@ -1,6 +1,7 @@
 package spotitube.resources;
 
 import exceptions.UnauthorizedException;
+import services.IdService;
 import services.PlaylistService;
 import services.UserService;
 import spotitube.domain.Playlist;
@@ -20,6 +21,7 @@ public class PlaylistResource
 {
     private UserService userService;
     private PlaylistService playlistService;
+    private IdService idService;
 
     /**
      * Getter of all of the playlists.
@@ -64,7 +66,7 @@ public class PlaylistResource
             Playlist playlist = new Playlist();
             playlist.setId(playlistId);
 
-            if (playlistId > 0 && playlistService.delete(playlist, user)) {
+            if (idService.isValid(playlistId) && playlistService.delete(playlist, user)) {
                 PlaylistResponseDTO dto = createResponse(user);
 
                 return Response
@@ -136,7 +138,7 @@ public class PlaylistResource
             Playlist playlist = new Playlist();
             playlist.setId(playlistId);
 
-            if (playlistId > 0 && playlistService.editTitle(playlist, request, user)) {
+            if (idService.isValid(playlistId) && playlistService.editTitle(playlist, request, user)) {
                 PlaylistResponseDTO dto = createResponse(user);
 
                 return Response
@@ -193,5 +195,16 @@ public class PlaylistResource
     public void setPlaylistService(PlaylistService playlistService)
     {
         this.playlistService = playlistService;
+    }
+
+    /**
+     * Injects the idService.
+     *
+     * @param idService the IdService.
+     */
+    @Inject
+    public void setIdService(IdService idService)
+    {
+        this.idService = idService;
     }
 }

@@ -9,10 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="UserMapperTest and sample for PlaylistMapperTest (not done). HET IS TIJD VOOR WEEKEND">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Fix playlist duration query and status codes (FORBIDDEN)">
+      <change afterPath="$PROJECT_DIR$/sql/create.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/IdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/playlist.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/playlist_track.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/playlist_user.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/track.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/user.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistTrackResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistTrackResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" afterDir="false" />
@@ -72,6 +78,32 @@
     </key>
   </component>
   <component name="RunManager" selected="TomEE Server.Spotitube BE">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HAN-dea-Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotitube.resources.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotitube.resources" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.resources.LoginResourceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PlaylistMapperTest.mapSinglePlaylistDomainToPlaylistDTO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HAN-dea-Spotitube" />
       <extension name="coverage">
@@ -131,22 +163,6 @@
       <option name="PACKAGE_NAME" value="spotitube.mappers" />
       <option name="MAIN_CLASS_NAME" value="spotitube.mappers.UserMapperTest" />
       <option name="METHOD_NAME" value="mapSingleResponseDTOToUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserMapperTest.mapSingleUserDomainToDTO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HAN-dea-Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.mappers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube.mappers" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.mappers.UserMapperTest" />
-      <option name="METHOD_NAME" value="mapSingleUserDomainToDTO" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -240,20 +256,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.UserMapperTest.mapSingleUserDomainToDTO" />
       <item itemvalue="JUnit.UserMapperTest.mapSingleResponseDTOToUser" />
       <item itemvalue="JUnit.UserMapperTest.mapMultipleUserDomainsToResponseDTOs" />
       <item itemvalue="JUnit.UserMapperTest.mapMultipleResponseDTOsToUsers" />
       <item itemvalue="JUnit.PlaylistMapperTest.mapSinglePlaylistDomainToPlaylistDTO" />
       <item itemvalue="TomEE Server.Spotitube BE" />
+      <item itemvalue="JUnit.LoginResourceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoginResourceTest" />
         <item itemvalue="JUnit.PlaylistMapperTest.mapSinglePlaylistDomainToPlaylistDTO" />
         <item itemvalue="JUnit.UserMapperTest.mapMultipleResponseDTOsToUsers" />
         <item itemvalue="JUnit.UserMapperTest.mapMultipleUserDomainsToResponseDTOs" />
         <item itemvalue="JUnit.UserMapperTest.mapSingleResponseDTOToUser" />
-        <item itemvalue="JUnit.UserMapperTest.mapSingleUserDomainToDTO" />
       </list>
     </recent_temporary>
   </component>
@@ -279,14 +295,8 @@
       <workItem from="1616071806849" duration="6757000" />
       <workItem from="1616153789761" duration="12751000" />
       <workItem from="1616261777718" duration="300000" />
-      <workItem from="1616407252788" duration="1540000" />
-    </task>
-    <task id="LOCAL-00005" summary="Basic userDAO">
-      <created>1615816459999</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1615816459999</updated>
+      <workItem from="1616407252788" duration="2704000" />
+      <workItem from="1616413240591" duration="6098000" />
     </task>
     <task id="LOCAL-00006" summary="Base login functionality">
       <created>1615818712606</created>
@@ -624,7 +634,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616164918286</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Fix playlist duration query and status codes (FORBIDDEN)">
+      <created>1616408812143</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1616408812144</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +660,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cleanup DTO's" />
     <MESSAGE value="Added necessary files for playlists" />
     <MESSAGE value="Added domain models for Tracks and Playlists" />
     <MESSAGE value="Added required DTO's" />
@@ -668,7 +684,8 @@
     <MESSAGE value="JavaDoc and formatting" />
     <MESSAGE value="Formatting" />
     <MESSAGE value="UserMapperTest and sample for PlaylistMapperTest (not done). HET IS TIJD VOOR WEEKEND" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserMapperTest and sample for PlaylistMapperTest (not done). HET IS TIJD VOOR WEEKEND" />
+    <MESSAGE value="Fix playlist duration query and status codes (FORBIDDEN)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix playlist duration query and status codes (FORBIDDEN)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Spotitube_BE.ic" NAME="Spotitube BE Coverage Results" MODIFIED="1616164842603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

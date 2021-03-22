@@ -1,6 +1,7 @@
 package spotitube.resources;
 
 import exceptions.UnauthorizedException;
+import services.IdService;
 import services.TrackService;
 import services.UserService;
 import spotitube.dto.track.TracksResponseDTO;
@@ -18,6 +19,7 @@ public class TrackResource
 {
     private UserService userService;
     private TrackService trackService;
+    private IdService idService;
 
     /**
      * Get's all the available tracks to add to a specific playlist.
@@ -33,7 +35,7 @@ public class TrackResource
         try {
             userService.authenticateToken(token);
 
-            if (playlistId > 0) {
+            if (idService.isValid(playlistId)) {
                 TracksResponseDTO dto = new TracksResponseDTO();
                 dto.setTracks(trackService.getAllNotInPlaylist(playlistId));
 
@@ -73,5 +75,16 @@ public class TrackResource
     public void setTrackService(TrackService trackService)
     {
         this.trackService = trackService;
+    }
+
+    /**
+     * Injects the idService.
+     *
+     * @param idService the IdService.
+     */
+    @Inject
+    public void setIdService(IdService idService)
+    {
+        this.idService = idService;
     }
 }
