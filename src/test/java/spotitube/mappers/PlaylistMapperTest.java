@@ -39,7 +39,7 @@ public class PlaylistMapperTest
     }
 
     @Test
-    public void mapSinglePlaylistDomainToPlaylistDTO()
+    public void mapSingleToDTO()
     {
         // Arrange
         Playlist playlist = playlists.get(0);
@@ -48,5 +48,43 @@ public class PlaylistMapperTest
         // Assert
         assertEquals(dto.getId(), playlist.getId());
         assertEquals(dto.getName(), playlist.getName());
+    }
+
+    @Test
+    public void mapSingleToDomain()
+    {
+        // Arrange
+        PlaylistDTO dto = playlistDTOS.get(0);
+        Playlist playlist = PlaylistMapper.getInstance().convertToEntity(dto);
+
+        // Assert
+        assertEquals(dto.getId(), playlist.getId());
+        assertEquals(dto.getName(), playlist.getName());
+    }
+
+    @Test
+    public void mapMultipleToDTO()
+    {
+        // Arrange
+        List<PlaylistDTO> playlistDTOS = PlaylistMapper.getInstance().convertToDTO(playlists);
+
+        // Assert
+        for (int i = 0; i < playlistDTOS.size(); i++) {
+            assertEquals(playlistDTOS.get(i).getId(), playlists.get(i).getId());
+            assertEquals(playlistDTOS.get(i).getName(), playlists.get(i).getName());
+        }
+    }
+
+    @Test
+    public void mapMultipleToDomain()
+    {
+        // Arrange
+        List<Playlist> playlists = PlaylistMapper.getInstance().convertToEntity(playlistDTOS);
+
+        // Assert
+        for (int i = 0; i < playlists.size(); i++) {
+            assertEquals(playlists.get(i).getId(), playlistDTOS.get(i).getId());
+            assertEquals(playlists.get(i).getName(), playlistDTOS.get(i).getName());
+        }
     }
 }
