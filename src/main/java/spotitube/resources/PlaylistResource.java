@@ -104,7 +104,8 @@ public class PlaylistResource
                 PlaylistResponseDTO dto = createResponse(user);
 
                 return Response
-                    .ok(dto)
+                    .status(Response.Status.CREATED)
+                    .entity(dto)
                     .build();
             }
         }

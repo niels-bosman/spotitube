@@ -55,23 +55,20 @@ public class PlaylistResourceTest
         Mockito.when(userService.authenticateToken(Mockito.anyString())).thenThrow(UnauthorizedException.class);
         Mockito.when(userService.authenticateToken(Mockito.eq(dummyUser.getToken()))).thenReturn(dummyUser);
 
-        // Mock playlistService methods, just to be sure the response at least contains values
         Mockito.when(playlistService.getAll(dummyUser)).thenReturn(new ArrayList<>());
         Mockito.when(playlistService.getTotalDuration(new ArrayList<>())).thenReturn(0);
     }
 
-    @Test
-    public void getAll()
+    @Test public void getAll()
     {
         // Act
         Response response = playlistResource.getAll(dummyUser.getToken());
 
         // Assert
-        assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
+        assertEquals(Response.Status.OK, response.getStatusInfo());
     }
 
-    @Test
-    public void getAllNotAuthorized()
+    @Test public void getAllNotAuthorized()
     {
         // Act
         Response response = playlistResource.getAll("verkeerdToken");
@@ -89,7 +86,7 @@ public class PlaylistResourceTest
         Response response = playlistResource.addPlaylist(dummyUser.getToken(), dto);
 
         // Assert
-        assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
+        assertEquals(Response.Status.CREATED, response.getStatusInfo());
     }
 
     @Test public void addPlaylistForbidden()

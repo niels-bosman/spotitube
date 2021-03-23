@@ -37,8 +37,7 @@ public class UserMapperTest
         });
     }
 
-    @Test
-    public void mapSingleUserDomainToResponseDTO()
+    @Test public void mapSingleUserDomainToResponseDTO()
     {
         // Arrange
         User user = users.get(0);
@@ -49,8 +48,7 @@ public class UserMapperTest
         assertEquals(response.getToken(), user.getToken());
     }
 
-    @Test
-    public void mapSingleResponseDTOToUser()
+    @Test public void mapSingleResponseDTOToUser()
     {
         // Arrange
         LoginResponseDTO response = responseDTOS.get(0);
@@ -61,8 +59,7 @@ public class UserMapperTest
         assertEquals(response.getToken(), user.getToken());
     }
 
-    @Test
-    public void mapMultipleUserDomainsToResponseDTOs()
+    @Test public void mapMultipleUserDomainsToResponseDTOs()
     {
         // Arrange
         List<LoginResponseDTO> DTOs = UserMapper.getInstance().convertToDTO(users);
@@ -74,8 +71,7 @@ public class UserMapperTest
         }
     }
 
-    @Test
-    public void mapMultipleResponseDTOsToUsers()
+    @Test public void mapMultipleResponseDTOsToUsers()
     {
         // Arrange
         List<User> mappedUsers = UserMapper.getInstance().convertToEntity(responseDTOS);

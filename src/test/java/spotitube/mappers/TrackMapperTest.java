@@ -49,8 +49,7 @@ public class TrackMapperTest
         });
     }
 
-    @Test
-    public void mapSingleToDTO()
+    @Test public void mapSingleToDTO()
     {
         // Arrange
         Track track = tracks.get(0);
@@ -68,8 +67,7 @@ public class TrackMapperTest
         assertEquals(dto.isOfflineAvailable(), track.isOfflineAvailable());
     }
 
-    @Test
-    public void mapSingleToDomain()
+    @Test public void mapSingleToDomain()
     {
         // Arrange
         TrackDTO dto = trackDTOS.get(0);
@@ -87,8 +85,7 @@ public class TrackMapperTest
         assertEquals(dto.isOfflineAvailable(), track.isOfflineAvailable());
     }
 
-    @Test
-    public void mapMultipleToDTO()
+    @Test public void mapMultipleToDTO()
     {
         // Arrange
         List<TrackDTO> trackDTOS = TrackMapper.getInstance().convertToDTO(tracks);
@@ -107,8 +104,7 @@ public class TrackMapperTest
         }
     }
 
-    @Test
-    public void mapMultipleToDomain()
+    @Test public void mapMultipleToDomain()
     {
         // Arrange
         List<Track> tracks = TrackMapper.getInstance().convertToEntity(trackDTOS);

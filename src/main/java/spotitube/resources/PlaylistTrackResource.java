@@ -113,7 +113,8 @@ public class PlaylistTrackResource
                 dto.setTracks(trackService.getAllByPlaylist(playlistId));
 
                 return Response
-                    .ok(dto)
+                    .status(Response.Status.CREATED)
+                    .entity(dto)
                     .build();
             }
         }

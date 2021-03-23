@@ -29,8 +29,7 @@ public class LoginResourceTest
         this.loginRequestDTO.setPassword("niels");
     }
 
-    @Test
-    public void successfulLogin() throws UnauthorizedException
+    @Test public void successfulLogin() throws UnauthorizedException
     {
         // Arrange
         User user = new User();
@@ -48,8 +47,7 @@ public class LoginResourceTest
         assertEquals(this.loginRequestDTO.getUser(), loginResponseDTO.getUser());
     }
 
-    @Test
-    public void failedLogin() throws UnauthorizedException
+    @Test public void failedLogin() throws UnauthorizedException
     {
         // Arrange
         UserService userServiceMock = mock(UserService.class);

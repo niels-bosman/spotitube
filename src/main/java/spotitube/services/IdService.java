@@ -10,6 +10,12 @@ public class IdService
      */
     public boolean isValid(int... ids)
     {
+        for (int id : ids) {
+            if (id <= 0) {
+                return false;
+            }
+        }
+
         return true;
     }
 }

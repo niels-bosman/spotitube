@@ -39,7 +39,7 @@ public class PlaylistService
      *
      * @param playlist The playlist to be deleted.
      * @param user     The authenticated user.
-     * @return If the deletion was succesful.
+     * @return If the deletion was successful.
      */
     public boolean delete(Playlist playlist, User user)
     {
