@@ -22,6 +22,7 @@ public class PlaylistResource
     private UserService userService;
     private PlaylistService playlistService;
     private IdService idService;
+    public Playlist playlist = new Playlist();
 
     /**
      * Getter of all of the playlists.
@@ -63,7 +64,6 @@ public class PlaylistResource
     {
         try {
             User user = userService.authenticateToken(token);
-            Playlist playlist = new Playlist();
             playlist.setId(playlistId);
 
             if (idService.isValid(playlistId) && playlistService.delete(playlist, user)) {
@@ -135,7 +135,6 @@ public class PlaylistResource
     {
         try {
             User user = userService.authenticateToken(token);
-            Playlist playlist = new Playlist();
             playlist.setId(playlistId);
 
             if (idService.isValid(playlistId) && playlistService.editTitle(playlist, request, user)) {
