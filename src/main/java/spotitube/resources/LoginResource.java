@@ -1,7 +1,7 @@
 package spotitube.resources;
 
-import exceptions.UnauthorizedException;
-import services.UserService;
+import spotitube.exceptions.UnauthorizedException;
+import spotitube.services.UserService;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
 import spotitube.mappers.UserMapper;

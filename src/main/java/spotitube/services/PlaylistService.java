@@ -1,4 +1,4 @@
-package services;
+package spotitube.services;
 
 import spotitube.dao.PlaylistDAO;
 import spotitube.domain.Playlist;

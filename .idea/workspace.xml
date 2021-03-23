@@ -9,15 +9,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Mapper tests done.">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Make PlaylistMapperTest 100% coverage.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/mappers/PlaylistMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/mappers/PlaylistMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/UnauthorizedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/exceptions/UnauthorizedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/IdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/services/IdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/services/PlaylistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/TrackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/services/TrackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/LoginResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistTrackResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/PlaylistTrackResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/resources/TrackResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/mappers/PlaylistMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/mappers/PlaylistMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/resources/LoginResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/resources/LoginResourceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -55,7 +69,6 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -64,11 +77,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="spotitube.resources" />
       <recent name="spotitube" />
+      <recent name="spotitube.resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistMapperTest">
+  <component name="RunManager" selected="JUnit.Test all in package">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -80,78 +93,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test all in package" type="JUnit" factoryName="JUnit">
       <module name="HAN-dea-Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.resources.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube.resources" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.resources.LoginResourceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlaylistMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HAN-dea-Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.mappers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube.mappers" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.mappers.PlaylistMapperTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlaylistMapperTest.mapSinglePlaylistDomainToPlaylistDTO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HAN-dea-Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.mappers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube.mappers" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.mappers.PlaylistMapperTest" />
-      <option name="METHOD_NAME" value="mapSinglePlaylistDomainToPlaylistDTO" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrackMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HAN-dea-Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.mappers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube.mappers" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.mappers.TrackMapperTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HAN-dea-Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.mappers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube.mappers" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.mappers.UserMapperTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="spotitube" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -244,22 +191,9 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.PlaylistMapperTest.mapSinglePlaylistDomainToPlaylistDTO" />
-      <item itemvalue="JUnit.LoginResourceTest" />
-      <item itemvalue="JUnit.PlaylistMapperTest" />
-      <item itemvalue="JUnit.TrackMapperTest" />
+      <item itemvalue="JUnit.Test all in package" />
       <item itemvalue="TomEE Server.TomEE 9.0.37" />
-      <item itemvalue="JUnit.UserMapperTest" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.PlaylistMapperTest" />
-        <item itemvalue="JUnit.TrackMapperTest" />
-        <item itemvalue="JUnit.UserMapperTest" />
-        <item itemvalue="JUnit.LoginResourceTest" />
-        <item itemvalue="JUnit.PlaylistMapperTest.mapSinglePlaylistDomainToPlaylistDTO" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -287,14 +221,9 @@
       <workItem from="1616413240591" duration="6098000" />
       <workItem from="1616440484744" duration="1637000" />
       <workItem from="1616452707641" duration="1349000" />
-      <workItem from="1616454759505" duration="482000" />
-    </task>
-    <task id="LOCAL-00010" summary="Refactoring">
-      <created>1615820632276</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1615820632276</updated>
+      <workItem from="1616454759505" duration="520000" />
+      <workItem from="1616505240726" duration="1514000" />
+      <workItem from="1616506772221" duration="3044000" />
     </task>
     <task id="LOCAL-00011" summary="Refactoring">
       <created>1615820846530</created>
@@ -632,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616453941156</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Make PlaylistMapperTest 100% coverage.">
+      <created>1616455255596</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1616455255597</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -651,7 +587,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Base SQL files" />
     <MESSAGE value="Dummy data in SQL files." />
     <MESSAGE value="Exceptions for being unauthorized" />
     <MESSAGE value="Updated SQL tables" />
@@ -676,22 +611,25 @@
     <MESSAGE value="Reformat code" />
     <MESSAGE value="PlaylistMapperTest done" />
     <MESSAGE value="Mapper tests done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mapper tests done." />
+    <MESSAGE value="Make PlaylistMapperTest 100% coverage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Make PlaylistMapperTest 100% coverage." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$LoginResourceTest.ic" NAME="LoginResourceTest Coverage Results" MODIFIED="1616455009677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Test_all.ic" NAME="Test all Coverage Results" MODIFIED="1616507236196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$LoginResourceTest.ic" NAME="LoginResourceTest Coverage Results" MODIFIED="1616506816809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spotitube.resources.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Test_all_in_package.ic" NAME="Test all in package Coverage Results" MODIFIED="1616511044397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Spotitube_BE.ic" NAME="Spotitube BE Coverage Results" MODIFIED="1616164842603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$UserMapperTest.ic" NAME="UserMapperTest Coverage Results" MODIFIED="1616455027672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$UserMapperTest.ic" NAME="UserMapperTest Coverage Results" MODIFIED="1616505345085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spotitube.mappers.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$PlaylistMapperTest.ic" NAME="PlaylistMapperTest Coverage Results" MODIFIED="1616455227463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$PlaylistMapperTest.ic" NAME="PlaylistMapperTest Coverage Results" MODIFIED="1616507075821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spotitube.mappers.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$TrackMapperTest.ic" NAME="TrackMapperTest Coverage Results" MODIFIED="1616455049205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$TrackMapperTest.ic" NAME="TrackMapperTest Coverage Results" MODIFIED="1616505336381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spotitube.mappers.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$TomEE_9_0_37.ic" NAME="TomEE 9.0.37 Coverage Results" MODIFIED="1616454983480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$TomEE_9_0_37.ic" NAME="TomEE 9.0.37 Coverage Results" MODIFIED="1616505265391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -1,10 +1,10 @@
 package spotitube.resources;
 
-import exceptions.UnauthorizedException;
-import services.IdService;
-import services.PlaylistService;
-import services.TrackService;
-import services.UserService;
+import spotitube.exceptions.UnauthorizedException;
+import spotitube.services.IdService;
+import spotitube.services.PlaylistService;
+import spotitube.services.TrackService;
+import spotitube.services.UserService;
 import spotitube.domain.User;
 import spotitube.dto.track.TrackDTO;
 import spotitube.dto.track.TracksResponseDTO;

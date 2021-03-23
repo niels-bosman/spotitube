@@ -1,4 +1,4 @@
-package services;
+package spotitube.services;
 
 public class IdService
 {

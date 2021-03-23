@@ -1,6 +1,6 @@
 package spotitube.dao;
 
-import exceptions.UnauthorizedException;
+import spotitube.exceptions.UnauthorizedException;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
 

@@ -1,8 +1,8 @@
 package spotitube.resources;
 
-import exceptions.UnauthorizedException;
+import spotitube.exceptions.UnauthorizedException;
 import org.junit.jupiter.api.Test;
-import services.UserService;
+import spotitube.services.UserService;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
 

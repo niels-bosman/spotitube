@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import spotitube.domain.Playlist;
+import spotitube.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
 
 import java.util.ArrayList;
@@ -12,11 +13,14 @@ import java.util.List;
 public class PlaylistMapperTest
 {
     private List<Playlist> playlists = new ArrayList<>();
+    private User user = new User();
     private List<PlaylistDTO> playlistDTOS = new ArrayList<>();
 
     @BeforeEach
     public void setUp()
     {
+        user.setId(1);
+
         for (int i = 0; i < 3; i++) {
             Playlist playlist = new Playlist();
             playlist.setId(i);
@@ -43,7 +47,7 @@ public class PlaylistMapperTest
     {
         // Arrange
         Playlist playlist = playlists.get(0);
-        PlaylistDTO dto = PlaylistMapper.getInstance().convertToDTO(playlist);
+        PlaylistDTO dto = PlaylistMapper.getInstance().convertToDTO(playlist, user);
 
         // Assert
         assertEquals(dto.getId(), playlist.getId());
@@ -66,7 +70,7 @@ public class PlaylistMapperTest
     public void mapMultipleToDTO()
     {
         // Arrange
-        List<PlaylistDTO> playlistDTOS = PlaylistMapper.getInstance().convertToDTO(playlists, 1);
+        List<PlaylistDTO> playlistDTOS = PlaylistMapper.getInstance().convertToDTO(playlists, user);
 
         // Assert
         for (int i = 0; i < playlistDTOS.size(); i++) {
