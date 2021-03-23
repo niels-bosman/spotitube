@@ -6,7 +6,6 @@ public class TracksResponseDTO
 {
     private List<TrackDTO> tracks;
 
-
     public List<TrackDTO> getTracks()
     {
         return tracks;

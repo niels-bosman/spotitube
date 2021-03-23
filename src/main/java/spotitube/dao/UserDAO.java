@@ -61,17 +61,20 @@ public class UserDAO
      *
      * @param user The user to add it to.
      */
-    public void addToken(User user)
+    public boolean addToken(User user)
     {
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(ADD_TOKEN_QUERY);
             statement.setString(1, user.getToken());
             statement.setInt(2, user.getId());
-            statement.execute();
+
+            return statement.executeUpdate() > 0;
         }
         catch (SQLException exception) {
             exception.printStackTrace();
         }
+
+        return false;
     }
 
     /**

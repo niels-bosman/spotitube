@@ -46,9 +46,9 @@ public class UserService
      *
      * @param user the user
      */
-    public void addToken(User user)
+    public boolean addToken(User user)
     {
-        userDAO.addToken(user);
+        return userDAO.addToken(user);
     }
 
     /**

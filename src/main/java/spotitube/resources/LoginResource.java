@@ -35,17 +35,21 @@ public class LoginResource
         try {
             User user = userService.get(request);
 
-            userService.addToken(user);
-
-            return Response
-                .ok(UserMapper.getInstance().convertToDTO(user))
-                .build();
+            if (userService.addToken(user)) {
+                return Response
+                    .ok(UserMapper.getInstance().convertToDTO(user))
+                    .build();
+            }
         }
         catch (UnauthorizedException e) {
             return Response
                 .status(Response.Status.UNAUTHORIZED)
                 .build();
         }
+
+        return Response
+            .status(Response.Status.BAD_REQUEST)
+            .build();
     }
 
     /**

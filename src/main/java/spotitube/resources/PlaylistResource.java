@@ -40,7 +40,8 @@ public class PlaylistResource
             PlaylistResponseDTO dto = createResponse(user);
 
             return Response
-                .ok(dto)
+                .ok(Response.Status.OK)
+                .entity(dto)
                 .build();
         }
         catch (UnauthorizedException e) {

@@ -19,6 +19,10 @@ public class PlaylistMapper implements IMapper<Playlist, PlaylistDTO>
         playlist.setName(dto.getName());
         playlist.setOwnerId(-1);
 
+        if (dto.getTracks() != null) {
+            playlist.setTracks(TrackMapper.getInstance().convertToEntity(dto.getTracks()));
+        }
+
         return playlist;
     }
 
@@ -28,6 +32,10 @@ public class PlaylistMapper implements IMapper<Playlist, PlaylistDTO>
         PlaylistDTO dto = new PlaylistDTO();
         dto.setId(entity.getId());
         dto.setName(entity.getName());
+
+        if (entity.getTracks() != null) {
+            dto.setTracks(TrackMapper.getInstance().convertToDTO(entity.getTracks()));
+        }
 
         if (args.length > 0 && isOwner(args[0], entity)) {
             dto.setOwner(true);

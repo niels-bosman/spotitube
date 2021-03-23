@@ -36,6 +36,7 @@ public class LoginResourceTest
         user.setName(this.loginRequestDTO.getUser());
         UserService userServiceMock = mock(UserService.class);
         when(userServiceMock.get(loginRequestDTO)).thenReturn(user);
+        when(userServiceMock.addToken(user)).thenReturn(true);
         this.loginResource.setUserService(userServiceMock);
 
         // Act
@@ -59,5 +60,22 @@ public class LoginResourceTest
 
         // Assert
         assertEquals(Response.Status.UNAUTHORIZED, response.getStatusInfo());
+    }
+
+    @Test public void loginBadRequest() throws UnauthorizedException
+    {
+        // Arrange
+        User user = new User();
+        user.setName(this.loginRequestDTO.getUser());
+        UserService userServiceMock = mock(UserService.class);
+        when(userServiceMock.get(loginRequestDTO)).thenReturn(user);
+        when(userServiceMock.addToken(user)).thenReturn(false);
+        this.loginResource.setUserService(userServiceMock);
+
+        // Act
+        Response response = this.loginResource.login(this.loginRequestDTO);
+
+        // Assert
+        assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());
     }
 }
