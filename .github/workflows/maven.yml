@@ -23,11 +23,8 @@ jobs:
 
     - name: Build with Maven
       run: mvn test -B --file pom.xml
-
-    - name: Setup Codecov
-      run: bash <(curl -s https://codecov.io/bash) && echo "{CODECOV_TOKEN}={uuid-repo-token}" >> $GITHUB_ENV
       
-    - name: Upload coverage to Codecov  
-      uses: codecov/codecov-action@v1
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v1
       with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+        token: ${{ secrets.CODECOV_TOKEN }}
