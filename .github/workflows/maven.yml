@@ -21,10 +21,13 @@ jobs:
       with:
         java-version: 11
 
-    - name: Build with Maven
-      run: mvn test -B --file pom.xml
-      
+    - name: Generate JaCoCo report
+      run: jacoco:report
+
     - uses: actions/checkout@master
     - uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+
+    - name: Build with Maven
+      run: mvn test -B --file pom.xml

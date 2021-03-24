@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Remove useless action">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Remove travis.yml">
       <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -308,21 +308,7 @@
       <workItem from="1616506772221" duration="10172000" />
       <workItem from="1616520372228" duration="10834000" />
       <workItem from="1616541387534" duration="562000" />
-      <workItem from="1616576199258" duration="3035000" />
-    </task>
-    <task id="LOCAL-00022" summary="Rename result">
-      <created>1615825228108</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1615825228108</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Renaming in AuthService">
-      <created>1615827487573</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1615827487573</updated>
+      <workItem from="1616576199258" duration="3602000" />
     </task>
     <task id="LOCAL-00024" summary="Code cleanup">
       <created>1615890731025</created>
@@ -653,7 +639,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616578860095</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Add codecov setup">
+      <created>1616579244157</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1616579244157</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Remove travis.yml">
+      <created>1616579262142</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1616579262142</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -672,8 +672,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reformat user service, dao and resources." />
-    <MESSAGE value="Basic track resource with its nesessary files." />
     <MESSAGE value="TrackResource done" />
     <MESSAGE value="Formatting SQL" />
     <MESSAGE value="Basic API done" />
@@ -697,7 +695,9 @@
     <MESSAGE value="Update readme" />
     <MESSAGE value="Update actions" />
     <MESSAGE value="Remove useless action" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove useless action" />
+    <MESSAGE value="Add codecov setup" />
+    <MESSAGE value="Remove travis.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove travis.yml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
