@@ -22,9 +22,6 @@ jobs:
         java-version: 11
     - name: Build with Maven
       run: mvn test -B --file pom.xml
-
-    - name: Generate cobertura coverage
-      run: mvn cobertura:cobertura
       
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v1

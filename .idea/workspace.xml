@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Update readme">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Update actions">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,14 +308,7 @@
       <workItem from="1616506772221" duration="10172000" />
       <workItem from="1616520372228" duration="10834000" />
       <workItem from="1616541387534" duration="562000" />
-      <workItem from="1616576199258" duration="2471000" />
-    </task>
-    <task id="LOCAL-00020" summary="Rename SQL file">
-      <created>1615824699598</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1615824699598</updated>
+      <workItem from="1616576199258" duration="2652000" />
     </task>
     <task id="LOCAL-00021" summary="Move files (DTO) out of services folder.">
       <created>1615825103847</created>
@@ -654,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616578506134</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Update actions">
+      <created>1616578798545</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1616578798545</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,7 +672,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reformatting and javadoc" />
     <MESSAGE value="Reformat SQL" />
     <MESSAGE value="Reformat user service, dao and resources." />
     <MESSAGE value="Basic track resource with its nesessary files." />
@@ -698,7 +696,8 @@
     <MESSAGE value="Codecov github action" />
     <MESSAGE value="Code coverage pls work" />
     <MESSAGE value="Update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update readme" />
+    <MESSAGE value="Update actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update actions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
