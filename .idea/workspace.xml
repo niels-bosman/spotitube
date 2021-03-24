@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Codecov github action">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Code coverage pls work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,14 +308,7 @@
       <workItem from="1616506772221" duration="10172000" />
       <workItem from="1616520372228" duration="10834000" />
       <workItem from="1616541387534" duration="562000" />
-      <workItem from="1616576199258" duration="2237000" />
-    </task>
-    <task id="LOCAL-00018" summary="Fix typo">
-      <created>1615824569245</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1615824569245</updated>
+      <workItem from="1616576199258" duration="2300000" />
     </task>
     <task id="LOCAL-00019" summary="Make status code assertions with Response.Status class.">
       <created>1615824640668</created>
@@ -655,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616578080225</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Code coverage pls work">
+      <created>1616578442237</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1616578442237</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,7 +672,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cleanup code" />
     <MESSAGE value="Playlist CRUD done" />
     <MESSAGE value="Reformatting and javadoc" />
     <MESSAGE value="Reformat SQL" />
@@ -699,7 +696,8 @@
     <MESSAGE value="Added JaCoCo for badge generation" />
     <MESSAGE value="Edit gitignore" />
     <MESSAGE value="Codecov github action" />
-    <option name="LAST_COMMIT_MESSAGE" value="Codecov github action" />
+    <MESSAGE value="Code coverage pls work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code coverage pls work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

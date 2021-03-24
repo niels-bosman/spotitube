@@ -1,2 +1,3 @@
-# Spotitube [![Build Status](https://travis-ci.org/niels-bosman/HAN-dea-Spotitube.svg?branch=master)](https://travis-ci.org/HANICA-DEA/spotitube) [![Coverage Status](https://coveralls.io/repos/github/niels-bosman/HAN-dea-Spotitube/badge.svg?branch=master)](https://coveralls.io/github/niels-bosman/HAN-dea-Spotitube/?branch=master)
+# Spotitube [![codecov](https://codecov.io/gh/niels-bosman/HAN-dea-spotitube/branch/main/graph/badge.svg)](https://codecov.io/gh/niels-bosman/HAN-dea-spotitube)
+
 Een Java API voor de course DEA in het OOSE semester van de Hogeschool van Arnhem en Nijmegen.
