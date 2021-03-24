@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Remove travis.yml">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Report JaCoCo">
       <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -308,14 +308,7 @@
       <workItem from="1616506772221" duration="10172000" />
       <workItem from="1616520372228" duration="10834000" />
       <workItem from="1616541387534" duration="562000" />
-      <workItem from="1616576199258" duration="3602000" />
-    </task>
-    <task id="LOCAL-00024" summary="Code cleanup">
-      <created>1615890731025</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1615890731025</updated>
+      <workItem from="1616576199258" duration="3810000" />
     </task>
     <task id="LOCAL-00025" summary="Added UserMapper">
       <created>1615972818411</created>
@@ -653,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616579262142</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Report JaCoCo">
+      <created>1616579810482</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1616579810482</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -672,7 +672,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TrackResource done" />
     <MESSAGE value="Formatting SQL" />
     <MESSAGE value="Basic API done" />
     <MESSAGE value="JavaDoc and formatting" />
@@ -697,7 +696,8 @@
     <MESSAGE value="Remove useless action" />
     <MESSAGE value="Add codecov setup" />
     <MESSAGE value="Remove travis.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove travis.yml" />
+    <MESSAGE value="Report JaCoCo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Report JaCoCo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

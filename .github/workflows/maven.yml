@@ -21,8 +21,14 @@ jobs:
       with:
         java-version: 11
 
-    - name: Generate JaCoCo report
-      run: jacoco:report
+    - name: Generate Coverage Report
+      run: mvn clean verify
+
+    - name: Archive Jacoco reports
+      uses: actions/upload-artifact@v1
+      with:
+        name: jacoco-reports
+        path: test-coverage/target/site/jacoco-aggregate
 
     - uses: actions/checkout@master
     - uses: codecov/codecov-action@v1
