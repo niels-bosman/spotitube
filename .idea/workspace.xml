@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Edit gitignore">
-      <change afterPath="$PROJECT_DIR$/travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Codecov github action">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,14 +310,7 @@
       <workItem from="1616506772221" duration="10172000" />
       <workItem from="1616520372228" duration="10834000" />
       <workItem from="1616541387534" duration="562000" />
-      <workItem from="1616576199258" duration="1869000" />
-    </task>
-    <task id="LOCAL-00017" summary="rename tests to have no word &quot;test&quot; in it (should be obvious)">
-      <created>1615824553657</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1615824553657</updated>
+      <workItem from="1616576199258" duration="2237000" />
     </task>
     <task id="LOCAL-00018" summary="Fix typo">
       <created>1615824569245</created>
@@ -654,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616577256786</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Codecov github action">
+      <created>1616578080225</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1616578080225</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,7 +674,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add playlist route" />
     <MESSAGE value="cleanup code" />
     <MESSAGE value="Playlist CRUD done" />
     <MESSAGE value="Reformatting and javadoc" />
@@ -698,7 +698,8 @@
     <MESSAGE value="Tests for everything except DAO's. 72% coverage." />
     <MESSAGE value="Added JaCoCo for badge generation" />
     <MESSAGE value="Edit gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit gitignore" />
+    <MESSAGE value="Codecov github action" />
+    <option name="LAST_COMMIT_MESSAGE" value="Codecov github action" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
