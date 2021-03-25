@@ -2,4 +2,8 @@
 
 Een Java API voor de course DEA in het OOSE-semester van de Hogeschool van Arnhem en Nijmegen.
 
+### Package diagram
 ![image](https://user-images.githubusercontent.com/25898715/112535599-c7264f00-8dac-11eb-8fc4-9b6fc13dbde9.png)
+
+### Deployment diagram
+![image](https://user-images.githubusercontent.com/25898715/112537259-c393c780-8dae-11eb-8fd6-c7b97ab5c578.png)
