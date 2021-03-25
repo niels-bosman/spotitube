@@ -93,5 +93,5 @@
         <maven.compiler.target>11</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <sonar.projectKey>niels-bosman_HAN-dea-spotitube</sonar.projectKey>
-    </properties>A
+    </properties>
 </project>
