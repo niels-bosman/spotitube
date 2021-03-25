@@ -1,10 +1,10 @@
 package spotitube.resources;
 
+import spotitube.dto.track.TracksResponseDTO;
 import spotitube.exceptions.UnauthorizedException;
 import spotitube.services.IdService;
 import spotitube.services.TrackService;
 import spotitube.services.UserService;
-import spotitube.dto.track.TracksResponseDTO;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;

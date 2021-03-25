@@ -1,9 +1,9 @@
 package spotitube.services;
 
-import spotitube.exceptions.UnauthorizedException;
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
+import spotitube.exceptions.UnauthorizedException;
 
 import javax.inject.Inject;
 

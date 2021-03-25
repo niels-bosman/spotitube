@@ -1,14 +1,14 @@
 package spotitube.resources;
 
-import spotitube.exceptions.UnauthorizedException;
-import spotitube.services.IdService;
-import spotitube.services.PlaylistService;
-import spotitube.services.UserService;
 import spotitube.domain.Playlist;
 import spotitube.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
 import spotitube.dto.playlist.PlaylistResponseDTO;
+import spotitube.exceptions.UnauthorizedException;
 import spotitube.mappers.PlaylistMapper;
+import spotitube.services.IdService;
+import spotitube.services.PlaylistService;
+import spotitube.services.UserService;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;

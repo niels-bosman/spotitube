@@ -1,10 +1,10 @@
 package spotitube.resources;
 
-import spotitube.exceptions.UnauthorizedException;
-import spotitube.services.UserService;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
+import spotitube.exceptions.UnauthorizedException;
 import spotitube.mappers.UserMapper;
+import spotitube.services.UserService;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
