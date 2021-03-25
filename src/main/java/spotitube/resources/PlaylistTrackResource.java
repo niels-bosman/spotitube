@@ -71,7 +71,7 @@ public class PlaylistTrackResource
         try {
             int userId = userService.authenticateToken(token);
 
-            if (canRemoveTrackFromPlaylist(playlistId, trackId, userId)) {
+            if (canAndWillRemoveTrackFromPlaylist(playlistId, trackId, userId)) {
                 TracksResponseDTO dto = new TracksResponseDTO();
                 dto.setTracks(trackService.getAllByPlaylist(playlistId));
 
@@ -107,7 +107,7 @@ public class PlaylistTrackResource
         try {
             int userId = userService.authenticateToken(token);
 
-            if (canAddTrackToPlaylist(playlistId, userId, trackDTO)) {
+            if (canAndWillAddTrackToPlaylist(playlistId, userId, trackDTO)) {
                 TracksResponseDTO dto = new TracksResponseDTO();
                 dto.setTracks(trackService.getAllByPlaylist(playlistId));
 
@@ -136,7 +136,7 @@ public class PlaylistTrackResource
      * @param userId     The ID of the authenticated user.
      * @return The result of the statement.
      */
-    public boolean canRemoveTrackFromPlaylist(int playlistId, int trackId, int userId)
+    public boolean canAndWillRemoveTrackFromPlaylist(int playlistId, int trackId, int userId)
     {
         return idService.isValid(trackId, userId, playlistId)
             && playlistService.isOwnedBy(playlistId, userId)
@@ -151,7 +151,7 @@ public class PlaylistTrackResource
      * @param trackDTO   The DTO of the track to add.
      * @return The result of the statement.
      */
-    public boolean canAddTrackToPlaylist(int playlistId, int userId, TrackDTO trackDTO)
+    public boolean canAndWillAddTrackToPlaylist(int playlistId, int userId, TrackDTO trackDTO)
     {
         return idService.isValid(playlistId, userId)
             && playlistService.isOwnedBy(playlistId, userId)

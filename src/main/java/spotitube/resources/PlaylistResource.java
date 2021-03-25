@@ -34,11 +34,9 @@ public class PlaylistResource
         try {
             int userId = userService.authenticateToken(token);
 
-            PlaylistResponseDTO dto = createResponse(userId);
-
             return Response
                 .ok(Response.Status.OK)
-                .entity(dto)
+                .entity(createResponse(userId))
                 .build();
         }
         catch (UnauthorizedException e) {
@@ -64,10 +62,8 @@ public class PlaylistResource
             int userId = userService.authenticateToken(token);
 
             if (idService.isValid(playlistId) && playlistService.delete(playlistId, userId)) {
-                PlaylistResponseDTO dto = createResponse(userId);
-
                 return Response
-                    .ok(dto)
+                    .ok(createResponse(userId))
                     .build();
             }
         }
@@ -98,11 +94,9 @@ public class PlaylistResource
             int userId = userService.authenticateToken(token);
 
             if (playlistService.add(request, userId)) {
-                PlaylistResponseDTO dto = createResponse(userId);
-
                 return Response
                     .status(Response.Status.CREATED)
-                    .entity(dto)
+                    .entity(createResponse(userId))
                     .build();
             }
         }
@@ -135,10 +129,8 @@ public class PlaylistResource
             int userId = userService.authenticateToken(token);
 
             if (idService.isValid(playlistId, userId) && playlistService.editTitle(playlistId, request, userId)) {
-                PlaylistResponseDTO dto = createResponse(userId);
-
                 return Response
-                    .ok(dto)
+                    .ok(createResponse(userId))
                     .build();
             }
         }
