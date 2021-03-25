@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>spotitube</groupId>
     <artifactId>HAN-dea-Spotitube</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
-
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
@@ -41,7 +38,6 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-
     <build>
         <finalName>HAN-dea-spotitube</finalName>
         <pluginManagement>
@@ -57,6 +53,5 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
-        <sonar.projectKey>niels-bosman_HAN-dea-spotitube</sonar.projectKey>
     </properties>
 </project>
