@@ -50,9 +50,9 @@ public class PlaylistResourceTest extends DummyGenerator
 
         // Mock authenticate token method with good token and with any other string.
         Mockito.when(userService.authenticateToken(Mockito.anyString())).thenThrow(UnauthorizedException.class);
-        Mockito.when(userService.authenticateToken(Mockito.eq(DUMMY_USER.getToken()))).thenReturn(DUMMY_USER);
+        Mockito.when(userService.authenticateToken(Mockito.eq(DUMMY_USER.getToken()))).thenReturn(DUMMY_USER.getId());
 
-        Mockito.when(playlistService.getAll(DUMMY_USER)).thenReturn(new ArrayList<>());
+        Mockito.when(playlistService.getAll(DUMMY_USER.getId())).thenReturn(new ArrayList<>());
         Mockito.when(playlistService.getTotalDuration(new ArrayList<>())).thenReturn(0);
     }
 
@@ -77,7 +77,7 @@ public class PlaylistResourceTest extends DummyGenerator
     @Test public void addPlaylistSuccessful()
     {
         // Arrange
-        Mockito.when(playlistService.add(Mockito.any(PlaylistDTO.class), Mockito.eq(DUMMY_USER))).thenReturn(true);
+        Mockito.when(playlistService.add(Mockito.any(PlaylistDTO.class), Mockito.eq(DUMMY_USER.getId()))).thenReturn(true);
 
         // Act
         Response response = playlistResource.addPlaylist(DUMMY_USER.getToken(), dto);
@@ -88,7 +88,7 @@ public class PlaylistResourceTest extends DummyGenerator
 
     @Test public void addPlaylistForbidden()
     {
-        Mockito.when(playlistService.add(Mockito.any(PlaylistDTO.class), Mockito.eq(DUMMY_USER))).thenReturn(false);
+        Mockito.when(playlistService.add(Mockito.any(PlaylistDTO.class), Mockito.eq(DUMMY_USER.getId()))).thenReturn(false);
 
         Response response = playlistResource.addPlaylist("invalidToken", dto);
 
@@ -97,7 +97,7 @@ public class PlaylistResourceTest extends DummyGenerator
 
     @Test public void addPlaylistBadRequest()
     {
-        Mockito.when(playlistService.add(Mockito.any(PlaylistDTO.class), Mockito.eq(DUMMY_USER))).thenReturn(false);
+        Mockito.when(playlistService.add(Mockito.any(PlaylistDTO.class), Mockito.eq(DUMMY_USER.getId()))).thenReturn(false);
 
         Response response = playlistResource.addPlaylist(DUMMY_USER.getToken(), dto);
 
@@ -107,11 +107,10 @@ public class PlaylistResourceTest extends DummyGenerator
     @Test public void deletePlaylistSuccessful()
     {
         // Arrange
-        playlistResource.playlist.setId(dummyPlaylists.get(0).getId());
-        Mockito.when(playlistService.delete(playlistResource.playlist, DUMMY_USER)).thenReturn(true);
+        Mockito.when(playlistService.delete(DUMMY_PLAYLIST.getId(), DUMMY_USER.getId())).thenReturn(true);
 
         // Act
-        Response response = playlistResource.deletePlaylist(playlistResource.playlist.getId(), DUMMY_USER.getToken());
+        Response response = playlistResource.deletePlaylist(DUMMY_PLAYLIST.getId(), DUMMY_USER.getToken());
 
         // Assert
         assertEquals(Response.Status.OK, response.getStatusInfo());
@@ -120,11 +119,10 @@ public class PlaylistResourceTest extends DummyGenerator
     @Test public void deletePlaylistForbidden()
     {
         // Arrange
-        playlistResource.playlist.setId(dummyPlaylists.get(0).getId());
-        Mockito.when(playlistService.delete(playlistResource.playlist, DUMMY_USER)).thenReturn(false);
+        Mockito.when(playlistService.delete(DUMMY_PLAYLIST.getId(), DUMMY_USER.getId())).thenReturn(false);
 
         // Act
-        Response response = playlistResource.deletePlaylist(playlistResource.playlist.getId(), "wrongToken");
+        Response response = playlistResource.deletePlaylist(DUMMY_PLAYLIST.getId(), "wrongToken");
 
         // Assert
         assertEquals(Response.Status.FORBIDDEN, response.getStatusInfo());
@@ -133,11 +131,10 @@ public class PlaylistResourceTest extends DummyGenerator
     @Test public void deletePlaylistBadRequest()
     {
         // Arrange
-        playlistResource.playlist.setId(dummyPlaylists.get(0).getId());
-        Mockito.when(playlistService.delete(playlistResource.playlist, DUMMY_USER)).thenReturn(false);
+        Mockito.when(playlistService.delete(DUMMY_PLAYLIST.getId(), DUMMY_USER.getId())).thenReturn(false);
 
         // Act
-        Response response = playlistResource.deletePlaylist(playlistResource.playlist.getId(), DUMMY_USER.getToken());
+        Response response = playlistResource.deletePlaylist(DUMMY_PLAYLIST.getId(), DUMMY_USER.getToken());
 
         // Assert
         assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());
@@ -146,11 +143,10 @@ public class PlaylistResourceTest extends DummyGenerator
     @Test public void editPlaylistSuccessful()
     {
         // Arrange
-        playlistResource.playlist.setId(dummyPlaylists.get(0).getId());
-        Mockito.when(playlistService.editTitle(playlistResource.playlist, dto, DUMMY_USER)).thenReturn(true);
+        Mockito.when(playlistService.editTitle(DUMMY_PLAYLIST.getId(), dto, DUMMY_USER.getId())).thenReturn(true);
 
         // Act
-        Response response = playlistResource.editPlaylist(playlistResource.playlist.getId(), DUMMY_USER.getToken(), dto);
+        Response response = playlistResource.editPlaylist(DUMMY_PLAYLIST.getId(), DUMMY_USER.getToken(), dto);
 
         // Assert
         assertEquals(Response.Status.OK, response.getStatusInfo());
@@ -159,11 +155,10 @@ public class PlaylistResourceTest extends DummyGenerator
     @Test public void editPlaylistForbidden()
     {
         // Arrange
-        playlistResource.playlist.setId(dummyPlaylists.get(0).getId());
-        Mockito.when(playlistService.editTitle(playlistResource.playlist, dto, DUMMY_USER)).thenReturn(true);
+        Mockito.when(playlistService.editTitle(DUMMY_PLAYLIST.getId(), dto, DUMMY_USER.getId())).thenReturn(true);
 
         // Act
-        Response response = playlistResource.editPlaylist(playlistResource.playlist.getId(), "wrongToken", dto);
+        Response response = playlistResource.editPlaylist(DUMMY_PLAYLIST.getId(), "wrongToken", dto);
 
         // Assert
         assertEquals(Response.Status.FORBIDDEN, response.getStatusInfo());
@@ -172,11 +167,10 @@ public class PlaylistResourceTest extends DummyGenerator
     @Test public void editPlaylistBadRequest()
     {
         // Arrange
-        playlistResource.playlist.setId(dummyPlaylists.get(0).getId());
-        Mockito.when(playlistService.editTitle(playlistResource.playlist, dto, DUMMY_USER)).thenReturn(false);
+        Mockito.when(playlistService.editTitle(DUMMY_PLAYLIST.getId(), dto, DUMMY_USER.getId())).thenReturn(false);
 
         // Act
-        Response response = playlistResource.editPlaylist(playlistResource.playlist.getId(), DUMMY_USER.getToken(), dto);
+        Response response = playlistResource.editPlaylist(DUMMY_PLAYLIST.getId(), DUMMY_USER.getToken(), dto);
 
         // Assert
         assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());

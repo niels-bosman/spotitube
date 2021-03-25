@@ -70,9 +70,9 @@ public class PlaylistTrackResource
     public Response removeTrackFromPlaylist(@PathParam("playlist_id") int playlistId, @PathParam("track_id") int trackId, @QueryParam("token") String token)
     {
         try {
-            User user = userService.authenticateToken(token);
+            int userId = userService.authenticateToken(token);
 
-            if (canRemoveTrackFromPlaylist(playlistId, trackId, user.getId())) {
+            if (canRemoveTrackFromPlaylist(playlistId, trackId, userId)) {
                 TracksResponseDTO dto = new TracksResponseDTO();
                 dto.setTracks(trackService.getAllByPlaylist(playlistId));
 
@@ -106,9 +106,9 @@ public class PlaylistTrackResource
     public Response addTrackToPlaylist(@PathParam("playlist_id") int playlistId, @QueryParam("token") String token, TrackDTO trackDTO)
     {
         try {
-            User user = userService.authenticateToken(token);
+            int userId = userService.authenticateToken(token);
 
-            if (canAddTrackToPlaylist(playlistId, user.getId(), trackDTO)) {
+            if (canAddTrackToPlaylist(playlistId, userId, trackDTO)) {
                 TracksResponseDTO dto = new TracksResponseDTO();
                 dto.setTracks(trackService.getAllByPlaylist(playlistId));
 

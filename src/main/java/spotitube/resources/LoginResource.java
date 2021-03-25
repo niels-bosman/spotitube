@@ -1,9 +1,7 @@
 package spotitube.resources;
 
-import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
 import spotitube.exceptions.UnauthorizedException;
-import spotitube.mappers.UserMapper;
 import spotitube.services.UserService;
 
 import javax.inject.Inject;
@@ -33,23 +31,15 @@ public class LoginResource
     public Response login(LoginRequestDTO request)
     {
         try {
-            User user = userService.get(request);
-
-            if (userService.addToken(user)) {
-                return Response
-                    .ok(UserMapper.getInstance().convertToDTO(user))
-                    .build();
-            }
+            return Response
+                .ok(userService.authenticate(request.getUser(), request.getPassword()))
+                .build();
         }
         catch (UnauthorizedException e) {
             return Response
                 .status(Response.Status.UNAUTHORIZED)
                 .build();
         }
-
-        return Response
-            .status(Response.Status.BAD_REQUEST)
-            .build();
     }
 
     /**

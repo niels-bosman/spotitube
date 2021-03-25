@@ -16,11 +16,14 @@ public class PlaylistService
     /**
      * Getter of all of the playlists.
      *
-     * @param user The authenticated user.
+     * @param userId The authenticated user ID.
      * @return All playlists
      */
-    public List<PlaylistDTO> getAll(User user)
+    public List<PlaylistDTO> getAll(int userId)
     {
+        User user = new User();
+        user.setId(userId);
+
         return PlaylistMapper.getInstance().convertToDTO(playlistDAO.getAll(), user);
     }
 
@@ -37,26 +40,26 @@ public class PlaylistService
     /**
      * Deletes a specific playlist.
      *
-     * @param playlist The playlist to be deleted.
-     * @param user     The authenticated user.
+     * @param playlistId The playlist to be deleted.
+     * @param userId     The authenticated user.
      * @return If the deletion was successful.
      */
-    public boolean delete(Playlist playlist, User user)
+    public boolean delete(int playlistId, int userId)
     {
-        return playlistDAO.delete(playlist, user);
+        return playlistDAO.delete(playlistId, userId);
     }
 
     /**
      * Adds a playlist.
      *
      * @param playlistDTO The playlist to be added.
-     * @param user        The authenticated user.
+     * @param userId        The authenticated user.
      * @return If the adding was successful.
      */
-    public boolean add(PlaylistDTO playlistDTO, User user)
+    public boolean add(PlaylistDTO playlistDTO, int userId)
     {
         Playlist playlist = PlaylistMapper.getInstance().convertToEntity(playlistDTO);
-        playlist.setOwnerId(user.getId());
+        playlist.setOwnerId(userId);
 
         return playlistDAO.add(playlist);
     }
@@ -64,14 +67,14 @@ public class PlaylistService
     /**
      * Edit the title of a specific playlist.
      *
-     * @param editablePlaylist The editable playlist
+     * @param playlistId The editable playlist
      * @param newPlaylist      The new playlist
-     * @param user             The authenticated user.
+     * @param userId             The authenticated user.
      * @return If the editing was successful.
      */
-    public boolean editTitle(Playlist editablePlaylist, PlaylistDTO newPlaylist, User user)
+    public boolean editTitle(int playlistId, PlaylistDTO newPlaylist, int userId)
     {
-        return playlistDAO.editTitle(editablePlaylist, newPlaylist, user);
+        return playlistDAO.editTitle(playlistId, newPlaylist, userId);
     }
 
     public boolean isOwnedBy(int playlistId, int userId)

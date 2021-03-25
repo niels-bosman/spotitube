@@ -37,7 +37,7 @@ public class PlaylistTrackResourceTest extends DummyGenerator
         playlistTrackResource.setIdService(idService);
 
         Mockito.when(userService.authenticateToken(Mockito.anyString())).thenThrow(UnauthorizedException.class);
-        Mockito.when(userService.authenticateToken(Mockito.eq(DUMMY_USER.getToken()))).thenReturn(DUMMY_USER);
+        Mockito.when(userService.authenticateToken(Mockito.eq(DUMMY_USER.getToken()))).thenReturn(DUMMY_USER.getId());
     }
 
     @Test public void playlistTracksSuccessful()

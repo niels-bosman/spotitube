@@ -85,16 +85,16 @@ public class PlaylistDAO
     /**
      * Deletes a specific playlist.
      *
-     * @param playlist The deletable playlist.
-     * @param user     The owner of the playlist.
+     * @param playlistId The deletable playlist.
+     * @param userId     The owner of the playlist.
      * @return If the deletion was successful.
      */
-    public boolean delete(Playlist playlist, User user)
+    public boolean delete(int playlistId, int userId)
     {
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(DELETE_QUERY);
-            statement.setInt(1, playlist.getId());
-            statement.setInt(2, user.getId());
+            statement.setInt(1, playlistId);
+            statement.setInt(2, userId);
 
             return statement.executeUpdate() > 0;
         }
@@ -130,18 +130,18 @@ public class PlaylistDAO
     /**
      * Edits the name of a specific playlist.
      *
-     * @param editablePlaylist The editable playlist
+     * @param playlistId The editable playlist
      * @param newPlaylist      The new playlist
-     * @param user             The user
+     * @param userId             The user
      * @return If the editing was successful
      */
-    public boolean editTitle(Playlist editablePlaylist, PlaylistDTO newPlaylist, User user)
+    public boolean editTitle(int playlistId, PlaylistDTO newPlaylist, int userId)
     {
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(UPDATE_NAME_QUERY);
             statement.setString(1, newPlaylist.getName());
-            statement.setInt(2, editablePlaylist.getId());
-            statement.setInt(3, user.getId());
+            statement.setInt(2, playlistId);
+            statement.setInt(3, userId);
 
             return statement.executeUpdate() > 0;
         }

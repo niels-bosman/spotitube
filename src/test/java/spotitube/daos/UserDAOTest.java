@@ -46,7 +46,7 @@ public class UserDAOTest extends DummyGenerator
         Mockito.when(result.getString("name")).thenReturn(DUMMY_USER.getName());
 
         // Act
-        User user = userDAO.get(loginRequestDTO);
+        User user = userDAO.get(loginRequestDTO.getUser(), loginRequestDTO.getPassword());
 
         // Assert
         assertEquals(user.getId(), DUMMY_USER.getId());
@@ -73,7 +73,9 @@ public class UserDAOTest extends DummyGenerator
         Mockito.when(result.next()).thenReturn(false);
 
         // Act / assert
-        assertThrows(UnauthorizedException.class, () -> userDAO.get(loginRequestDTO));
+        assertThrows(UnauthorizedException.class, () -> {
+            userDAO.get(loginRequestDTO.getUser(), loginRequestDTO.getPassword());
+        });
     }
 
     @Test public void getSQLException() throws SQLException, UnauthorizedException
@@ -95,13 +97,13 @@ public class UserDAOTest extends DummyGenerator
         Mockito.when(preparedStatement.executeQuery()).thenThrow(new SQLException());
 
         // Act
-        User user = userDAO.get(loginRequestDTO);
+        User user = userDAO.get(loginRequestDTO.getUser(), loginRequestDTO.getPassword());
 
         // Assert
         assertNull(user.getName());
     }
 
-    @Test public void verifyTokenSuccessful() throws SQLException
+    @Test public void verifyTokenSuccessful() throws SQLException, UnauthorizedException
     {
         // Arrange
         String expectedQuery = "SELECT id, name FROM user WHERE token = ?";
@@ -127,7 +129,7 @@ public class UserDAOTest extends DummyGenerator
         assertEquals(user.getId(), DUMMY_USER.getId());
     }
 
-    @Test public void verifyTokenNull() throws SQLException
+    @Test public void verifyTokenError() throws SQLException, UnauthorizedException
     {
         // Arrange
         String expectedQuery = "SELECT id, name FROM user WHERE token = ?";
@@ -145,7 +147,7 @@ public class UserDAOTest extends DummyGenerator
         Mockito.when(result.next()).thenReturn(false);
 
         // Act / assert
-        assertNull(userDAO.verifyToken("token"));
+        assertThrows(UnauthorizedException.class, () -> userDAO.verifyToken("token"));
     }
 
     @Test public void addTokenSuccessful() throws SQLException

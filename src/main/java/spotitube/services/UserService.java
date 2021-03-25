@@ -3,13 +3,31 @@ package spotitube.services;
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
+import spotitube.dto.login.LoginResponseDTO;
 import spotitube.exceptions.UnauthorizedException;
+import spotitube.mappers.UserMapper;
 
 import javax.inject.Inject;
 
 public class UserService
 {
     private UserDAO userDAO;
+
+    public LoginResponseDTO authenticate(String username, String password) throws UnauthorizedException
+    {
+        User user = userDAO.get(username, password);
+
+        if(user != null) {
+            user.setToken();
+
+            // Try to store the token
+            if(userDAO.addToken(user)) {
+                return UserMapper.getInstance().convertToDTO(user);
+            }
+        }
+
+        throw new UnauthorizedException();
+    }
 
     /**
      * Authenticate token user.
@@ -18,15 +36,9 @@ public class UserService
      * @return the user
      * @throws UnauthorizedException the unauthorized exception
      */
-    public User authenticateToken(String token) throws UnauthorizedException
+    public int authenticateToken(String token) throws UnauthorizedException
     {
-        User user = userDAO.verifyToken(token);
-
-        if (user != null) {
-            return user;
-        }
-
-        throw new UnauthorizedException();
+        return userDAO.verifyToken(token).getId();
     }
 
     /**
@@ -38,7 +50,7 @@ public class UserService
      */
     public User get(LoginRequestDTO requestDTO) throws UnauthorizedException
     {
-        return userDAO.get(requestDTO);
+        return userDAO.get(requestDTO.getUser(), requestDTO.getPassword());
     }
 
     /**

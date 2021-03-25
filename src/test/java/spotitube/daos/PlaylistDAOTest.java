@@ -147,7 +147,7 @@ public class PlaylistDAOTest extends DummyGenerator
         Mockito.when(statement.executeUpdate()).thenReturn(1);
 
         // Act / assert
-        assertTrue(playlistDAO.delete(DUMMY_PLAYLIST, DUMMY_USER));
+        assertTrue(playlistDAO.delete(DUMMY_PLAYLIST.getId(), DUMMY_USER.getId()));
     }
 
     @Test public void deleteException() throws SQLException
@@ -166,7 +166,7 @@ public class PlaylistDAOTest extends DummyGenerator
         Mockito.when(statement.executeUpdate()).thenThrow(new SQLException());
 
         // Act / assert
-        assertFalse(playlistDAO.delete(DUMMY_PLAYLIST, DUMMY_USER));
+        assertFalse(playlistDAO.delete(DUMMY_PLAYLIST.getId(), DUMMY_USER.getId()));
     }
 
     @Test public void addSuccess() throws SQLException
@@ -223,7 +223,7 @@ public class PlaylistDAOTest extends DummyGenerator
         Mockito.when(statement.executeUpdate()).thenReturn(1);
 
         // Act / assert
-        assertTrue(playlistDAO.editTitle(DUMMY_PLAYLIST, new PlaylistDTO(), DUMMY_USER));
+        assertTrue(playlistDAO.editTitle(DUMMY_PLAYLIST.getId(), new PlaylistDTO(), DUMMY_USER.getId()));
     }
 
     @Test public void editException() throws SQLException
@@ -242,7 +242,7 @@ public class PlaylistDAOTest extends DummyGenerator
         Mockito.when(statement.executeUpdate()).thenThrow(new SQLException());
 
         // Act / assert
-        assertFalse(playlistDAO.editTitle(DUMMY_PLAYLIST, new PlaylistDTO(), DUMMY_USER));
+        assertFalse(playlistDAO.editTitle(DUMMY_PLAYLIST.getId(), new PlaylistDTO(), DUMMY_USER.getId()));
     }
 
     @Test public void ownedByUserSuccess() throws SQLException

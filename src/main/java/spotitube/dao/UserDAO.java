@@ -29,14 +29,14 @@ public class UserDAO
      * @return The user.
      * @throws UnauthorizedException the unauthorized exception
      */
-    public User get(LoginRequestDTO requestDTO) throws UnauthorizedException
+    public User get(String username, String password) throws UnauthorizedException
     {
         User user = new User();
 
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(LOGIN_QUERY);
-            statement.setString(1, requestDTO.getUser());
-            statement.setString(2, requestDTO.getPassword());
+            statement.setString(1, username);
+            statement.setString(2, password);
             ResultSet result = statement.executeQuery();
 
             if (!result.next()) {
@@ -83,7 +83,7 @@ public class UserDAO
      * @param token The given token.
      * @return The verified user.
      */
-    public User verifyToken(String token)
+    public User verifyToken(String token) throws UnauthorizedException
     {
         User user = new User();
 
@@ -102,7 +102,11 @@ public class UserDAO
             exception.printStackTrace();
         }
 
-        return (user.getName() != null) ? user : null;
+        if (user.getName() != null) {
+            return user;
+        }
+
+        throw new UnauthorizedException();
     }
 
     /**

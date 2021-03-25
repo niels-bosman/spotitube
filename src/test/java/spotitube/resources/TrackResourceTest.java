@@ -34,7 +34,7 @@ public class TrackResourceTest extends DummyGenerator
         trackResource.setIdService(idService);
 
         Mockito.when(userService.authenticateToken(Mockito.anyString())).thenThrow(UnauthorizedException.class);
-        Mockito.when(userService.authenticateToken(Mockito.eq(DUMMY_USER.getToken()))).thenReturn(DUMMY_USER);
+        Mockito.when(userService.authenticateToken(Mockito.eq(DUMMY_USER.getToken()))).thenReturn(DUMMY_USER.getId());
         Mockito.when(trackService.getAllNotInPlaylist(Mockito.anyInt())).thenReturn(new ArrayList<>());
     }
 

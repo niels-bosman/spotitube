@@ -22,7 +22,6 @@ public class PlaylistResource
     private UserService userService;
     private PlaylistService playlistService;
     private IdService idService;
-    public Playlist playlist = new Playlist();
 
     /**
      * Getter of all of the playlists.
@@ -35,9 +34,9 @@ public class PlaylistResource
     public Response getAll(@QueryParam("token") String token)
     {
         try {
-            User user = userService.authenticateToken(token);
+            int userId = userService.authenticateToken(token);
 
-            PlaylistResponseDTO dto = createResponse(user);
+            PlaylistResponseDTO dto = createResponse(userId);
 
             return Response
                 .ok(Response.Status.OK)
@@ -64,11 +63,10 @@ public class PlaylistResource
     public Response deletePlaylist(@PathParam("id") int playlistId, @QueryParam("token") String token)
     {
         try {
-            User user = userService.authenticateToken(token);
-            playlist.setId(playlistId);
+            int userId = userService.authenticateToken(token);
 
-            if (idService.isValid(playlistId) && playlistService.delete(playlist, user)) {
-                PlaylistResponseDTO dto = createResponse(user);
+            if (idService.isValid(playlistId) && playlistService.delete(playlistId, userId)) {
+                PlaylistResponseDTO dto = createResponse(userId);
 
                 return Response
                     .ok(dto)
@@ -99,10 +97,10 @@ public class PlaylistResource
     public Response addPlaylist(@QueryParam("token") String token, PlaylistDTO request)
     {
         try {
-            User user = userService.authenticateToken(token);
+            int userId = userService.authenticateToken(token);
 
-            if (playlistService.add(request, user)) {
-                PlaylistResponseDTO dto = createResponse(user);
+            if (playlistService.add(request, userId)) {
+                PlaylistResponseDTO dto = createResponse(userId);
 
                 return Response
                     .status(Response.Status.CREATED)
@@ -136,11 +134,10 @@ public class PlaylistResource
     public Response editPlaylist(@PathParam("id") int playlistId, @QueryParam("token") String token, PlaylistDTO request)
     {
         try {
-            User user = userService.authenticateToken(token);
-            playlist.setId(playlistId);
+            int userId = userService.authenticateToken(token);
 
-            if (idService.isValid(playlistId) && playlistService.editTitle(playlist, request, user)) {
-                PlaylistResponseDTO dto = createResponse(user);
+            if (idService.isValid(playlistId, userId) && playlistService.editTitle(playlistId, request, userId)) {
+                PlaylistResponseDTO dto = createResponse(userId);
 
                 return Response
                     .ok(dto)
@@ -161,13 +158,13 @@ public class PlaylistResource
     /**
      * Formats all the playlists and verifies it with the user.
      *
-     * @param user the authenticated User.
+     * @param userId the authenticated User.
      * @return A full playlist with it's duration
      */
-    private PlaylistResponseDTO createResponse(User user)
+    private PlaylistResponseDTO createResponse(int userId)
     {
         PlaylistResponseDTO playlistResponseDTO = new PlaylistResponseDTO();
-        List<PlaylistDTO> playlistDTOs = playlistService.getAll(user);
+        List<PlaylistDTO> playlistDTOs = playlistService.getAll(userId);
         int duration = playlistService.getTotalDuration(PlaylistMapper.getInstance().convertToEntity(playlistDTOs));
 
         playlistResponseDTO.setPlaylists(playlistDTOs);

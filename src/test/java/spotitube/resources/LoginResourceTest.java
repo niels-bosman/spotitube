@@ -1,5 +1,6 @@
 package spotitube.resources;
 
+import spotitube.DummyGenerator;
 import spotitube.exceptions.UnauthorizedException;
 import org.junit.jupiter.api.Test;
 import spotitube.services.UserService;
@@ -15,7 +16,7 @@ import javax.ws.rs.core.Response;
 import org.junit.jupiter.api.BeforeEach;
 import spotitube.dto.login.LoginResponseDTO;
 
-public class LoginResourceTest
+public class LoginResourceTest extends DummyGenerator
 {
     private LoginRequestDTO loginRequestDTO;
     private LoginResource loginResource;
@@ -34,8 +35,13 @@ public class LoginResourceTest
         // Arrange
         User user = new User();
         user.setName(this.loginRequestDTO.getUser());
+
+        LoginResponseDTO mockResponse = new LoginResponseDTO();
+        mockResponse.setUser(loginRequestDTO.getUser());
+
         UserService userServiceMock = mock(UserService.class);
-        when(userServiceMock.get(loginRequestDTO)).thenReturn(user);
+        when(userServiceMock.authenticate(loginRequestDTO.getUser(), loginRequestDTO.getPassword()))
+            .thenReturn(mockResponse);
         when(userServiceMock.addToken(user)).thenReturn(true);
         this.loginResource.setUserService(userServiceMock);
 
@@ -52,30 +58,16 @@ public class LoginResourceTest
     {
         // Arrange
         UserService userServiceMock = mock(UserService.class);
-        when(userServiceMock.get(loginRequestDTO)).thenThrow(new UnauthorizedException());
+        when(userServiceMock.authenticate(DUMMY_USER.getUsername(), DUMMY_USER.getPassword())).thenThrow(new UnauthorizedException());
         this.loginResource.setUserService(userServiceMock);
+        LoginRequestDTO loginRequestDTO = new LoginRequestDTO();
+        loginRequestDTO.setUser(DUMMY_USER.getUsername());
+        loginRequestDTO.setPassword(DUMMY_USER.getPassword());
 
         // Act
-        Response response = this.loginResource.login(this.loginRequestDTO);
+        Response response = this.loginResource.login(loginRequestDTO);
 
         // Assert
         assertEquals(Response.Status.UNAUTHORIZED, response.getStatusInfo());
-    }
-
-    @Test public void loginBadRequest() throws UnauthorizedException
-    {
-        // Arrange
-        User user = new User();
-        user.setName(this.loginRequestDTO.getUser());
-        UserService userServiceMock = mock(UserService.class);
-        when(userServiceMock.get(loginRequestDTO)).thenReturn(user);
-        when(userServiceMock.addToken(user)).thenReturn(false);
-        this.loginResource.setUserService(userServiceMock);
-
-        // Act
-        Response response = this.loginResource.login(this.loginRequestDTO);
-
-        // Assert
-        assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());
     }
 }

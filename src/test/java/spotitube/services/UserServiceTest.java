@@ -9,6 +9,7 @@ import spotitube.DummyGenerator;
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
+import spotitube.dto.login.LoginResponseDTO;
 import spotitube.exceptions.UnauthorizedException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,16 +32,16 @@ public class UserServiceTest extends DummyGenerator
         Mockito.when(userDAO.verifyToken(DUMMY_USER.getToken())).thenReturn(DUMMY_USER);
 
         // Act
-        User testUser = userService.authenticateToken(DUMMY_USER.getToken());
+        int userId = userService.authenticateToken(DUMMY_USER.getToken());
 
         // Assert
-        assertNotEquals(testUser, null);
+        assertEquals(userId, DUMMY_USER.getId());
     }
 
-    @Test public void authenticateTokenException()
+    @Test public void authenticateTokenException() throws UnauthorizedException
     {
         // Arrange
-        Mockito.when(userDAO.verifyToken(Mockito.anyString())).thenReturn(null);
+        Mockito.when(userDAO.verifyToken(Mockito.anyString())).thenThrow(UnauthorizedException.class);
 
         // Assert / act
         assertThrows(UnauthorizedException.class, () -> userService.authenticateToken("wrongToken"));
@@ -49,22 +50,52 @@ public class UserServiceTest extends DummyGenerator
     @Test public void get() throws UnauthorizedException
     {
         // Arrange
-        Mockito.when(userDAO.get(Mockito.any(LoginRequestDTO.class))).thenReturn(DUMMY_USER);
+        Mockito.when(userDAO.get(Mockito.anyString(), Mockito.anyString())).thenReturn(DUMMY_USER);
+        LoginRequestDTO loginRequestDTO = new LoginRequestDTO();
+        loginRequestDTO.setUser(DUMMY_USER.getName());
+        loginRequestDTO.setPassword(DUMMY_USER.getPassword());
 
         // Act
-        User user = userService.get(new LoginRequestDTO());
+        User user = userService.get(loginRequestDTO);
 
         // Assert
         assertEquals(user.getName(), DUMMY_USER.getName());
     }
 
+    @Test public void authenticate() throws UnauthorizedException
+    {
+        // Arrange
+        Mockito.when(userDAO.get(Mockito.anyString(), Mockito.anyString())).thenReturn(DUMMY_USER);
+        Mockito.when(userDAO.addToken(DUMMY_USER)).thenReturn(true);
+
+        // Act
+        LoginResponseDTO loginResponseDTO = userService.authenticate(DUMMY_USER.getUsername(), DUMMY_USER.getPassword());
+
+        // Assert
+        assertEquals(loginResponseDTO.getUser(), DUMMY_USER.getName());
+    }
+
+    @Test public void authenticateException() throws UnauthorizedException
+    {
+        // Arrange
+        Mockito.when(userDAO.get(Mockito.anyString(), Mockito.anyString())).thenReturn(null);
+
+        // Act / assert
+        assertThrows(UnauthorizedException.class, () -> {
+            userService.authenticate(DUMMY_USER.getUsername(), DUMMY_USER.getPassword());
+        });
+    }
+
     @Test public void getException() throws UnauthorizedException
     {
         // Arrange
-        Mockito.when(userDAO.get(Mockito.any(LoginRequestDTO.class))).thenThrow(UnauthorizedException.class);
+        Mockito.when(userDAO.get(Mockito.anyString(), Mockito.anyString())).thenThrow(UnauthorizedException.class);
+        LoginRequestDTO loginRequestDTO = new LoginRequestDTO();
+        loginRequestDTO.setUser(DUMMY_USER.getName());
+        loginRequestDTO.setPassword(DUMMY_USER.getPassword());
 
         // Assert / Act
-        assertThrows(UnauthorizedException.class, () -> userService.get(new LoginRequestDTO()));
+        assertThrows(UnauthorizedException.class, () -> userService.get(loginRequestDTO));
     }
 
     @Test public void addToken()
