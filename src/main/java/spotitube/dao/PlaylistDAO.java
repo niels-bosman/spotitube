@@ -21,7 +21,7 @@ public class PlaylistDAO
     private static final String GET_ALL_QUERY = "SELECT id, name, owner_id FROM playlist";
     private static final String GET_TOTAL_DURATION_QUERY = "SELECT SUM(t.duration) AS `duration` FROM track t INNER JOIN playlist_track pt ON pt.track_id = t.id WHERE pt.playlist_id = ?";
     private static final String DELETE_QUERY = "DELETE FROM playlist WHERE id = ? AND owner_id = ?";
-    private static final String CREATE_NEW_QUERY = "INSERT INTO playlist (name, owner_id) VALUES(?, ?)";
+    private static final String CREATE_NEW_QUERY = "INSERT INTO playlist (name, owner_id) VALUES (?, ?)";
     private static final String UPDATE_NAME_QUERY = "UPDATE playlist SET name = ? WHERE id = ? AND owner_id = ?";
     private static final String IS_OWNED_BY_USER_QUERY = "SELECT 1 FROM playlist WHERE id = ? AND owner_id = ?";
 
