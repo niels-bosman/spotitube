@@ -1,8 +1,15 @@
+language: java
+
+install: true
+
 addons:
   sonarcloud:
     organization: niels-bosman
     token:
       secure: ei5Qd1VkXxvSk6BonlJz+UuxO2A6MPeY3Nx/ac1W9nnmt1FNxEdaXOvKkl0zlyqhhxQa6FCviWkzDEPOzKAxQPBivaQQFpgJZVDN2LCDa7yKQx8Lqo6ixfkrZEFZ364w9pjWHxJ564HKyTRpt1+m69iiI7+ziVe/JRCTQ4qV1nzD/fIKpGUPddHnMtBd0TEEuVkG1elw2sPnoG3PNlQemGJOG/b6fyzx57Ch/tqMX+xmbH0acSfQCWfyF0jKEdo6LJmDGD8mAJB8hVhXbAISYzdNY9+KNyqIQuSLCwjEdMaMcSfDHnmAMe9NDvhofWymwJurREwwNIp4YnoJGcTW/jd1ZhoaeoAicFtkxqCd5NLMCHBOjVTnvxNyVivWo/ANZ5Sz3nzGlWVU6meOMylxoNc+3LDNSfjgEKD8IB8NcIUneMsJIX7aZvS15wvPjWxJjJQmjOEJu9bLh/moMEGexgE04cKXunAwEyu8WQhLJom5iuaZ+6eUB/9leXB7daDLLUfDD8MN53Ge07NIcCIBj38JUpxHfGB6jAmQprHqs6omIFQPNLIX1bGNHsmGh1FY+S6BPdRfQCvpXChtHHaNziPyWYcTtnpMWolm3ZmpW+C2jqd9bm2AsInuOAAS8fkxpdlsJFSF8cv16oXpm03Cw1kXPxYp9XLccRJg24Jws5g=
 
+jdk:
+  - oraclejdk8
+
 script:
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=niels-bosman_HAN-dea-spotitube
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
