@@ -86,10 +86,10 @@ public class UserServiceTest extends DummyGenerator
         });
     }
 
-    @Test public void getException() throws UnauthorizedException
+    @Test public void getException()
     {
         // Arrange
-        Mockito.when(userDAO.get(Mockito.anyString(), Mockito.anyString())).thenThrow(UnauthorizedException.class);
+        Mockito.when(userDAO.get(Mockito.anyString(), Mockito.anyString())).thenReturn(null);
         LoginRequestDTO loginRequestDTO = new LoginRequestDTO();
         loginRequestDTO.setUser(DUMMY_USER.getName());
         loginRequestDTO.setPassword(DUMMY_USER.getPassword());

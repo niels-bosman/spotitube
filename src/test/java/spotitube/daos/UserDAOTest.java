@@ -73,9 +73,7 @@ public class UserDAOTest extends DummyGenerator
         Mockito.when(result.next()).thenReturn(false);
 
         // Act / assert
-        assertThrows(UnauthorizedException.class, () -> {
-            userDAO.get(loginRequestDTO.getUser(), loginRequestDTO.getPassword());
-        });
+        assertNull(userDAO.get(loginRequestDTO.getUser(), loginRequestDTO.getPassword()));
     }
 
     @Test public void getSQLException() throws SQLException, UnauthorizedException

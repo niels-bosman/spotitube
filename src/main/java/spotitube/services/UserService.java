@@ -13,15 +13,24 @@ public class UserService
 {
     private UserDAO userDAO;
 
+
+    /**
+     * Authenticates a user.
+     *
+     * @param username the username
+     * @param password the password
+     * @return the login response dto
+     * @throws UnauthorizedException the unauthorized exception
+     */
     public LoginResponseDTO authenticate(String username, String password) throws UnauthorizedException
     {
         User user = userDAO.get(username, password);
 
-        if(user != null) {
+        if (user != null) {
             user.setToken();
 
             // Try to store the token
-            if(userDAO.addToken(user)) {
+            if (userDAO.addToken(user)) {
                 return UserMapper.getInstance().convertToDTO(user);
             }
         }
@@ -50,13 +59,20 @@ public class UserService
      */
     public User get(LoginRequestDTO requestDTO) throws UnauthorizedException
     {
-        return userDAO.get(requestDTO.getUser(), requestDTO.getPassword());
+        User user = userDAO.get(requestDTO.getUser(), requestDTO.getPassword());
+
+        if (user == null) {
+            throw new UnauthorizedException();
+        }
+
+        return user;
     }
 
     /**
      * Add token.
      *
      * @param user the user
+     * @return If the adding was successful.
      */
     public boolean addToken(User user)
     {

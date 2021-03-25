@@ -53,7 +53,7 @@ public class PlaylistService
      * Adds a playlist.
      *
      * @param playlistDTO The playlist to be added.
-     * @param userId        The authenticated user.
+     * @param userId      The authenticated user.
      * @return If the adding was successful.
      */
     public boolean add(PlaylistDTO playlistDTO, int userId)
@@ -67,9 +67,9 @@ public class PlaylistService
     /**
      * Edit the title of a specific playlist.
      *
-     * @param playlistId The editable playlist
-     * @param newPlaylist      The new playlist
-     * @param userId             The authenticated user.
+     * @param playlistId  The editable playlist
+     * @param newPlaylist The new playlist
+     * @param userId      The authenticated user.
      * @return If the editing was successful.
      */
     public boolean editTitle(int playlistId, PlaylistDTO newPlaylist, int userId)

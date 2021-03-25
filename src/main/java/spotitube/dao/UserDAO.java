@@ -1,7 +1,6 @@
 package spotitube.dao;
 
 import spotitube.domain.User;
-import spotitube.dto.login.LoginRequestDTO;
 import spotitube.exceptions.UnauthorizedException;
 
 import javax.annotation.Resource;
@@ -25,11 +24,11 @@ public class UserDAO
     /**
      * Get a specific user
      *
-     * @param requestDTO The searchable user.
+     * @param username The username to get
+     * @param password The password to get
      * @return The user.
-     * @throws UnauthorizedException the unauthorized exception
      */
-    public User get(String username, String password) throws UnauthorizedException
+    public User get(String username, String password)
     {
         User user = new User();
 
@@ -40,7 +39,7 @@ public class UserDAO
             ResultSet result = statement.executeQuery();
 
             if (!result.next()) {
-                throw new UnauthorizedException();
+                return null;
             }
 
             user.setId(result.getInt("id"));

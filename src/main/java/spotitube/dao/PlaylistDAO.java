@@ -1,7 +1,6 @@
 package spotitube.dao;
 
 import spotitube.domain.Playlist;
-import spotitube.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
 
 import javax.annotation.Resource;
@@ -130,9 +129,9 @@ public class PlaylistDAO
     /**
      * Edits the name of a specific playlist.
      *
-     * @param playlistId The editable playlist
-     * @param newPlaylist      The new playlist
-     * @param userId             The user
+     * @param playlistId  The editable playlist
+     * @param newPlaylist The new playlist
+     * @param userId      The user
      * @return If the editing was successful
      */
     public boolean editTitle(int playlistId, PlaylistDTO newPlaylist, int userId)

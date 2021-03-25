@@ -1,6 +1,5 @@
 package spotitube.resources;
 
-import spotitube.domain.User;
 import spotitube.dto.track.TrackDTO;
 import spotitube.dto.track.TracksResponseDTO;
 import spotitube.exceptions.UnauthorizedException;

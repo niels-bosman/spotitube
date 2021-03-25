@@ -1,7 +1,5 @@
 package spotitube.resources;
 
-import spotitube.domain.Playlist;
-import spotitube.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
 import spotitube.dto.playlist.PlaylistResponseDTO;
 import spotitube.exceptions.UnauthorizedException;
