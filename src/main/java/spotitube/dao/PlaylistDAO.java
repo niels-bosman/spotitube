@@ -57,6 +57,7 @@ public class PlaylistDAO
     /**
      * Gets total duration of a list of playlists.
      *
+     * @param playlists the playlists
      * @return The total duration of the tracks
      */
     public int getTotalDuration(List<Playlist> playlists)
@@ -175,6 +176,11 @@ public class PlaylistDAO
         return false;
     }
 
+    /**
+     * Sets data source.
+     *
+     * @param dataSource the data source
+     */
     public void setDataSource(DataSource dataSource)
     {
         this.dataSource = dataSource;

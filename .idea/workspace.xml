@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="100% coverage (?)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="100% coverage!">
       <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/daos/PlaylistDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/daos/PlaylistDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/TrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/TrackDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,14 +301,7 @@
       <workItem from="1616541387534" duration="562000" />
       <workItem from="1616576199258" duration="4051000" />
       <workItem from="1616608305948" duration="15277000" />
-      <workItem from="1616667820453" duration="348000" />
-    </task>
-    <task id="LOCAL-00029" summary="Added necessary files for playlists">
-      <created>1615976456559</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1615976456559</updated>
+      <workItem from="1616667820453" duration="413000" />
     </task>
     <task id="LOCAL-00030" summary="Added domain models for Tracks and Playlists">
       <created>1615976906472</created>
@@ -646,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616667789759</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="100% coverage!">
+      <created>1616668178232</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1616668178232</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +665,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="UserMapperTest and sample for PlaylistMapperTest (not done). HET IS TIJD VOOR WEEKEND" />
     <MESSAGE value="Fix playlist duration query and status codes (FORBIDDEN)" />
     <MESSAGE value="Workspace" />
     <MESSAGE value="Reformat code" />
@@ -690,7 +689,8 @@
     <MESSAGE value="All test done except PlaylistDAOTest" />
     <MESSAGE value="Remove not working pipeline" />
     <MESSAGE value="100% coverage (?)" />
-    <option name="LAST_COMMIT_MESSAGE" value="100% coverage (?)" />
+    <MESSAGE value="100% coverage!" />
+    <option name="LAST_COMMIT_MESSAGE" value="100% coverage!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

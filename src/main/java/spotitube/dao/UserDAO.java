@@ -105,6 +105,11 @@ public class UserDAO
         return (user.getName() != null) ? user : null;
     }
 
+    /**
+     * Sets data source.
+     *
+     * @param dataSource the data source
+     */
     public void setDataSource(DataSource dataSource)
     {
         this.dataSource = dataSource;
