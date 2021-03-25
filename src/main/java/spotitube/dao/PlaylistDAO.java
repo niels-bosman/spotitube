@@ -166,9 +166,7 @@ public class PlaylistDAO
             statement.setInt(2, userId);
             ResultSet result = statement.executeQuery();
 
-            if (result.next()) {
-                return true;
-            }
+            return result.next();
         }
         catch (SQLException exception) {
             exception.printStackTrace();

@@ -279,8 +279,7 @@ public class PlaylistDAOTest extends TestHelpers
         playlistDAO.setDataSource(dataSource);
 
         Mockito.when(dataSource.getConnection()).thenReturn(connection);
-        Mockito.when(connection.prepareStatement(expectedQuery)).thenReturn(statement);
-        Mockito.when(statement.executeQuery()).thenThrow(new SQLException());
+        Mockito.when(connection.prepareStatement(expectedQuery)).thenThrow(new SQLException());
 
         // Act / assert
         assertFalse(playlistDAO.isOwnedByUser(DUMMY_PLAYLIST.getId(), DUMMY_USER.getId()));

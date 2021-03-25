@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Remove not working pipeline">
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="100% coverage (?)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/TestHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/TestHelpers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/daos/PlaylistDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/daos/PlaylistDAOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,19 +72,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.Test all in package">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PlaylistDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HAN-dea-Spotitube" />
       <extension name="coverage">
@@ -266,11 +252,11 @@
     <list>
       <item itemvalue="JUnit.Test all in package" />
       <item itemvalue="JUnit.TrackDAOTest.getNotByPlaylistErrorViaIn" />
-      <item itemvalue="TomEE Server.TomEE 9.0.37" />
       <item itemvalue="JUnit.PlaylistDAOTest.getAllSuccess" />
       <item itemvalue="JUnit.PlaylistDAOTest.getAllException" />
       <item itemvalue="JUnit.PlaylistDAOTest" />
       <item itemvalue="JUnit.PlaylistDAOTest.getTotalDurationSuccess" />
+      <item itemvalue="TomEE Server.TomEE 9.0.37" />
     </list>
     <recent_temporary>
       <list>
@@ -314,14 +300,8 @@
       <workItem from="1616520372228" duration="10834000" />
       <workItem from="1616541387534" duration="562000" />
       <workItem from="1616576199258" duration="4051000" />
-      <workItem from="1616608305948" duration="15257000" />
-    </task>
-    <task id="LOCAL-00028" summary="cleanup DTO's">
-      <created>1615973893596</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1615973893596</updated>
+      <workItem from="1616608305948" duration="15277000" />
+      <workItem from="1616667820453" duration="348000" />
     </task>
     <task id="LOCAL-00029" summary="Added necessary files for playlists">
       <created>1615976456559</created>
@@ -659,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616663925051</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="100% coverage (?)">
+      <created>1616667789759</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1616667789759</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +665,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Formatting" />
     <MESSAGE value="UserMapperTest and sample for PlaylistMapperTest (not done). HET IS TIJD VOOR WEEKEND" />
     <MESSAGE value="Fix playlist duration query and status codes (FORBIDDEN)" />
     <MESSAGE value="Workspace" />
@@ -703,7 +689,8 @@
     <MESSAGE value="Coverage pls" />
     <MESSAGE value="All test done except PlaylistDAOTest" />
     <MESSAGE value="Remove not working pipeline" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove not working pipeline" />
+    <MESSAGE value="100% coverage (?)" />
+    <option name="LAST_COMMIT_MESSAGE" value="100% coverage (?)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -731,7 +718,7 @@
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$LoginResourceTest.ic" NAME="LoginResourceTest Coverage Results" MODIFIED="1616506816809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spotitube.resources.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Test_all_in_package.ic" NAME="Test all in package Coverage Results" MODIFIED="1616667724639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Test_all_in_package.ic" NAME="Test all in package Coverage Results" MODIFIED="1616668130638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Spotitube_BE.ic" NAME="Spotitube BE Coverage Results" MODIFIED="1616164842603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$UserMapperTest.ic" NAME="UserMapperTest Coverage Results" MODIFIED="1616505345085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spotitube.mappers.*</FILTER>
