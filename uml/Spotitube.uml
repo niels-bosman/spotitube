@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>spotitube.dao.PlaylistDAO</OriginalElement>
+  <nodes>
+    <node x="2993.133333333333" y="84.0">java.lang.Throwable</node>
+    <node x="776.0" y="1702.0">spotitube.dao.PlaylistDAO</node>
+    <node x="3588.425" y="535.0">spotitube.dto.track.TrackDTO</node>
+    <node x="3519.329971505287" y="1243.5">spotitube.dao.TrackDAO</node>
+    <node x="2624.281607896323" y="1739.5">spotitube.dao.UserDAO</node>
+    <node x="4175.770199052002" y="2075.0">spotitube.dto.track.TracksResponseDTO</node>
+    <node x="2707.75" y="2088.0">javax.ws.rs.Path</node>
+    <node x="3939.532699052001" y="2526.5">spotitube.resources.TrackResource</node>
+    <node x="1967.678456353772" y="2551.5">spotitube.resources.LoginResource</node>
+    <node x="1757.5" y="1181.0">spotitube.domain.User</node>
+    <node x="3241.329971505287" y="1319.5">spotitube.exceptions.UnauthorizedException</node>
+    <node x="2866.6082573017707" y="2464.0">spotitube.resources.PlaylistTrackResource</node>
+    <node x="649.9769350375357" y="1218.5">spotitube.domain.Playlist</node>
+    <node x="2773.8" y="535.0">spotitube.domain.Track</node>
+    <node x="1154.0" y="2013.0">spotitube.services.PlaylistService</node>
+    <node x="2666.329971505287" y="1319.5">javax.enterprise.inject.Default</node>
+    <node x="2434.329971505287" y="1268.5">spotitube.dto.login.LoginRequestDTO</node>
+    <node x="3888.2049715052867" y="1727.0">spotitube.services.TrackService</node>
+    <node x="1646.0" y="1714.0">spotitube.dto.login.LoginResponseDTO</node>
+    <node x="0.0" y="1739.0">spotitube.dto.playlist.PlaylistResponseDTO</node>
+    <node x="311.0" y="1727.0">spotitube.mappers.PlaylistMapper</node>
+    <node x="3193.3" y="761.0">java.lang.Exception</node>
+    <node x="2804.329971505287" y="1256.0">spotitube.mappers.TrackMapper</node>
+    <node x="3070.633333333333" y="0.0">java.io.Serializable</node>
+    <node x="1335.1800927448078" y="710.0">spotitube.mappers.IMapper</node>
+    <node x="2416.2" y="2050.5">spotitube.services.UserService</node>
+    <node x="2862.75" y="2088.0">spotitube.services.IdService</node>
+    <node x="939.6124239684373" y="2476.0">spotitube.resources.PlaylistResource</node>
+    <node x="1509.0" y="2038.0">spotitube.mappers.UserMapper</node>
+    <node x="336.3380561948586" y="1218.0">spotitube.dto.playlist.PlaylistDTO</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="spotitube.dao.UserDAO" target="spotitube.domain.User">
+      <point x="-105.19999999999982" y="-68.0" />
+      <point x="2650.581607896323" y="1602.0" />
+      <point x="1942.318181818182" y="1602.0" />
+      <point x="77.81818181818198" y="155.5" />
+    </edge>
+    <edge source="spotitube.dto.playlist.PlaylistResponseDTO" target="spotitube.dto.playlist.PlaylistDTO">
+      <point x="-69.75" y="-68.5" />
+      <point x="69.75" y="1522.0" />
+      <point x="355.12377048057283" y="1522.0" />
+      <point x="-112.71428571428571" y="118.5" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistResource" target="spotitube.services.UserService">
+      <point x="68.79999999999995" y="-118.5" />
+      <point x="1180.4124239684372" y="2374.0" />
+      <point x="2432.075" y="2374.0" />
+      <point x="-111.125" y="68.0" />
+    </edge>
+    <edge source="spotitube.mappers.PlaylistMapper" target="spotitube.domain.User">
+      <point x="123.71428571428567" y="-80.5" />
+      <point x="651.2142857142858" y="1602.0" />
+      <point x="1767.2272727272725" y="1602.0" />
+      <point x="-97.27272727272748" y="155.5" />
+    </edge>
+    <edge source="spotitube.mappers.PlaylistMapper" target="spotitube.dto.playlist.PlaylistDTO">
+      <point x="-123.71428571428578" y="-80.5" />
+      <point x="403.7857142857142" y="1552.0" />
+      <point x="467.8380561948586" y="1552.0" />
+      <point x="2.8421709430404007E-14" y="118.5" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistTrackResource" target="spotitube.services.IdService">
+      <point x="-42.0" y="-130.5" />
+      <point x="3020.6082573017707" y="2304.0" />
+      <point x="2939.416666666667" y="2304.0" />
+      <point x="-15.333333333333258" y="30.5" />
+    </edge>
+    <edge source="spotitube.dao.UserDAO" target="spotitube.exceptions.UnauthorizedException">
+      <point x="105.19999999999982" y="-68.0" />
+      <point x="2860.9816078963227" y="1682.0" />
+      <point x="3348.829971505287" y="1682.0" />
+      <point x="-21.5" y="17.0" />
+    </edge>
+    <edge source="java.lang.Throwable" target="java.io.Serializable">
+      <point x="0.0" y="-180.5" />
+      <point x="0.0" y="17.0" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistTrackResource" target="spotitube.domain.User">
+      <point x="14.0" y="-130.5" />
+      <point x="3076.6082573017707" y="2444.0" />
+      <point x="3057.25" y="2444.0" />
+      <point x="3057.25" y="1933.0" />
+      <point x="2423.178456353772" y="1933.0" />
+      <point x="2423.178456353772" y="1612.0" />
+      <point x="1922.8636363636365" y="1612.0" />
+      <point x="58.36363636363649" y="155.5" />
+    </edge>
+    <edge source="spotitube.services.UserService" target="spotitube.dao.UserDAO">
+      <point x="0.0" y="-68.0" />
+      <point x="2543.2" y="1973.0" />
+      <point x="2690.031607896323" y="1973.0" />
+      <point x="-65.75" y="68.0" />
+    </edge>
+    <edge source="spotitube.resources.LoginResource" target="spotitube.services.UserService">
+      <point x="39.57142857142844" y="-43.0" />
+      <point x="2145.7498849252006" y="2394.0" />
+      <point x="2495.575" y="2394.0" />
+      <point x="-47.625" y="68.0" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistTrackResource" target="spotitube.exceptions.UnauthorizedException">
+      <point x="42.0" y="-130.5" />
+      <point x="3104.6082573017707" y="2364.0" />
+      <point x="3532.7482745629895" y="2364.0" />
+      <point x="3532.7482745629895" y="1672.0" />
+      <point x="3434.829971505287" y="1672.0" />
+      <point x="64.5" y="17.0" />
+    </edge>
+    <edge source="spotitube.services.TrackService" target="spotitube.dao.TrackDAO">
+      <point x="-66.59999999999991" y="-80.5" />
+      <point x="3988.104971505287" y="1642.0" />
+      <point x="3597.829971505287" y="1642.0" />
+      <point x="-78.5" y="93.0" />
+    </edge>
+    <edge source="spotitube.services.PlaylistService" target="spotitube.dao.PlaylistDAO">
+      <point x="-83.75" y="-105.5" />
+      <point x="1237.75" y="1983.0" />
+      <point x="859.75" y="1983.0" />
+      <point x="-83.75" y="105.5" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistTrackResource" target="spotitube.services.TrackService">
+      <point x="98.0" y="-130.5" />
+      <point x="3160.6082573017707" y="2384.0" />
+      <point x="3914.7660323853343" y="2384.0" />
+      <point x="3914.7660323853343" y="1993.0" />
+      <point x="3929.8299715052867" y="1993.0" />
+      <point x="-124.875" y="80.5" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistTrackResource" target="spotitube.dto.track.TrackDTO">
+      <point x="70.0" y="-130.5" />
+      <point x="3132.6082573017707" y="2374.0" />
+      <point x="3877.704971505287" y="2374.0" />
+      <point x="3877.704971505287" y="1081.0" />
+      <point x="3735.8" y="1081.0" />
+      <point x="16.375" y="243.0" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistResource" target="spotitube.services.PlaylistService">
+      <point x="22.933333333333394" y="-118.5" />
+      <point x="1134.5457573017707" y="2354.0" />
+      <point x="1195.875" y="2354.0" />
+      <point x="-125.625" y="105.5" />
+    </edge>
+    <edge source="spotitube.dao.UserDAO" target="spotitube.dto.login.LoginRequestDTO">
+      <point x="0.0" y="-68.0" />
+      <point x="2755.781607896323" y="1582.0" />
+      <point x="2610.9966381719532" y="1582.0" />
+      <point x="70.66666666666652" y="68.0" />
+    </edge>
+    <edge source="spotitube.mappers.UserMapper" target="spotitube.domain.User">
+      <point x="-94.19999999999982" y="-80.5" />
+      <point x="1650.3000000000002" y="1993.0" />
+      <point x="1575.0179263247287" y="1993.0" />
+      <point x="1575.0179263247287" y="1642.0" />
+      <point x="1845.0454545454545" y="1642.0" />
+      <point x="-19.454545454545496" y="155.5" />
+    </edge>
+    <edge source="spotitube.services.TrackService" target="spotitube.dto.track.TrackDTO">
+      <point x="133.20000000000005" y="-80.5" />
+      <point x="4187.904971505287" y="1612.0" />
+      <point x="4021.5035323853344" y="1612.0" />
+      <point x="4021.5035323853344" y="1061.0" />
+      <point x="3768.55" y="1061.0" />
+      <point x="49.125" y="243.0" />
+    </edge>
+    <edge source="spotitube.services.PlaylistService" target="spotitube.domain.User">
+      <point x="139.58333333333326" y="-105.5" />
+      <point x="1461.0833333333333" y="1993.0" />
+      <point x="1483.5249239684372" y="1993.0" />
+      <point x="1483.5249239684372" y="1632.0" />
+      <point x="1825.590909090909" y="1632.0" />
+      <point x="-38.90909090909099" y="155.5" />
+    </edge>
+    <edge source="spotitube.dao.PlaylistDAO" target="spotitube.domain.User">
+      <point x="125.625" y="-105.5" />
+      <point x="1069.125" y="1622.0" />
+      <point x="1806.1363636363635" y="1622.0" />
+      <point x="-58.36363636363649" y="155.5" />
+    </edge>
+    <edge source="spotitube.dao.PlaylistDAO" target="spotitube.domain.Playlist">
+      <point x="-41.875" y="-105.5" />
+      <point x="901.625" y="1552.0" />
+      <point x="799.7626493232499" y="1552.0" />
+      <point x="33.28571428571422" y="118.0" />
+    </edge>
+    <edge source="spotitube.mappers.PlaylistMapper" target="spotitube.mappers.TrackMapper">
+      <point x="185.57142857142856" y="-80.5" />
+      <point x="713.0714285714284" y="1652.0" />
+      <point x="2908.579971505287" y="1652.0" />
+      <point x="-104.25" y="80.5" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistTrackResource" target="spotitube.dto.track.TracksResponseDTO">
+      <point x="154.0" y="-130.5" />
+      <point x="3216.6082573017707" y="2404.0" />
+      <point x="4208.645199052002" y="2404.0" />
+      <point x="-98.625" y="43.5" />
+    </edge>
+    <edge source="java.lang.Throwable" target="java.lang.Throwable">
+      <point x="26.916666666666742" y="180.5" />
+      <point x="3181.55" y="495.0" />
+      <point x="2943.133333333333" y="495.0" />
+      <point x="2943.133333333333" y="129.125" />
+      <point x="-161.5" y="-135.375" />
+    </edge>
+    <edge source="spotitube.services.UserService" target="spotitube.dto.login.LoginRequestDTO">
+      <point x="-50.80000000000018" y="-68.0" />
+      <point x="2492.3999999999996" y="1963.0" />
+      <point x="2613.781607896323" y="1963.0" />
+      <point x="2613.781607896323" y="1642.0" />
+      <point x="2540.329971505287" y="1642.0" />
+      <point x="0.0" y="68.0" />
+    </edge>
+    <edge source="spotitube.mappers.TrackMapper" target="spotitube.dto.track.TrackDTO">
+      <point x="83.39999999999998" y="-80.5" />
+      <point x="3096.229971505287" y="1151.0" />
+      <point x="3670.3" y="1151.0" />
+      <point x="-49.125" y="243.0" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistResource" target="spotitube.services.IdService">
+      <point x="137.5999999999999" y="-118.5" />
+      <point x="1249.2124239684372" y="2434.0" />
+      <point x="2878.083333333333" y="2434.0" />
+      <point x="-76.66666666666674" y="30.5" />
+    </edge>
+    <edge source="spotitube.services.UserService" target="spotitube.exceptions.UnauthorizedException">
+      <point x="101.59999999999991" y="-68.0" />
+      <point x="2644.8" y="1993.0" />
+      <point x="3501.8285323853343" y="1993.0" />
+      <point x="3501.8285323853343" y="1682.0" />
+      <point x="3391.829971505287" y="1682.0" />
+      <point x="21.5" y="17.0" />
+    </edge>
+    <edge source="spotitube.services.PlaylistService" target="spotitube.domain.Playlist">
+      <point x="83.75" y="-105.5" />
+      <point x="1405.25" y="1953.0" />
+      <point x="1132.5" y="1953.0" />
+      <point x="1132.5" y="1522.0" />
+      <point x="866.3340778946786" y="1522.0" />
+      <point x="99.85714285714289" y="118.0" />
+    </edge>
+    <edge source="spotitube.dao.TrackDAO" target="spotitube.domain.Track">
+      <point x="-78.5" y="-93.0" />
+      <point x="3597.829971505287" y="1101.0" />
+      <point x="2942.2285714285713" y="1101.0" />
+      <point x="37.42857142857133" y="243.0" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistResource" target="spotitube.domain.Playlist">
+      <point x="-91.73333333333335" y="-118.5" />
+      <point x="1019.8790906351039" y="2414.0" />
+      <point x="300.5" y="2414.0" />
+      <point x="300.5" y="1572.0" />
+      <point x="666.6197921803928" y="1572.0" />
+      <point x="-99.85714285714289" y="118.0" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistResource" target="spotitube.domain.User">
+      <point x="-22.933333333333394" y="-118.5" />
+      <point x="1088.6790906351039" y="2384.0" />
+      <point x="765.5" y="2384.0" />
+      <point x="765.5" y="1612.0" />
+      <point x="1786.681818181818" y="1612.0" />
+      <point x="-77.81818181818198" y="155.5" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistResource" target="spotitube.exceptions.UnauthorizedException">
+      <point x="0.0" y="-118.5" />
+      <point x="1111.6124239684373" y="2344.0" />
+      <point x="1143.5" y="2344.0" />
+      <point x="1143.5" y="1662.0" />
+      <point x="3262.829971505287" y="1662.0" />
+      <point x="-107.5" y="17.0" />
+    </edge>
+    <edge source="spotitube.services.UserService" target="spotitube.domain.User">
+      <point x="-101.59999999999991" y="-68.0" />
+      <point x="2441.6000000000004" y="1943.0" />
+      <point x="2061.7" y="1943.0" />
+      <point x="2061.7" y="1622.0" />
+      <point x="1903.409090909091" y="1622.0" />
+      <point x="38.90909090909099" y="155.5" />
+    </edge>
+    <edge source="spotitube.mappers.UserMapper" target="spotitube.dto.login.LoginResponseDTO">
+      <point x="0.0" y="-80.5" />
+      <point x="1744.5" y="1993.0" />
+      <point x="1698.0" y="1993.0" />
+      <point x="-52.0" y="93.5" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistResource" target="javax.ws.rs.Path">
+      <point x="114.66666666666674" y="-118.5" />
+      <point x="1226.279090635104" y="2414.0" />
+      <point x="2724.625" y="2414.0" />
+      <point x="-50.625" y="30.5" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistTrackResource" target="javax.ws.rs.Path">
+      <point x="-70.0" y="-130.5" />
+      <point x="2992.6082573017707" y="2314.0" />
+      <point x="2792.125" y="2314.0" />
+      <point x="16.875" y="30.5" />
+    </edge>
+    <edge source="spotitube.domain.Playlist" target="spotitube.domain.Track">
+      <point x="-58.25" y="-118.0" />
+      <point x="708.2269350375357" y="1111.0" />
+      <point x="2792.5142857142855" y="1111.0" />
+      <point x="-112.28571428571422" y="243.0" />
+    </edge>
+    <edge source="spotitube.dto.track.TracksResponseDTO" target="spotitube.dto.track.TrackDTO">
+      <point x="65.75" y="-43.5" />
+      <point x="4373.020199052002" y="1993.0" />
+      <point x="4252.520199052002" y="1993.0" />
+      <point x="4252.520199052002" y="1041.0" />
+      <point x="3834.05" y="1041.0" />
+      <point x="114.625" y="243.0" />
+    </edge>
+    <edge source="spotitube.resources.TrackResource" target="spotitube.services.UserService">
+      <point x="-126.44999999999982" y="-68.0" />
+      <point x="3953.5826990520013" y="2284.0" />
+      <point x="2622.575" y="2284.0" />
+      <point x="79.375" y="68.0" />
+    </edge>
+    <edge source="spotitube.mappers.TrackMapper" target="spotitube.domain.Track">
+      <point x="-83.39999999999998" y="-80.5" />
+      <point x="2929.429971505287" y="1121.0" />
+      <point x="2867.3714285714286" y="1121.0" />
+      <point x="-37.42857142857156" y="243.0" />
+    </edge>
+    <edge source="spotitube.mappers.UserMapper" target="spotitube.mappers.IMapper">
+      <point x="-188.4000000000001" y="-80.5" />
+      <point x="1556.1" y="1993.0" />
+      <point x="1520.4951990520012" y="1993.0" />
+      <point x="1520.4951990520012" y="1101.0" />
+      <point x="1507.1800927448078" y="1101.0" />
+      <point x="0.0" y="68.0" />
+    </edge>
+    <edge source="spotitube.services.TrackService" target="spotitube.mappers.TrackMapper">
+      <point x="-133.20000000000005" y="-80.5" />
+      <point x="3921.5049715052864" y="1652.0" />
+      <point x="3117.079971505287" y="1652.0" />
+      <point x="104.25" y="80.5" />
+    </edge>
+    <edge source="spotitube.mappers.PlaylistMapper" target="spotitube.mappers.IMapper">
+      <point x="-185.57142857142844" y="-80.5" />
+      <point x="341.92857142857156" y="1512.0" />
+      <point x="301.8571428571429" y="1512.0" />
+      <point x="301.8571428571429" y="1101.0" />
+      <point x="1392.513426078141" y="1101.0" />
+      <point x="-114.66666666666663" y="68.0" />
+    </edge>
+    <edge source="java.lang.Exception" target="java.lang.Throwable">
+      <point x="34.5" y="-17.0" />
+      <point x="3296.8" y="515.0" />
+      <point x="3289.2166666666667" y="515.0" />
+      <point x="134.58333333333348" y="180.5" />
+    </edge>
+    <edge source="spotitube.services.TrackService" target="spotitube.domain.Track">
+      <point x="66.59999999999991" y="-80.5" />
+      <point x="4121.304971505287" y="1622.0" />
+      <point x="3916.847828648144" y="1622.0" />
+      <point x="3916.847828648144" y="1071.0" />
+      <point x="3017.085714285714" y="1071.0" />
+      <point x="112.28571428571422" y="243.0" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistTrackResource" target="spotitube.services.PlaylistService">
+      <point x="-182.0" y="-130.5" />
+      <point x="2880.6082573017707" y="2354.0" />
+      <point x="1363.375" y="2354.0" />
+      <point x="41.875" y="105.5" />
+    </edge>
+    <edge source="spotitube.dto.playlist.PlaylistDTO" target="spotitube.dto.track.TrackDTO">
+      <point x="-65.75" y="-118.5" />
+      <point x="402.0880561948586" y="1131.0" />
+      <point x="3604.8" y="1131.0" />
+      <point x="-114.625" y="243.0" />
+    </edge>
+    <edge source="spotitube.services.PlaylistService" target="spotitube.mappers.PlaylistMapper">
+      <point x="-139.58333333333337" y="-105.5" />
+      <point x="1181.9166666666665" y="1993.0" />
+      <point x="635.75" y="1993.0" />
+      <point x="108.25" y="80.5" />
+    </edge>
+    <edge source="spotitube.resources.TrackResource" target="spotitube.dto.track.TracksResponseDTO">
+      <point x="70.25" y="-68.0" />
+      <point x="4150.282699052001" y="2424.0" />
+      <point x="4340.145199052002" y="2424.0" />
+      <point x="32.875" y="43.5" />
+    </edge>
+    <edge source="spotitube.resources.LoginResource" target="spotitube.mappers.UserMapper">
+      <point x="-118.71428571428578" y="-43.0" />
+      <point x="1987.4641706394862" y="2364.0" />
+      <point x="1744.5" y="2364.0" />
+      <point x="0.0" y="80.5" />
+    </edge>
+    <edge source="spotitube.resources.TrackResource" target="spotitube.services.IdService">
+      <point x="-42.15000000000009" y="-68.0" />
+      <point x="4037.882699052001" y="2254.0" />
+      <point x="3000.75" y="2254.0" />
+      <point x="46.0" y="30.5" />
+    </edge>
+    <edge source="spotitube.resources.LoginResource" target="spotitube.dto.login.LoginRequestDTO">
+      <point x="-39.57142857142844" y="-43.0" />
+      <point x="2066.6070277823437" y="2364.0" />
+      <point x="2072.7" y="2364.0" />
+      <point x="2072.7" y="1642.0" />
+      <point x="2469.66330483862" y="1642.0" />
+      <point x="-70.66666666666652" y="68.0" />
+    </edge>
+    <edge source="spotitube.resources.TrackResource" target="spotitube.exceptions.UnauthorizedException">
+      <point x="126.44999999999982" y="-68.0" />
+      <point x="4206.482699052001" y="2444.0" />
+      <point x="4449.270199052002" y="2444.0" />
+      <point x="4449.270199052002" y="1602.0" />
+      <point x="3477.829971505287" y="1602.0" />
+      <point x="107.5" y="17.0" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistResource" target="spotitube.mappers.PlaylistMapper">
+      <point x="-68.79999999999995" y="-118.5" />
+      <point x="1042.8124239684373" y="2404.0" />
+      <point x="419.25" y="2404.0" />
+      <point x="-108.25" y="80.5" />
+    </edge>
+    <edge source="spotitube.resources.LoginResource" target="spotitube.exceptions.UnauthorizedException">
+      <point x="0.0" y="-43.0" />
+      <point x="2106.178456353772" y="2364.0" />
+      <point x="2183.195199052001" y="2364.0" />
+      <point x="2183.195199052001" y="1953.0" />
+      <point x="2602.781607896323" y="1953.0" />
+      <point x="2602.781607896323" y="1672.0" />
+      <point x="3305.829971505287" y="1672.0" />
+      <point x="-64.5" y="17.0" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistTrackResource" target="spotitube.services.UserService">
+      <point x="-126.0" y="-130.5" />
+      <point x="2936.6082573017707" y="2334.0" />
+      <point x="2559.075" y="2334.0" />
+      <point x="15.875" y="68.0" />
+    </edge>
+    <edge source="spotitube.resources.TrackResource" target="spotitube.services.TrackService">
+      <point x="42.15000000000009" y="-68.0" />
+      <point x="4122.182699052001" y="2394.0" />
+      <point x="4105.082699052002" y="2394.0" />
+      <point x="4105.082699052002" y="1993.0" />
+      <point x="4179.579971505287" y="1993.0" />
+      <point x="124.875" y="80.5" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistResource" target="spotitube.dto.playlist.PlaylistDTO">
+      <point x="-114.66666666666674" y="-118.5" />
+      <point x="996.9457573017705" y="2424.0" />
+      <point x="289.5" y="2424.0" />
+      <point x="289.5" y="1542.0" />
+      <point x="430.26662762342994" y="1542.0" />
+      <point x="-37.57142857142867" y="118.5" />
+    </edge>
+    <edge source="spotitube.dao.UserDAO" target="javax.enterprise.inject.Default">
+      <point x="52.59999999999991" y="-68.0" />
+      <point x="2808.3816078963227" y="1572.0" />
+      <point x="2725.329971505287" y="1572.0" />
+      <point x="0.0" y="17.0" />
+    </edge>
+    <edge source="spotitube.services.PlaylistService" target="spotitube.dto.playlist.PlaylistDTO">
+      <point x="27.916666666666742" y="-105.5" />
+      <point x="1349.4166666666667" y="1963.0" />
+      <point x="1121.5" y="1963.0" />
+      <point x="1121.5" y="1532.0" />
+      <point x="580.5523419091444" y="1532.0" />
+      <point x="112.71428571428578" y="118.5" />
+    </edge>
+    <edge source="spotitube.mappers.TrackMapper" target="spotitube.mappers.IMapper">
+      <point x="-166.79999999999995" y="-80.5" />
+      <point x="2846.029971505287" y="1101.0" />
+      <point x="1621.8467594114745" y="1101.0" />
+      <point x="114.66666666666674" y="68.0" />
+    </edge>
+    <edge source="spotitube.resources.LoginResource" target="javax.ws.rs.Path">
+      <point x="118.71428571428578" y="-43.0" />
+      <point x="2224.8927420680575" y="2424.0" />
+      <point x="2758.375" y="2424.0" />
+      <point x="-16.875" y="30.5" />
+    </edge>
+    <edge source="spotitube.resources.LoginResource" target="spotitube.domain.User">
+      <point x="-79.14285714285734" y="-43.0" />
+      <point x="2027.0355992109146" y="2364.0" />
+      <point x="2050.7" y="2364.0" />
+      <point x="2050.7" y="1632.0" />
+      <point x="1883.9545454545455" y="1632.0" />
+      <point x="19.454545454545496" y="155.5" />
+    </edge>
+    <edge source="spotitube.exceptions.UnauthorizedException" target="java.lang.Exception">
+      <point x="0.0" y="-17.0" />
+      <point x="3370.329971505287" y="1121.0" />
+      <point x="3262.3" y="1121.0" />
+      <point x="0.0" y="17.0" />
+    </edge>
+    <edge source="spotitube.resources.TrackResource" target="javax.ws.rs.Path">
+      <point x="-70.25" y="-68.0" />
+      <point x="4009.782699052001" y="2264.0" />
+      <point x="2825.875" y="2264.0" />
+      <point x="50.625" y="30.5" />
+    </edge>
+    <edge source="spotitube.mappers.PlaylistMapper" target="spotitube.domain.Playlist">
+      <point x="0.0" y="-80.5" />
+      <point x="527.5" y="1582.0" />
+      <point x="699.905506466107" y="1582.0" />
+      <point x="-66.57142857142867" y="118.0" />
+    </edge>
+    <edge source="spotitube.dao.PlaylistDAO" target="spotitube.dto.playlist.PlaylistDTO">
+      <point x="-125.625" y="-105.5" />
+      <point x="817.875" y="1562.0" />
+      <point x="542.9809133377157" y="1562.0" />
+      <point x="75.14285714285722" y="118.5" />
+    </edge>
+    <edge source="spotitube.resources.PlaylistResource" target="spotitube.dto.playlist.PlaylistResponseDTO">
+      <point x="-137.5999999999999" y="-118.5" />
+      <point x="974.0124239684374" y="2434.0" />
+      <point x="145.0" y="2434.0" />
+      <point x="145.0" y="1993.0" />
+      <point x="209.25" y="1993.0" />
+      <point x="69.75" y="68.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.523049001814882" x="1647.8120563975958" y="1747.7807078417766" />
+  <SelectedNodes>
+    <node>spotitube.dao.PlaylistDAO</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
