@@ -176,4 +176,9 @@ public class PlaylistDAO
 
         return false;
     }
+
+    public void setDataSource(DataSource dataSource)
+    {
+        this.dataSource = dataSource;
+    }
 }

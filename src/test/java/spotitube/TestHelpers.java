@@ -1,13 +1,22 @@
 package spotitube;
 
+import spotitube.domain.Playlist;
 import spotitube.domain.Track;
 import spotitube.domain.User;
+
+import java.util.ArrayList;
 
 public class TestHelpers
 {
     public static final User DUMMY_USER = makeUser();
     public static final Track DUMMY_TRACK = makeTrack();
+    public static final Playlist DUMMY_PLAYLIST = makePlaylist();
 
+    /**
+     * Makes a user.
+     *
+     * @return the user
+     */
     public static User makeUser()
     {
         User user = new User();
@@ -21,6 +30,11 @@ public class TestHelpers
         return user;
     }
 
+    /**
+     * Makes a track.
+     *
+     * @return the track
+     */
     public static Track makeTrack()
     {
         Track track = new Track();
@@ -36,5 +50,22 @@ public class TestHelpers
         track.setTitle("valid-title");
 
         return track;
+    }
+
+    /**
+     * Makes a playlist
+     *
+     * @return the playlist
+     */
+    public static Playlist makePlaylist()
+    {
+        Playlist playlist = new Playlist();
+
+        playlist.setId(1);
+        playlist.setName("valid-name");
+        playlist.setOwnerId(1);
+        playlist.setTracks(new ArrayList<>());
+
+        return playlist;
     }
 }

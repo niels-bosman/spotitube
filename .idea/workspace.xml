@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="All test done except PlaylistDAOTest">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/badge.yml" beforeDir="false" />
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Remove not working pipeline">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/TestHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/TestHelpers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/daos/PlaylistDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/daos/PlaylistDAOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +86,69 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PlaylistDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HAN-dea-Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotitube.daos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotitube.daos" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.daos.PlaylistDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistDAOTest.getAllException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HAN-dea-Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotitube.daos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotitube.daos" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.daos.PlaylistDAOTest" />
+      <option name="METHOD_NAME" value="getAllException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistDAOTest.getAllSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HAN-dea-Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotitube.daos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotitube.daos" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.daos.PlaylistDAOTest" />
+      <option name="METHOD_NAME" value="getAllSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistDAOTest.getTotalDurationSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HAN-dea-Spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotitube.daos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotitube.daos" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.daos.PlaylistDAOTest" />
+      <option name="METHOD_NAME" value="getTotalDurationSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test all in package" type="JUnit" factoryName="JUnit">
       <module name="HAN-dea-Spotitube" />
       <option name="PACKAGE_NAME" value="spotitube" />
@@ -91,54 +156,6 @@
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <dir value="$PROJECT_DIR$/src/main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrackDAOTest.deleteFromPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HAN-dea-Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.daos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube.daos" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.daos.TrackDAOTest" />
-      <option name="METHOD_NAME" value="deleteFromPlaylist" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrackDAOTest.deleteFromPlaylistFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HAN-dea-Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.daos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube.daos" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.daos.TrackDAOTest" />
-      <option name="METHOD_NAME" value="deleteFromPlaylistFail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrackDAOTest.getByPlaylistSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HAN-dea-Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.daos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube.daos" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.daos.TrackDAOTest" />
-      <option name="METHOD_NAME" value="getByPlaylistSuccessful" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,22 +171,6 @@
       <option name="PACKAGE_NAME" value="spotitube.daos" />
       <option name="MAIN_CLASS_NAME" value="spotitube.daos.TrackDAOTest" />
       <option name="METHOD_NAME" value="getNotByPlaylistErrorViaIn" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDAOTest.getUnauthorized" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HAN-dea-Spotitube" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.daos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube.daos" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.daos.UserDAOTest" />
-      <option name="METHOD_NAME" value="getUnauthorized" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -264,20 +265,20 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Test all in package" />
-      <item itemvalue="JUnit.UserDAOTest.getUnauthorized" />
-      <item itemvalue="JUnit.TrackDAOTest.getByPlaylistSuccessful" />
-      <item itemvalue="JUnit.TrackDAOTest.deleteFromPlaylist" />
-      <item itemvalue="JUnit.TrackDAOTest.deleteFromPlaylistFail" />
       <item itemvalue="JUnit.TrackDAOTest.getNotByPlaylistErrorViaIn" />
       <item itemvalue="TomEE Server.TomEE 9.0.37" />
+      <item itemvalue="JUnit.PlaylistDAOTest.getAllSuccess" />
+      <item itemvalue="JUnit.PlaylistDAOTest.getAllException" />
+      <item itemvalue="JUnit.PlaylistDAOTest" />
+      <item itemvalue="JUnit.PlaylistDAOTest.getTotalDurationSuccess" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlaylistDAOTest.getTotalDurationSuccess" />
+        <item itemvalue="JUnit.PlaylistDAOTest" />
+        <item itemvalue="JUnit.PlaylistDAOTest.getAllException" />
+        <item itemvalue="JUnit.PlaylistDAOTest.getAllSuccess" />
         <item itemvalue="JUnit.TrackDAOTest.getNotByPlaylistErrorViaIn" />
-        <item itemvalue="JUnit.TrackDAOTest.deleteFromPlaylistFail" />
-        <item itemvalue="JUnit.TrackDAOTest.deleteFromPlaylist" />
-        <item itemvalue="JUnit.TrackDAOTest.getByPlaylistSuccessful" />
-        <item itemvalue="JUnit.UserDAOTest.getUnauthorized" />
       </list>
     </recent_temporary>
   </component>
@@ -313,14 +314,7 @@
       <workItem from="1616520372228" duration="10834000" />
       <workItem from="1616541387534" duration="562000" />
       <workItem from="1616576199258" duration="4051000" />
-      <workItem from="1616608305948" duration="11385000" />
-    </task>
-    <task id="LOCAL-00027" summary="Cleanup get parameters in userDAO">
-      <created>1615973480909</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1615973480909</updated>
+      <workItem from="1616608305948" duration="15257000" />
     </task>
     <task id="LOCAL-00028" summary="cleanup DTO's">
       <created>1615973893596</created>
@@ -658,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616663879444</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Remove not working pipeline">
+      <created>1616663925051</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1616663925051</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -677,7 +678,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="JavaDoc and formatting" />
     <MESSAGE value="Formatting" />
     <MESSAGE value="UserMapperTest and sample for PlaylistMapperTest (not done). HET IS TIJD VOOR WEEKEND" />
     <MESSAGE value="Fix playlist duration query and status codes (FORBIDDEN)" />
@@ -702,7 +702,8 @@
     <MESSAGE value="Report JaCoCo" />
     <MESSAGE value="Coverage pls" />
     <MESSAGE value="All test done except PlaylistDAOTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="All test done except PlaylistDAOTest" />
+    <MESSAGE value="Remove not working pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove not working pipeline" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -730,7 +731,7 @@
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$LoginResourceTest.ic" NAME="LoginResourceTest Coverage Results" MODIFIED="1616506816809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spotitube.resources.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Test_all_in_package.ic" NAME="Test all in package Coverage Results" MODIFIED="1616663801253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Test_all_in_package.ic" NAME="Test all in package Coverage Results" MODIFIED="1616667724639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$Spotitube_BE.ic" NAME="Spotitube BE Coverage Results" MODIFIED="1616164842603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/HAN_dea_spotitube$UserMapperTest.ic" NAME="UserMapperTest Coverage Results" MODIFIED="1616505345085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spotitube.mappers.*</FILTER>
