@@ -25,6 +25,11 @@ public class User
         this.username = username;
     }
 
+    public String getUsername()
+    {
+        return username;
+    }
+
     public String getName()
     {
         return name;
@@ -38,6 +43,11 @@ public class User
     public void setPassword(String password)
     {
         this.password = password;
+    }
+
+    public String getPassword()
+    {
+        return password;
     }
 
     public String getToken()

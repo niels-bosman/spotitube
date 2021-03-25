@@ -50,7 +50,7 @@ public class TrackDAO
      * @param notInPlaylist To decide if you want to check in or outside of a playlist.
      * @return All the tracks currently in or not in the playlist.
      */
-    private List<Track> getByPlaylistId(int playlistId, boolean notInPlaylist)
+    public List<Track> getByPlaylistId(int playlistId, boolean notInPlaylist)
     {
         List<Track> tracks = new ArrayList<>();
         String query = notInPlaylist ? GET_NOT_IN_PLAYLIST_QUERY : GET_IN_PLAYLIST_QUERY;
@@ -129,5 +129,10 @@ public class TrackDAO
         }
 
         return false;
+    }
+
+    public void setDataSource(DataSource dataSource)
+    {
+        this.dataSource = dataSource;
     }
 }

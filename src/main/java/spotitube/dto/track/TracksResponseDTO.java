@@ -4,12 +4,7 @@ import java.util.List;
 
 public class TracksResponseDTO
 {
-    private List<TrackDTO> tracks;
-
-    public List<TrackDTO> getTracks()
-    {
-        return tracks;
-    }
+    public List<TrackDTO> tracks;
 
     public void setTracks(List<TrackDTO> tracks)
     {

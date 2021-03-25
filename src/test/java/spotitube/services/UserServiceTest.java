@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import spotitube.TestHelpers;
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
@@ -12,37 +13,25 @@ import spotitube.exceptions.UnauthorizedException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class UserServiceTest
+public class UserServiceTest extends TestHelpers
 {
     @Mock private UserDAO userDAO;
     private UserService userService = new UserService();
-    private User dummyUser = new User();
 
     @BeforeEach
     public void setup()
     {
         MockitoAnnotations.openMocks(this);
         userService.setUserDAO(userDAO);
-
-        generateDummyUser();
-    }
-
-    public void generateDummyUser()
-    {
-        dummyUser.setId(1);
-        dummyUser.setToken();
-        dummyUser.setPassword("password");
-        dummyUser.setUsername("username");
-        dummyUser.setName("name");
     }
 
     @Test public void authenticateTokenSuccessful() throws UnauthorizedException
     {
         // Arrange
-        Mockito.when(userDAO.verifyToken(dummyUser.getToken())).thenReturn(dummyUser);
+        Mockito.when(userDAO.verifyToken(DUMMY_USER.getToken())).thenReturn(DUMMY_USER);
 
         // Act
-        User testUser = userService.authenticateToken(dummyUser.getToken());
+        User testUser = userService.authenticateToken(DUMMY_USER.getToken());
 
         // Assert
         assertNotEquals(testUser, null);
@@ -60,13 +49,13 @@ public class UserServiceTest
     @Test public void get() throws UnauthorizedException
     {
         // Arrange
-        Mockito.when(userDAO.get(Mockito.any(LoginRequestDTO.class))).thenReturn(dummyUser);
+        Mockito.when(userDAO.get(Mockito.any(LoginRequestDTO.class))).thenReturn(DUMMY_USER);
 
         // Act
         User user = userService.get(new LoginRequestDTO());
 
         // Assert
-        assertEquals(user.getName(), dummyUser.getName());
+        assertEquals(user.getName(), DUMMY_USER.getName());
     }
 
     @Test public void getException() throws UnauthorizedException
@@ -81,9 +70,9 @@ public class UserServiceTest
     @Test public void addToken()
     {
         // Arrange
-        Mockito.when(userDAO.addToken(dummyUser)).thenReturn(true);
+        Mockito.when(userDAO.addToken(DUMMY_USER)).thenReturn(true);
 
         // Assert / Act
-        assertTrue(userService.addToken(dummyUser));
+        assertTrue(userService.addToken(DUMMY_USER));
     }
 }

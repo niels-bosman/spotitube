@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import spotitube.TestHelpers;
 import spotitube.dao.PlaylistDAO;
 import spotitube.dao.TrackDAO;
 import spotitube.domain.Playlist;
@@ -17,7 +18,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PlaylistServiceTest
+public class PlaylistServiceTest extends TestHelpers
 {
     /**
      * The tests in this file are not useful (yet)
@@ -27,7 +28,6 @@ public class PlaylistServiceTest
 
     @Mock private PlaylistDAO playlistDAO;
     private PlaylistService playlistService = new PlaylistService();
-    private User dummyUser = new User();
     private List<Playlist> playlists = new ArrayList<>();
 
     @BeforeEach
@@ -36,18 +36,8 @@ public class PlaylistServiceTest
         MockitoAnnotations.openMocks(this);
         playlistService.setPlaylistDAO(playlistDAO);
 
-        generateDummyUser();
         playlists.add(new Playlist());
         playlists.add(new Playlist());
-    }
-
-    public void generateDummyUser()
-    {
-        dummyUser.setId(1);
-        dummyUser.setToken();
-        dummyUser.setPassword("password");
-        dummyUser.setUsername("username");
-        dummyUser.setName("name");
     }
 
     @Test public void getAllSuccessful()
@@ -56,7 +46,7 @@ public class PlaylistServiceTest
         Mockito.when(playlistDAO.getAll()).thenReturn(playlists);
 
         // Act
-        List<PlaylistDTO> playlists = playlistService.getAll(dummyUser);
+        List<PlaylistDTO> playlists = playlistService.getAll(DUMMY_USER);
 
         // Assert
         assertNotNull(playlists);
@@ -77,10 +67,10 @@ public class PlaylistServiceTest
         // Arrange
         Playlist playlist = new Playlist();
         PlaylistDTO playlistDTO = new PlaylistDTO();
-        Mockito.when(playlistDAO.editTitle(playlist, playlistDTO, dummyUser)).thenReturn(true);
+        Mockito.when(playlistDAO.editTitle(playlist, playlistDTO, DUMMY_USER)).thenReturn(true);
 
         // Act / assert
-        assertFalse(playlistService.editTitle(new Playlist(), new PlaylistDTO(), dummyUser));
+        assertFalse(playlistService.editTitle(new Playlist(), new PlaylistDTO(), DUMMY_USER));
     }
 
     @Test
@@ -89,10 +79,10 @@ public class PlaylistServiceTest
         // Arrange
         Playlist playlist = new Playlist();
         PlaylistDTO playlistDTO = new PlaylistDTO();
-        Mockito.when(playlistDAO.editTitle(playlist, playlistDTO, dummyUser)).thenReturn(false);
+        Mockito.when(playlistDAO.editTitle(playlist, playlistDTO, DUMMY_USER)).thenReturn(false);
 
         // Act / assert
-        assertFalse(playlistService.editTitle(playlist, playlistDTO, dummyUser));
+        assertFalse(playlistService.editTitle(playlist, playlistDTO, DUMMY_USER));
     }
 
     @Test public void editedPlaylistSuccessful()
@@ -100,69 +90,69 @@ public class PlaylistServiceTest
         // Arrange
         Playlist playlist = new Playlist();
         PlaylistDTO playlistDTO = new PlaylistDTO();
-        Mockito.when(playlistDAO.editTitle(playlist, playlistDTO, dummyUser)).thenReturn(true);
+        Mockito.when(playlistDAO.editTitle(playlist, playlistDTO, DUMMY_USER)).thenReturn(true);
 
         // Act / assert
-        assertFalse(playlistService.editTitle(new Playlist(), new PlaylistDTO(), dummyUser));
+        assertFalse(playlistService.editTitle(new Playlist(), new PlaylistDTO(), DUMMY_USER));
     }
 
     @Test public void addSuccessful()
     {
         // Arrange
         PlaylistDTO playlistDTO = new PlaylistDTO();
-        Mockito.when(playlistService.add(playlistDTO, dummyUser)).thenReturn(true);
+        Mockito.when(playlistService.add(playlistDTO, DUMMY_USER)).thenReturn(true);
 
         // Act / assert
-        assertFalse(playlistService.add(playlistDTO, dummyUser));
+        assertFalse(playlistService.add(playlistDTO, DUMMY_USER));
     }
 
     @Test public void addError()
     {
         // Arrange
         PlaylistDTO playlistDTO = new PlaylistDTO();
-        Mockito.when(playlistService.add(playlistDTO, dummyUser)).thenReturn(false);
+        Mockito.when(playlistService.add(playlistDTO, DUMMY_USER)).thenReturn(false);
 
         // Act / assert
-        assertFalse(playlistService.add(playlistDTO, dummyUser));
+        assertFalse(playlistService.add(playlistDTO, DUMMY_USER));
     }
 
     @Test public void removedSuccessful()
     {
         // Arrange
         Playlist playlist = new Playlist();
-        Mockito.when(playlistService.delete(playlist, dummyUser)).thenReturn(true);
+        Mockito.when(playlistService.delete(playlist, DUMMY_USER)).thenReturn(true);
 
         // Act / assert
-        assertTrue(playlistService.delete(playlist, dummyUser));
+        assertTrue(playlistService.delete(playlist, DUMMY_USER));
     }
 
     @Test public void removedError()
     {
         // Arrange
         Playlist playlist = new Playlist();
-        Mockito.when(playlistService.delete(playlist, dummyUser)).thenReturn(false);
+        Mockito.when(playlistService.delete(playlist, DUMMY_USER)).thenReturn(false);
 
         // Act / assert
-        assertFalse(playlistService.delete(playlist, dummyUser));
+        assertFalse(playlistService.delete(playlist, DUMMY_USER));
     }
 
     @Test public void isOwned()
     {
         // Arrange
         Playlist playlist = new Playlist();
-        Mockito.when(playlistService.isOwnedBy(playlist.getId(), dummyUser.getId())).thenReturn(true);
+        Mockito.when(playlistService.isOwnedBy(playlist.getId(), DUMMY_USER.getId())).thenReturn(true);
 
         // Act / assert
-        assertTrue(playlistService.isOwnedBy(playlist.getId(), dummyUser.getId()));
+        assertTrue(playlistService.isOwnedBy(playlist.getId(), DUMMY_USER.getId()));
     }
 
     @Test public void isNotOwned()
     {
         // Arrange
         Playlist playlist = new Playlist();
-        Mockito.when(playlistService.isOwnedBy(playlist.getId(), dummyUser.getId())).thenReturn(false);
+        Mockito.when(playlistService.isOwnedBy(playlist.getId(), DUMMY_USER.getId())).thenReturn(false);
 
         // Act / assert
-        assertFalse(playlistService.isOwnedBy(playlist.getId(), dummyUser.getId()));
+        assertFalse(playlistService.isOwnedBy(playlist.getId(), DUMMY_USER.getId()));
     }
 }

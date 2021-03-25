@@ -104,4 +104,9 @@ public class UserDAO
 
         return (user.getName() != null) ? user : null;
     }
+
+    public void setDataSource(DataSource dataSource)
+    {
+        this.dataSource = dataSource;
+    }
 }
