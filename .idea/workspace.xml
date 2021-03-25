@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="UML Files">
-      <change beforePath="$PROJECT_DIR$/uml/Spotitube.uml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/Spotitube.uml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/SpotitubeUML.png" beforeDir="false" afterPath="$PROJECT_DIR$/uml/SpotitubeUML.png" afterDir="false" />
+    <list default="true" id="238658ab-4e26-4869-a2d8-321388d9027c" name="Default Changelist" comment="Cleaner dependency diagram">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,14 +311,7 @@
       <workItem from="1616541387534" duration="562000" />
       <workItem from="1616576199258" duration="4051000" />
       <workItem from="1616608305948" duration="15277000" />
-      <workItem from="1616667820453" duration="1618000" />
-    </task>
-    <task id="LOCAL-00033" summary="Base SQL files">
-      <created>1615981253836</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1615981253836</updated>
+      <workItem from="1616667820453" duration="2831000" />
     </task>
     <task id="LOCAL-00034" summary="Base SQL files">
       <created>1615983694037</created>
@@ -656,7 +649,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616669115634</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Cleaner dependency diagram">
+      <created>1616669447923</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1616669447923</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +675,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PlaylistMapperTest done" />
     <MESSAGE value="Mapper tests done." />
     <MESSAGE value="Make PlaylistMapperTest 100% coverage." />
     <MESSAGE value="All files in package, PlaylistMapperTest 100% coverage" />
@@ -700,7 +699,8 @@
     <MESSAGE value="100% comments" />
     <MESSAGE value="V1.1, Tests completed" />
     <MESSAGE value="UML Files" />
-    <option name="LAST_COMMIT_MESSAGE" value="UML Files" />
+    <MESSAGE value="Cleaner dependency diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaner dependency diagram" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
