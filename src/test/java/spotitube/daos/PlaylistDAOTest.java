@@ -80,7 +80,7 @@ public class PlaylistDAOTest extends DummyGenerator
     @Test public void getTotalDurationSuccess() throws SQLException
     {
         // Arrange
-        String expectedQuery = "SELECT SUM(t.duration) as `duration` FROM track t INNER JOIN playlist_track pt ON pt.track_id = t.id WHERE pt.playlist_id = ?";
+        String expectedQuery = "SELECT SUM(t.duration) AS `duration` FROM track t INNER JOIN playlist_track pt ON pt.track_id = t.id WHERE pt.playlist_id = ?";
 
         DataSource dataSource = mock(DataSource.class);
         Connection connection = mock(Connection.class);
@@ -109,7 +109,7 @@ public class PlaylistDAOTest extends DummyGenerator
     @Test public void getTotalDurationException() throws SQLException
     {
         // Arrange
-        String expectedQuery = "SELECT SUM(t.duration) as `duration` FROM track t INNER JOIN playlist_track pt ON pt.track_id = t.id WHERE pt.playlist_id = ?";
+        String expectedQuery = "SELECT SUM(t.duration) AS `duration` FROM track t INNER JOIN playlist_track pt ON pt.track_id = t.id WHERE pt.playlist_id = ?";
 
         DataSource dataSource = mock(DataSource.class);
         Connection connection = mock(Connection.class);
@@ -172,7 +172,7 @@ public class PlaylistDAOTest extends DummyGenerator
     @Test public void addSuccess() throws SQLException
     {
         // Arrange
-        String expectedQuery = "INSERT INTO playlist (name, owner_id) VALUES(?, ?)";
+        String expectedQuery = "INSERT INTO playlist (name, owner_id) VALUES (?, ?)";
 
         DataSource dataSource = mock(DataSource.class);
         Connection connection = mock(Connection.class);
@@ -191,7 +191,7 @@ public class PlaylistDAOTest extends DummyGenerator
     @Test public void addException() throws SQLException
     {
         // Arrange
-        String expectedQuery = "INSERT INTO playlist (name, owner_id) VALUES(?, ?)";
+        String expectedQuery = "INSERT INTO playlist (name, owner_id) VALUES (?, ?)";
 
         DataSource dataSource = mock(DataSource.class);
         Connection connection = mock(Connection.class);

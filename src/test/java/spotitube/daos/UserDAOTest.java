@@ -104,18 +104,18 @@ public class UserDAOTest extends DummyGenerator
     @Test public void verifyTokenSuccessful() throws SQLException
     {
         // Arrange
-        String expectedQuery = "SELECT id, name from user WHERE token = ?";
+        String expectedQuery = "SELECT id, name FROM user WHERE token = ?";
 
         DataSource dataSource = mock(DataSource.class);
         Connection connection = mock(Connection.class);
         ResultSet result = mock(ResultSet.class);
-        PreparedStatement preparedStatement = mock(PreparedStatement.class);
+        PreparedStatement statement = mock(PreparedStatement.class);
 
         userDAO.setDataSource(dataSource);
 
         Mockito.when(dataSource.getConnection()).thenReturn(connection);
-        Mockito.when(connection.prepareStatement(expectedQuery)).thenReturn(preparedStatement);
-        Mockito.when(preparedStatement.executeQuery()).thenReturn(result);
+        Mockito.when(connection.prepareStatement(expectedQuery)).thenReturn(statement);
+        Mockito.when(statement.executeQuery()).thenReturn(result);
         Mockito.when(result.next()).thenReturn(true);
         Mockito.when(result.getInt("id")).thenReturn(DUMMY_USER.getId());
         Mockito.when(result.getString("name")).thenReturn(DUMMY_USER.getName());
@@ -130,7 +130,7 @@ public class UserDAOTest extends DummyGenerator
     @Test public void verifyTokenNull() throws SQLException
     {
         // Arrange
-        String expectedQuery = "SELECT id, name from user WHERE token = ?";
+        String expectedQuery = "SELECT id, name FROM user WHERE token = ?";
 
         DataSource dataSource = mock(DataSource.class);
         Connection connection = mock(Connection.class);
