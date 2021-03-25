@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import spotitube.TestHelpers;
+import spotitube.DummyGenerator;
 import spotitube.dao.PlaylistDAO;
-import spotitube.dao.TrackDAO;
 import spotitube.domain.Playlist;
-import spotitube.domain.Track;
-import spotitube.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
 
 import java.util.ArrayList;
@@ -18,7 +15,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PlaylistServiceTest extends TestHelpers
+public class PlaylistServiceTest extends DummyGenerator
 {
     /**
      * The tests in this file are not useful (yet)

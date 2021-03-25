@@ -1,13 +1,11 @@
 package spotitube.resources;
 
-import com.sun.mail.imap.protocol.ID;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import spotitube.TestHelpers;
-import spotitube.domain.User;
+import spotitube.DummyGenerator;
 import spotitube.exceptions.UnauthorizedException;
 import spotitube.services.IdService;
 import spotitube.services.TrackService;
@@ -18,7 +16,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TrackResourceTest extends TestHelpers
+public class TrackResourceTest extends DummyGenerator
 {
     @Mock private UserService userService;
     @Mock private TrackService trackService;

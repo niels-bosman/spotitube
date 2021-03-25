@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import spotitube.TestHelpers;
+import spotitube.DummyGenerator;
 import spotitube.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
@@ -13,7 +13,7 @@ import spotitube.exceptions.UnauthorizedException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class UserServiceTest extends TestHelpers
+public class UserServiceTest extends DummyGenerator
 {
     @Mock private UserDAO userDAO;
     private UserService userService = new UserService();

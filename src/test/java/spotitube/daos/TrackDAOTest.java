@@ -2,7 +2,7 @@ package spotitube.daos;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import spotitube.TestHelpers;
+import spotitube.DummyGenerator;
 import spotitube.dao.TrackDAO;
 import spotitube.domain.Track;
 
@@ -16,7 +16,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 
-public class TrackDAOTest extends TestHelpers
+public class TrackDAOTest extends DummyGenerator
 {
     private final TrackDAO trackDAO = new TrackDAO();
 

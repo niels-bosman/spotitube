@@ -2,10 +2,9 @@ package spotitube.daos;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import spotitube.TestHelpers;
+import spotitube.DummyGenerator;
 import spotitube.dao.PlaylistDAO;
 import spotitube.domain.Playlist;
-import spotitube.domain.Track;
 import spotitube.dto.playlist.PlaylistDTO;
 
 import javax.sql.DataSource;
@@ -19,7 +18,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 
-public class PlaylistDAOTest extends TestHelpers
+public class PlaylistDAOTest extends DummyGenerator
 {
     private PlaylistDAO playlistDAO = new PlaylistDAO();
 

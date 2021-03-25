@@ -1,12 +1,11 @@
 package spotitube.resources;
 
-import com.sun.mail.imap.protocol.ID;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import spotitube.TestHelpers;
+import spotitube.DummyGenerator;
 import spotitube.domain.Playlist;
 import spotitube.dto.playlist.PlaylistDTO;
 import spotitube.exceptions.UnauthorizedException;
@@ -20,7 +19,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PlaylistResourceTest extends TestHelpers
+public class PlaylistResourceTest extends DummyGenerator
 {
     @Mock private PlaylistService playlistService;
     @Mock private UserService userService;

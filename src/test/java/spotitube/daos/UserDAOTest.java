@@ -6,7 +6,7 @@ import spotitube.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
 import spotitube.exceptions.UnauthorizedException;
-import spotitube.TestHelpers;
+import spotitube.DummyGenerator;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -17,7 +17,7 @@ import java.sql.SQLException;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 
-public class UserDAOTest extends TestHelpers
+public class UserDAOTest extends DummyGenerator
 {
     private UserDAO userDAO = new UserDAO();
 

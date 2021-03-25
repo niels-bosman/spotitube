@@ -6,7 +6,7 @@ import spotitube.domain.User;
 
 import java.util.ArrayList;
 
-public class TestHelpers
+public class DummyGenerator
 {
     public static final User DUMMY_USER = makeUser();
     public static final Track DUMMY_TRACK = makeTrack();

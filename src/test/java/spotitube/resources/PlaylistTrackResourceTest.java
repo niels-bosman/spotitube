@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import spotitube.TestHelpers;
+import spotitube.DummyGenerator;
 import spotitube.dto.track.TrackDTO;
 import spotitube.exceptions.UnauthorizedException;
 import spotitube.services.IdService;
@@ -17,7 +17,7 @@ import javax.ws.rs.core.Response;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PlaylistTrackResourceTest extends TestHelpers
+public class PlaylistTrackResourceTest extends DummyGenerator
 {
     @Mock private TrackService trackService;
     @Mock private PlaylistService playlistService;
