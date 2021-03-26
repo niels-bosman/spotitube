@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import spotitube.dao.TrackDAO;
+import spotitube.data.dao.TrackDAO;
 import spotitube.domain.Track;
 import spotitube.dto.track.TrackDTO;
 

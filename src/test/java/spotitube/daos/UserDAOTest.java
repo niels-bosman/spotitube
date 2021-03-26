@@ -2,7 +2,7 @@ package spotitube.daos;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import spotitube.dao.UserDAO;
+import spotitube.data.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
 import spotitube.exceptions.UnauthorizedException;

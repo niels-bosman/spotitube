@@ -1,10 +1,10 @@
 package spotitube.services;
 
-import spotitube.dao.PlaylistDAO;
+import spotitube.data.dao.PlaylistDAO;
 import spotitube.domain.Playlist;
 import spotitube.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
-import spotitube.mappers.PlaylistMapper;
+import spotitube.data.mappers.PlaylistMapper;
 
 import javax.inject.Inject;
 import java.util.List;

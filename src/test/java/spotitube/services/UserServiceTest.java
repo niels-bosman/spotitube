@@ -6,7 +6,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import spotitube.DummyGenerator;
-import spotitube.dao.UserDAO;
+import spotitube.data.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
 import spotitube.dto.login.LoginResponseDTO;

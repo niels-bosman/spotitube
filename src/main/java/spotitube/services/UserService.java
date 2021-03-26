@@ -1,11 +1,11 @@
 package spotitube.services;
 
-import spotitube.dao.UserDAO;
+import spotitube.data.dao.UserDAO;
 import spotitube.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
 import spotitube.dto.login.LoginResponseDTO;
 import spotitube.exceptions.UnauthorizedException;
-import spotitube.mappers.UserMapper;
+import spotitube.data.mappers.UserMapper;
 
 import javax.inject.Inject;
 

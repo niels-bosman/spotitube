@@ -3,7 +3,7 @@ package spotitube.daos;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import spotitube.DummyGenerator;
-import spotitube.dao.PlaylistDAO;
+import spotitube.data.dao.PlaylistDAO;
 import spotitube.domain.Playlist;
 import spotitube.dto.playlist.PlaylistDTO;
 

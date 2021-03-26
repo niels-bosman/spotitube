@@ -3,7 +3,7 @@ package spotitube.resources;
 import spotitube.dto.playlist.PlaylistDTO;
 import spotitube.dto.playlist.PlaylistResponseDTO;
 import spotitube.exceptions.UnauthorizedException;
-import spotitube.mappers.PlaylistMapper;
+import spotitube.data.mappers.PlaylistMapper;
 import spotitube.services.IdService;
 import spotitube.services.PlaylistService;
 import spotitube.services.UserService;

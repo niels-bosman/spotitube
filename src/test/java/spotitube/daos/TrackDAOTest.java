@@ -3,7 +3,7 @@ package spotitube.daos;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import spotitube.DummyGenerator;
-import spotitube.dao.TrackDAO;
+import spotitube.data.dao.TrackDAO;
 import spotitube.domain.Track;
 
 import javax.sql.DataSource;

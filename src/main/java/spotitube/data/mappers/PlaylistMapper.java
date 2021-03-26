@@ -1,4 +1,4 @@
-package spotitube.mappers;
+package spotitube.data.mappers;
 
 import spotitube.domain.Playlist;
 import spotitube.domain.User;

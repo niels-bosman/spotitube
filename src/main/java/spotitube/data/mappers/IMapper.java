@@ -1,4 +1,4 @@
-package spotitube.mappers;
+package spotitube.data.mappers;
 
 import java.util.List;
 

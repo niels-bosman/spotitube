@@ -1,4 +1,4 @@
-package spotitube.mappers;
+package spotitube.data.mappers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;

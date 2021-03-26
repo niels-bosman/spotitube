@@ -1,4 +1,4 @@
-package spotitube.mappers;
+package spotitube.data.mappers;
 
 import spotitube.domain.User;
 import spotitube.dto.login.LoginResponseDTO;

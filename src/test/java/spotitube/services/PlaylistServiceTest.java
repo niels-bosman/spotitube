@@ -6,7 +6,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import spotitube.DummyGenerator;
-import spotitube.dao.PlaylistDAO;
+import spotitube.data.dao.PlaylistDAO;
 import spotitube.domain.Playlist;
 import spotitube.dto.playlist.PlaylistDTO;
 

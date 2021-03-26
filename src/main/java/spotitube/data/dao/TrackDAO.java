@@ -1,4 +1,4 @@
-package spotitube.dao;
+package spotitube.data.dao;
 
 import spotitube.domain.Track;
 

@@ -1,9 +1,9 @@
 package spotitube.services;
 
-import spotitube.dao.TrackDAO;
+import spotitube.data.dao.TrackDAO;
 import spotitube.domain.Track;
 import spotitube.dto.track.TrackDTO;
-import spotitube.mappers.TrackMapper;
+import spotitube.data.mappers.TrackMapper;
 
 import javax.inject.Inject;
 import java.util.List;

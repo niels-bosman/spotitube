@@ -1,4 +1,4 @@
-package spotitube.mappers;
+package spotitube.data.mappers;
 
 import spotitube.domain.Track;
 import spotitube.dto.track.TrackDTO;
