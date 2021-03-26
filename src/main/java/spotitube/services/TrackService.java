@@ -1,7 +1,7 @@
 package spotitube.services;
 
 import spotitube.data.dao.TrackDAO;
-import spotitube.domain.Track;
+import spotitube.data.domain.Track;
 import spotitube.dto.track.TrackDTO;
 import spotitube.data.mappers.TrackMapper;
 

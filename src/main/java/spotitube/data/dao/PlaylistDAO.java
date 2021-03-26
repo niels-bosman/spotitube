@@ -1,6 +1,6 @@
 package spotitube.data.dao;
 
-import spotitube.domain.Playlist;
+import spotitube.data.domain.Playlist;
 import spotitube.dto.playlist.PlaylistDTO;
 
 import javax.annotation.Resource;

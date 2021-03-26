@@ -1,4 +1,4 @@
-package spotitube.domain;
+package spotitube.data.domain;
 
 import java.util.UUID;
 

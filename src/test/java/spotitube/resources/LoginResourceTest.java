@@ -4,7 +4,7 @@ import spotitube.DummyGenerator;
 import spotitube.exceptions.UnauthorizedException;
 import org.junit.jupiter.api.Test;
 import spotitube.services.UserService;
-import spotitube.domain.User;
+import spotitube.data.domain.User;
 import spotitube.dto.login.LoginRequestDTO;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

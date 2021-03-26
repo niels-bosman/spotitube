@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import spotitube.DummyGenerator;
 import spotitube.data.dao.TrackDAO;
-import spotitube.domain.Track;
+import spotitube.data.domain.Track;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

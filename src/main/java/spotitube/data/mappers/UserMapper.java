@@ -1,6 +1,6 @@
 package spotitube.data.mappers;
 
-import spotitube.domain.User;
+import spotitube.data.domain.User;
 import spotitube.dto.login.LoginResponseDTO;
 
 import java.util.ArrayList;

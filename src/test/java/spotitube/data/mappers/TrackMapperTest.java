@@ -2,7 +2,7 @@ package spotitube.data.mappers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import spotitube.domain.Track;
+import spotitube.data.domain.Track;
 import spotitube.dto.track.TrackDTO;
 
 import java.util.ArrayList;

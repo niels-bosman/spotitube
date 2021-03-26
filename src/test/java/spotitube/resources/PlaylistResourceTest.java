@@ -6,7 +6,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import spotitube.DummyGenerator;
-import spotitube.domain.Playlist;
+import spotitube.data.domain.Playlist;
 import spotitube.dto.playlist.PlaylistDTO;
 import spotitube.exceptions.UnauthorizedException;
 import spotitube.services.IdService;

@@ -1,6 +1,6 @@
 package spotitube.data.dao;
 
-import spotitube.domain.Track;
+import spotitube.data.domain.Track;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;

@@ -1,4 +1,4 @@
-package spotitube.domain;
+package spotitube.data.domain;
 
 public class Track
 {

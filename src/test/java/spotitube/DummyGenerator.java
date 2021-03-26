@@ -1,8 +1,8 @@
 package spotitube;
 
-import spotitube.domain.Playlist;
-import spotitube.domain.Track;
-import spotitube.domain.User;
+import spotitube.data.domain.Playlist;
+import spotitube.data.domain.Track;
+import spotitube.data.domain.User;
 
 import java.util.ArrayList;
 

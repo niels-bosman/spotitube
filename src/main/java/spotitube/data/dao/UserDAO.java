@@ -1,6 +1,6 @@
 package spotitube.data.dao;
 
-import spotitube.domain.User;
+import spotitube.data.domain.User;
 import spotitube.exceptions.UnauthorizedException;
 
 import javax.annotation.Resource;

@@ -3,7 +3,7 @@ package spotitube.data.mappers;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import spotitube.domain.User;
+import spotitube.data.domain.User;
 import spotitube.dto.login.LoginResponseDTO;
 
 import java.util.ArrayList;

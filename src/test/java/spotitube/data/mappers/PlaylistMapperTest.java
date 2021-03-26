@@ -3,8 +3,8 @@ package spotitube.data.mappers;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import spotitube.domain.Playlist;
-import spotitube.domain.User;
+import spotitube.data.domain.Playlist;
+import spotitube.data.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
 
 import java.util.ArrayList;

@@ -1,8 +1,8 @@
 package spotitube.services;
 
 import spotitube.data.dao.PlaylistDAO;
-import spotitube.domain.Playlist;
-import spotitube.domain.User;
+import spotitube.data.domain.Playlist;
+import spotitube.data.domain.User;
 import spotitube.dto.playlist.PlaylistDTO;
 import spotitube.data.mappers.PlaylistMapper;
 

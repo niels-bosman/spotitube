@@ -6,7 +6,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import spotitube.data.dao.TrackDAO;
-import spotitube.domain.Track;
+import spotitube.data.domain.Track;
 import spotitube.dto.track.TrackDTO;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
 package spotitube.data.mappers;
 
-import spotitube.domain.Track;
+import spotitube.data.domain.Track;
 import spotitube.dto.track.TrackDTO;
 
 import java.util.ArrayList;

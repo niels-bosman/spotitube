@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import spotitube.DummyGenerator;
 import spotitube.data.dao.PlaylistDAO;
-import spotitube.domain.Playlist;
+import spotitube.data.domain.Playlist;
 import spotitube.dto.playlist.PlaylistDTO;
 
 import javax.sql.DataSource;
