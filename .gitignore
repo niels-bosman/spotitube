@@ -10,5 +10,5 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
-HAN-dea-Spotitube.iml
+HAN-dea-spotitube.iml
 spotitube.log
