@@ -23,7 +23,7 @@ public class UserDAO
 
     private static final String LOGIN_QUERY = "SELECT * FROM user WHERE username = ? AND password = ?";
     private static final String ADD_TOKEN_QUERY = "UPDATE user SET token = ? WHERE id = ?";
-    private static final String FETCH_USER_BY_TOKEN_QUERY = "SELECT id, name FROM userX WHERE token = ?";
+    private static final String FETCH_USER_BY_TOKEN_QUERY = "SELECT id, name FROM user WHERE token = ?";
 
     /**
      * Get a specific user
