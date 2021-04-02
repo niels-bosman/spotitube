@@ -1,5 +1,8 @@
 package spotitube.data.dao;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import spotitube.App;
 import spotitube.data.domain.Playlist;
 import spotitube.dto.playlist.PlaylistDTO;
 
@@ -16,6 +19,7 @@ public class PlaylistDAO
 {
     @Resource(name = "jdbc/spotitube")
     DataSource dataSource;
+    Logger logger = LoggerFactory.getLogger(App.class);
 
     private static final String GET_ALL_QUERY = "SELECT id, name, owner_id FROM playlist";
     private static final String GET_TOTAL_DURATION_QUERY = "SELECT SUM(t.duration) AS `duration` FROM track t INNER JOIN playlist_track pt ON pt.track_id = t.id WHERE pt.playlist_id = ?";
@@ -47,7 +51,7 @@ public class PlaylistDAO
             }
         }
         catch (SQLException exception) {
-            exception.printStackTrace();
+            logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
         }
 
         return response;
@@ -74,7 +78,7 @@ public class PlaylistDAO
                 }
             }
             catch (SQLException exception) {
-                exception.printStackTrace();
+                logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
             }
         }
 
@@ -98,7 +102,7 @@ public class PlaylistDAO
             return statement.executeUpdate() > 0;
         }
         catch (SQLException exception) {
-            exception.printStackTrace();
+            logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
         }
 
         return false;
@@ -120,7 +124,7 @@ public class PlaylistDAO
             return statement.executeUpdate() > 0;
         }
         catch (SQLException exception) {
-            exception.printStackTrace();
+            logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
         }
 
         return false;
@@ -145,7 +149,7 @@ public class PlaylistDAO
             return statement.executeUpdate() > 0;
         }
         catch (SQLException exception) {
-            exception.printStackTrace();
+            logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
         }
 
         return false;
@@ -169,7 +173,7 @@ public class PlaylistDAO
             return result.next();
         }
         catch (SQLException exception) {
-            exception.printStackTrace();
+            logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
         }
 
         return false;

@@ -1,5 +1,8 @@
 package spotitube.data.dao;
 
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+import spotitube.App;
 import spotitube.data.domain.User;
 import spotitube.exceptions.UnauthorizedException;
 
@@ -16,10 +19,11 @@ public class UserDAO
 {
     @Resource(name = "jdbc/spotitube")
     DataSource dataSource;
+    Logger logger = LoggerFactory.getLogger(App.class);
 
     private static final String LOGIN_QUERY = "SELECT * FROM user WHERE username = ? AND password = ?";
     private static final String ADD_TOKEN_QUERY = "UPDATE user SET token = ? WHERE id = ?";
-    private static final String FETCH_USER_BY_TOKEN_QUERY = "SELECT id, name FROM user WHERE token = ?";
+    private static final String FETCH_USER_BY_TOKEN_QUERY = "SELECT id, name FROM userX WHERE token = ?";
 
     /**
      * Get a specific user
@@ -49,7 +53,7 @@ public class UserDAO
             user.setToken();
         }
         catch (SQLException exception) {
-            exception.printStackTrace();
+            logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
         }
 
         return user;
@@ -70,7 +74,7 @@ public class UserDAO
             return statement.executeUpdate() > 0;
         }
         catch (SQLException exception) {
-            exception.printStackTrace();
+            logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
         }
 
         return false;
@@ -98,7 +102,7 @@ public class UserDAO
             }
         }
         catch (SQLException exception) {
-            exception.printStackTrace();
+            logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
         }
 
         if (user.getName() != null) {

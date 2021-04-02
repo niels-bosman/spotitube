@@ -1,5 +1,8 @@
 package spotitube.data.dao;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import spotitube.App;
 import spotitube.data.domain.Track;
 
 import javax.annotation.Resource;
@@ -15,6 +18,7 @@ public class TrackDAO
 {
     @Resource(name = "jdbc/spotitube")
     DataSource dataSource;
+    Logger logger = LoggerFactory.getLogger(App.class);
 
     private static final String GET_IN_PLAYLIST_QUERY = "SELECT t.*, pt.offlineAvailable FROM track t INNER JOIN playlist_track pt ON pt.track_id = t.id WHERE pt.playlist_id = ?";
     private static final String GET_NOT_IN_PLAYLIST_QUERY = "SELECT *, 0 AS `offlineAvailable` FROM track WHERE id NOT IN (SELECT track_id FROM playlist_track WHERE playlist_id = ?);";
@@ -76,7 +80,7 @@ public class TrackDAO
             }
         }
         catch (SQLException exception) {
-            exception.printStackTrace();
+            logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
         }
 
         return tracks;
@@ -101,7 +105,7 @@ public class TrackDAO
             return statement.executeUpdate() > 0;
         }
         catch (SQLException exception) {
-            exception.printStackTrace();
+            logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
         }
 
         return false;
@@ -125,7 +129,7 @@ public class TrackDAO
             return statement.executeUpdate() > 0;
         }
         catch (SQLException exception) {
-            exception.printStackTrace();
+            logger.error("Er is iets misgegaan bij de query, fout: {}", exception.toString());
         }
 
         return false;
